@@ -1,0 +1,10 @@
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MDI\bin\Release\MDI.exe
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MDI\bin\Release\MDI.pdb
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MDI\obj\x86\Release\MDI.Form1.resources
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MDI\obj\x86\Release\MDI.Properties.Resources.resources
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MDI\obj\x86\Release\MDI.csproj.GenerateResource.Cache
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MDI\obj\x86\Release\MDI.exe
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MDI\obj\x86\Release\MDI.pdb
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MDI\obj\x86\Release\MDI.AboutBox1.resources
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MDI\obj\x86\Release\MDI.Form3.resources
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MDI\obj\x86\Release\MDI.Form2.resources

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Last test parameters before application close-->
+<Settings>
+  <time>
+    <Hour>0</Hour>
+    <Minute>0</Minute>
+    <Sekunds>0</Sekunds>
+  </time>
+  <CoilCyclesTotal>
+    <Cykles>0</Cykles>
+  </CoilCyclesTotal>
+</Settings>

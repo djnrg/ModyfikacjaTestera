@@ -1,0 +1,11 @@
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\LokalnaBazaDanych\bin\Debug\Adresy.mdf
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\LokalnaBazaDanych\bin\Debug\Adresy_log.ldf
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\LokalnaBazaDanych\bin\Debug\LokalnaBazaDanych.exe.config
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\LokalnaBazaDanych\bin\Debug\LokalnaBazaDanych.exe
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\LokalnaBazaDanych\bin\Debug\LokalnaBazaDanych.pdb
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\LokalnaBazaDanych\obj\x86\Debug\LokalnaBazaDanych.Form1.resources
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\LokalnaBazaDanych\obj\x86\Debug\LokalnaBazaDanych.Form2.resources
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\LokalnaBazaDanych\obj\x86\Debug\LokalnaBazaDanych.Properties.Resources.resources
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\LokalnaBazaDanych\obj\x86\Debug\LokalnaBazaDanych.csproj.GenerateResource.Cache
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\LokalnaBazaDanych\obj\x86\Debug\LokalnaBazaDanych.exe
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\LokalnaBazaDanych\obj\x86\Debug\LokalnaBazaDanych.pdb

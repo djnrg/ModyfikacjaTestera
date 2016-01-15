@@ -1,0 +1,8 @@
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MultiForms\bin\Debug\MultiForms.exe
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MultiForms\bin\Debug\MultiForms.pdb
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MultiForms\obj\x86\Debug\MultiForms.Form1.resources
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MultiForms\obj\x86\Debug\MultiForms.Form2.resources
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MultiForms\obj\x86\Debug\MultiForms.Properties.Resources.resources
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MultiForms\obj\x86\Debug\MultiForms.csproj.GenerateResource.Cache
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MultiForms\obj\x86\Debug\MultiForms.exe
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\MultiForms\obj\x86\Debug\MultiForms.pdb

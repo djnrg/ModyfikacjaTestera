@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<syncDesignerSurface dslVersion="1.0.0.0" Id="faeae50e-b280-4e37-b86b-1b34d800c298" parentDesignerName="DatabaseCache" codeGenerationMode="Klient i serwer" synchronizeInOneTransaction="false" clientFileLocation="30db51ca-1ddf-41eb-b6a6-adb7a0b10580" serverFileLocation="30db51ca-1ddf-41eb-b6a6-adb7a0b10580" isRootSyncDesigner="true" rootSyncDesignerShouldGenerateCode="true" isClientSyncDesigner="false" isServerSyncDesigner="false" changeTrackingType="SqlServerChangeTracking" xmlns="http://schemas.microsoft.com/dsltools/SyncDesigner">
+  <syncAdapters>
+    <syncAdapter Id="16d4b198-8514-4bdb-9e1a-28e8ab40a3d2" name="TestDescriptionInputSyncAdapter" tableName="TestDescriptionInput">
+      <syncAdapterCommands>
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionInputSyncTableInsertCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionInputSyncTableDeleteCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionInputSyncTableUpdateCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionInputSyncTableSelectConflictDeletedRowsCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionInputSyncTableSelectConflictUpdatedRowsCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionInputSyncTableSelectIncrementalInsertsCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionInputSyncTableSelectIncrementalDeletesCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionInputSyncTableSelectIncrementalUpdatesCommand" />
+      </syncAdapterCommands>
+    </syncAdapter>
+    <syncAdapter Id="8fb309e7-df88-401d-897a-34817c01c299" name="TestDescriptionSetupSyncAdapter" tableName="TestDescriptionSetup">
+      <syncAdapterCommands>
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionSetupSyncTableInsertCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionSetupSyncTableDeleteCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionSetupSyncTableUpdateCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionSetupSyncTableSelectConflictDeletedRowsCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionSetupSyncTableSelectConflictUpdatedRowsCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionSetupSyncTableSelectIncrementalInsertsCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionSetupSyncTableSelectIncrementalDeletesCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionSetupSyncTableSelectIncrementalUpdatesCommand" />
+      </syncAdapterCommands>
+    </syncAdapter>
+    <syncAdapter Id="b0413137-8da9-4bc8-b562-4abdf8ebf553" name="TestParametersSyncAdapter" tableName="TestParameters">
+      <syncAdapterCommands>
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestParametersSyncTableInsertCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestParametersSyncTableDeleteCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestParametersSyncTableUpdateCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestParametersSyncTableSelectConflictDeletedRowsCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestParametersSyncTableSelectConflictUpdatedRowsCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestParametersSyncTableSelectIncrementalInsertsCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestParametersSyncTableSelectIncrementalDeletesCommand" />
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestParametersSyncTableSelectIncrementalUpdatesCommand" />
+      </syncAdapterCommands>
+    </syncAdapter>
+  </syncAdapters>
+  <syncTables>
+    <syncTable Id="5adbbaf8-dc2b-4fe7-9b93-03d31dba29fe" name="TestDescriptionInputSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="TestDescriptionInput" deletedItemsTableName="TestDescriptionInput_Tombstone" createdDateColumnName="CreationDate" lastEditDateColumnName="LastEditDate" fullTableName="dbo.TestDescriptionInput" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionInputSyncGroup" />
+      </syncGroup>
+    </syncTable>
+    <syncTable Id="ef62ddf9-620f-4e95-95c5-f974851fbccb" name="TestDescriptionSetupSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="TestDescriptionSetup" deletedItemsTableName="TestDescriptionSetup_Tombstone" createdDateColumnName="CreationDate" lastEditDateColumnName="LastEditDate" fullTableName="dbo.TestDescriptionSetup" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionSetupSyncGroup" />
+      </syncGroup>
+    </syncTable>
+    <syncTable Id="8a8fb04e-5121-48af-b837-6cc05ac3d1f4" name="TestParametersSyncTable" syncDirection="DownloadOnly" creationOptions="DropExistingOrCreateNewTable" tableName="TestParameters" deletedItemsTableName="TestParameters_Tombstone" createdDateColumnName="CreationDate" lastEditDateColumnName="LastEditDate" fullTableName="dbo.TestParameters" deletedDateColumnName="DeletionDate" transactionIndex="0">
+      <syncGroup>
+        <syncGroupMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestParametersSyncGroup" />
+      </syncGroup>
+    </syncTable>
+  </syncTables>
+  <syncGroups>
+    <syncGroup Id="ca2ba093-40bf-4729-a3b2-03fd3fa38274" name="TestDescriptionInputSyncGroup" />
+    <syncGroup Id="80314d58-df57-44af-9da3-f92a4964aee3" name="TestDescriptionSetupSyncGroup" />
+    <syncGroup Id="918203e3-48e0-4b96-bb86-95eff17b5585" name="TestParametersSyncGroup" />
+  </syncGroups>
+  <clientSyncProvider>
+    <clientSyncProvider Id="1b915a48-91dc-4efd-9ba3-42317a8746af" name="DatabaseCacheClientSyncProvider">
+      <syncConnection>
+        <syncConnectionMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/ClientConnection" />
+      </syncConnection>
+    </clientSyncProvider>
+  </clientSyncProvider>
+  <serverSyncProvider>
+    <serverSyncProvider Id="0afe3867-ffeb-4da5-8b64-0f7e0d294d4a" name="DatabaseCacheServerSyncProvider">
+      <syncAdapters>
+        <syncAdapterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionInputSyncAdapter" />
+        <syncAdapterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionSetupSyncAdapter" />
+        <syncAdapterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestParametersSyncAdapter" />
+      </syncAdapters>
+      <syncConnection>
+        <syncConnectionMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/ServerConnection" />
+      </syncConnection>
+      <selectNewAnchorCommand>
+        <syncAdapterCommandMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/selectNewAnchorCmd" />
+      </selectNewAnchorCommand>
+    </serverSyncProvider>
+  </serverSyncProvider>
+  <syncAgent>
+    <syncAgent name="DatabaseCacheSyncAgent" synchronizeInOneTransaction="false">
+      <serverSyncProvider>
+        <serverSyncProviderMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/DatabaseCacheServerSyncProvider" />
+      </serverSyncProvider>
+      <clientSyncProvider>
+        <clientSyncProviderMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/DatabaseCacheClientSyncProvider" />
+      </clientSyncProvider>
+      <syncTables>
+        <syncTableMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionInputSyncTable" />
+        <syncTableMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestDescriptionSetupSyncTable" />
+        <syncTableMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/TestParametersSyncTable" />
+      </syncTables>
+    </syncAgent>
+  </syncAgent>
+  <syncAdapterCommands>
+    <syncAdapterCommand Id="e52d4003-a20c-48bf-816b-41e438c9d75e" commandText=";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) INSERT INTO dbo.TestDescriptionInput ([ID_TestInput], [TestNameInput], [StartDate], [CompressorDescription], [Requester], [CompressorPass], [FinishDate], [ID_TestDescSetup], [Comments]) VALUES (@ID_TestInput, @TestNameInput, @StartDate, @CompressorDescription, @Requester, @CompressorPass, @FinishDate, @ID_TestDescSetup, @Comments) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestDescriptionInput')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestDescriptionInput') " commandType="Text" name="TestDescriptionInputSyncTableInsertCommand" commandKind="InsertCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestInput" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TestNameInput" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@StartDate" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CompressorDescription" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Requester" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CompressorPass" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@FinishDate" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestDescSetup" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Comments" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_row_count" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="00ab73f7-7572-4c51-9c09-ce660a66fe7b" commandText=";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) DELETE dbo.TestDescriptionInput FROM dbo.TestDescriptionInput JOIN CHANGETABLE(VERSION dbo.TestDescriptionInput, ([ID_TestInput]), (@ID_TestInput)) CT  ON CT.[ID_TestInput] = dbo.TestDescriptionInput.[ID_TestInput] WHERE (@sync_force_write = 1 OR CT.SYS_CHANGE_VERSION IS NULL OR CT.SYS_CHANGE_VERSION &lt;= @sync_last_received_anchor OR (CT.SYS_CHANGE_CONTEXT IS NOT NULL AND CT.SYS_CHANGE_CONTEXT = @sync_client_id_binary)) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestDescriptionInput')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestDescriptionInput') " commandType="Text" name="TestDescriptionInputSyncTableDeleteCommand" commandKind="DeleteCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestInput1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_force_write" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_row_count1" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="d1cd5626-0e09-48f8-b00b-679aece9ce59" commandText=";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) UPDATE dbo.TestDescriptionInput SET [TestNameInput] = @TestNameInput, [StartDate] = @StartDate, [CompressorDescription] = @CompressorDescription, [Requester] = @Requester, [CompressorPass] = @CompressorPass, [FinishDate] = @FinishDate, [ID_TestDescSetup] = @ID_TestDescSetup, [Comments] = @Comments FROM dbo.TestDescriptionInput  JOIN CHANGETABLE(VERSION dbo.TestDescriptionInput, ([ID_TestInput]), (@ID_TestInput)) CT  ON CT.[ID_TestInput] = dbo.TestDescriptionInput.[ID_TestInput] WHERE (@sync_force_write = 1 OR CT.SYS_CHANGE_VERSION IS NULL OR CT.SYS_CHANGE_VERSION &lt;= @sync_last_received_anchor OR (CT.SYS_CHANGE_CONTEXT IS NOT NULL AND CT.SYS_CHANGE_CONTEXT = @sync_client_id_binary)) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestDescriptionInput')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestDescriptionInput') " commandType="Text" name="TestDescriptionInputSyncTableUpdateCommand" commandKind="UpdateCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TestNameInput1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@StartDate1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CompressorDescription1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Requester1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CompressorPass1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@FinishDate1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestDescSetup1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Comments1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestInput2" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_force_write1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor2" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary2" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_row_count2" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="5fc84c17-8493-46ab-9958-b6c3e45ab5eb" commandText="SELECT CT.[ID_TestInput], CT.SYS_CHANGE_CONTEXT, CT.SYS_CHANGE_VERSION FROM CHANGETABLE(CHANGES dbo.TestDescriptionInput, @sync_last_received_anchor) CT WHERE (CT.[ID_TestInput] = @ID_TestInput AND CT.SYS_CHANGE_OPERATION = 'D')" commandType="Text" name="TestDescriptionInputSyncTableSelectConflictDeletedRowsCommand" commandKind="SelectConflictDeletedRowsCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor3" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestInput3" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="45d4b8e5-8787-4541-a449-a5e0044c5694" commandText="SELECT dbo.TestDescriptionInput.[ID_TestInput], [TestNameInput], [StartDate], [CompressorDescription], [Requester], [CompressorPass], [FinishDate], [ID_TestDescSetup], [Comments], CT.SYS_CHANGE_CONTEXT, CT.SYS_CHANGE_VERSION FROM dbo.TestDescriptionInput JOIN CHANGETABLE(VERSION dbo.TestDescriptionInput, ([ID_TestInput]), (@ID_TestInput)) CT  ON CT.[ID_TestInput] = dbo.TestDescriptionInput.[ID_TestInput]" commandType="Text" name="TestDescriptionInputSyncTableSelectConflictUpdatedRowsCommand" commandKind="SelectConflictUpdatedRowsCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestInput4" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="92a197fb-ef7c-4740-9b23-c079a7ab16de" commandText="IF @sync_initialized = 0 SELECT dbo.TestDescriptionInput.[ID_TestInput], [TestNameInput], [StartDate], [CompressorDescription], [Requester], [CompressorPass], [FinishDate], [ID_TestDescSetup], [Comments] FROM dbo.TestDescriptionInput LEFT OUTER JOIN CHANGETABLE(CHANGES dbo.TestDescriptionInput, @sync_last_received_anchor) CT ON CT.[ID_TestInput] = dbo.TestDescriptionInput.[ID_TestInput] WHERE (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary) ELSE  BEGIN SELECT dbo.TestDescriptionInput.[ID_TestInput], [TestNameInput], [StartDate], [CompressorDescription], [Requester], [CompressorPass], [FinishDate], [ID_TestDescSetup], [Comments] FROM dbo.TestDescriptionInput JOIN CHANGETABLE(CHANGES dbo.TestDescriptionInput, @sync_last_received_anchor) CT ON CT.[ID_TestInput] = dbo.TestDescriptionInput.[ID_TestInput] WHERE (CT.SYS_CHANGE_OPERATION = 'I' AND CT.SYS_CHANGE_CREATION_VERSION  &lt;= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestDescriptionInput')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestDescriptionInput')  END " commandType="Text" name="TestDescriptionInputSyncTableSelectIncrementalInsertsCommand" commandKind="SelectIncrementalInsertsCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_initialized" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor4" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary3" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_new_received_anchor" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="2f90fd1e-90b3-4994-b716-d93db642319d" commandText="IF @sync_initialized &gt; 0  BEGIN SELECT CT.[ID_TestInput] FROM CHANGETABLE(CHANGES dbo.TestDescriptionInput, @sync_last_received_anchor) CT WHERE (CT.SYS_CHANGE_OPERATION = 'D' AND CT.SYS_CHANGE_VERSION &lt;= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestDescriptionInput')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestDescriptionInput')  END " commandType="Text" name="TestDescriptionInputSyncTableSelectIncrementalDeletesCommand" commandKind="SelectIncrementalDeletesCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_initialized1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor5" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_new_received_anchor1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary4" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="fef8286a-f563-463d-82d1-45b040621106" commandText="IF @sync_initialized &gt; 0  BEGIN SELECT dbo.TestDescriptionInput.[ID_TestInput], [TestNameInput], [StartDate], [CompressorDescription], [Requester], [CompressorPass], [FinishDate], [ID_TestDescSetup], [Comments] FROM dbo.TestDescriptionInput JOIN CHANGETABLE(CHANGES dbo.TestDescriptionInput, @sync_last_received_anchor) CT ON CT.[ID_TestInput] = dbo.TestDescriptionInput.[ID_TestInput] WHERE (CT.SYS_CHANGE_OPERATION = 'U' AND CT.SYS_CHANGE_VERSION &lt;= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestDescriptionInput')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestDescriptionInput')  END " commandType="Text" name="TestDescriptionInputSyncTableSelectIncrementalUpdatesCommand" commandKind="SelectIncrementalUpdatesCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_initialized2" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor6" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_new_received_anchor2" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary5" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="3549f681-8204-4192-b253-84abc13a43be" commandText=";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) INSERT INTO dbo.TestDescriptionSetup ([ID_TestSetup], [TestName], [Step], [RequestedTime], [PressureDischargeSetup], [PressureSuctionSetup], [HotBoxTemperatureMin], [HotBoxTemperatureMax], [CompressorLimitTemp], [RPMsetup], [ECVOn], [ECVOff], [ECVHz], [ECVDC], [CoilOn], [CoilOff]) VALUES (@ID_TestSetup, @TestName, @Step, @RequestedTime, @PressureDischargeSetup, @PressureSuctionSetup, @HotBoxTemperatureMin, @HotBoxTemperatureMax, @CompressorLimitTemp, @RPMsetup, @ECVOn, @ECVOff, @ECVHz, @ECVDC, @CoilOn, @CoilOff) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestDescriptionSetup')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestDescriptionSetup') " commandType="Text" name="TestDescriptionSetupSyncTableInsertCommand" commandKind="InsertCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary6" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestSetup" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TestName" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Step" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@RequestedTime" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@PressureDischargeSetup" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@PressureSuctionSetup" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@HotBoxTemperatureMin" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@HotBoxTemperatureMax" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CompressorLimitTemp" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@RPMsetup" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ECVOn" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ECVOff" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ECVHz" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ECVDC" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CoilOn" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CoilOff" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_row_count3" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor7" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="e58c2a26-1029-4bcb-beb3-74ce15dce5eb" commandText=";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) DELETE dbo.TestDescriptionSetup FROM dbo.TestDescriptionSetup JOIN CHANGETABLE(VERSION dbo.TestDescriptionSetup, ([ID_TestSetup]), (@ID_TestSetup)) CT  ON CT.[ID_TestSetup] = dbo.TestDescriptionSetup.[ID_TestSetup] WHERE (@sync_force_write = 1 OR CT.SYS_CHANGE_VERSION IS NULL OR CT.SYS_CHANGE_VERSION &lt;= @sync_last_received_anchor OR (CT.SYS_CHANGE_CONTEXT IS NOT NULL AND CT.SYS_CHANGE_CONTEXT = @sync_client_id_binary)) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestDescriptionSetup')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestDescriptionSetup') " commandType="Text" name="TestDescriptionSetupSyncTableDeleteCommand" commandKind="DeleteCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary7" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestSetup1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_force_write2" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor8" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_row_count4" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="833f1609-ff6f-49b7-ada9-39b9d662ae42" commandText=";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) UPDATE dbo.TestDescriptionSetup SET [TestName] = @TestName, [Step] = @Step, [RequestedTime] = @RequestedTime, [PressureDischargeSetup] = @PressureDischargeSetup, [PressureSuctionSetup] = @PressureSuctionSetup, [HotBoxTemperatureMin] = @HotBoxTemperatureMin, [HotBoxTemperatureMax] = @HotBoxTemperatureMax, [CompressorLimitTemp] = @CompressorLimitTemp, [RPMsetup] = @RPMsetup, [ECVOn] = @ECVOn, [ECVOff] = @ECVOff, [ECVHz] = @ECVHz, [ECVDC] = @ECVDC, [CoilOn] = @CoilOn, [CoilOff] = @CoilOff FROM dbo.TestDescriptionSetup  JOIN CHANGETABLE(VERSION dbo.TestDescriptionSetup, ([ID_TestSetup]), (@ID_TestSetup)) CT  ON CT.[ID_TestSetup] = dbo.TestDescriptionSetup.[ID_TestSetup] WHERE (@sync_force_write = 1 OR CT.SYS_CHANGE_VERSION IS NULL OR CT.SYS_CHANGE_VERSION &lt;= @sync_last_received_anchor OR (CT.SYS_CHANGE_CONTEXT IS NOT NULL AND CT.SYS_CHANGE_CONTEXT = @sync_client_id_binary)) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestDescriptionSetup')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestDescriptionSetup') " commandType="Text" name="TestDescriptionSetupSyncTableUpdateCommand" commandKind="UpdateCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TestName1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Step1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@RequestedTime1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@PressureDischargeSetup1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@PressureSuctionSetup1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@HotBoxTemperatureMin1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@HotBoxTemperatureMax1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CompressorLimitTemp1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@RPMsetup1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ECVOn1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ECVOff1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ECVHz1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ECVDC1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CoilOn1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CoilOff1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestSetup2" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_force_write3" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor9" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary8" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_row_count5" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="12952dfa-4367-489d-b19b-11cbdab82a35" commandText="SELECT CT.[ID_TestSetup], CT.SYS_CHANGE_CONTEXT, CT.SYS_CHANGE_VERSION FROM CHANGETABLE(CHANGES dbo.TestDescriptionSetup, @sync_last_received_anchor) CT WHERE (CT.[ID_TestSetup] = @ID_TestSetup AND CT.SYS_CHANGE_OPERATION = 'D')" commandType="Text" name="TestDescriptionSetupSyncTableSelectConflictDeletedRowsCommand" commandKind="SelectConflictDeletedRowsCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor10" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestSetup3" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="41ea1a92-2d9a-4be5-8a99-6b13fa4500d6" commandText="SELECT dbo.TestDescriptionSetup.[ID_TestSetup], [TestName], [Step], [RequestedTime], [PressureDischargeSetup], [PressureSuctionSetup], [HotBoxTemperatureMin], [HotBoxTemperatureMax], [CompressorLimitTemp], [RPMsetup], [ECVOn], [ECVOff], [ECVHz], [ECVDC], [CoilOn], [CoilOff], CT.SYS_CHANGE_CONTEXT, CT.SYS_CHANGE_VERSION FROM dbo.TestDescriptionSetup JOIN CHANGETABLE(VERSION dbo.TestDescriptionSetup, ([ID_TestSetup]), (@ID_TestSetup)) CT  ON CT.[ID_TestSetup] = dbo.TestDescriptionSetup.[ID_TestSetup]" commandType="Text" name="TestDescriptionSetupSyncTableSelectConflictUpdatedRowsCommand" commandKind="SelectConflictUpdatedRowsCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestSetup4" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="ea37264c-daca-47ae-8db1-6751e8e190a3" commandText="IF @sync_initialized = 0 SELECT dbo.TestDescriptionSetup.[ID_TestSetup], [TestName], [Step], [RequestedTime], [PressureDischargeSetup], [PressureSuctionSetup], [HotBoxTemperatureMin], [HotBoxTemperatureMax], [CompressorLimitTemp], [RPMsetup], [ECVOn], [ECVOff], [ECVHz], [ECVDC], [CoilOn], [CoilOff] FROM dbo.TestDescriptionSetup LEFT OUTER JOIN CHANGETABLE(CHANGES dbo.TestDescriptionSetup, @sync_last_received_anchor) CT ON CT.[ID_TestSetup] = dbo.TestDescriptionSetup.[ID_TestSetup] WHERE (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary) ELSE  BEGIN SELECT dbo.TestDescriptionSetup.[ID_TestSetup], [TestName], [Step], [RequestedTime], [PressureDischargeSetup], [PressureSuctionSetup], [HotBoxTemperatureMin], [HotBoxTemperatureMax], [CompressorLimitTemp], [RPMsetup], [ECVOn], [ECVOff], [ECVHz], [ECVDC], [CoilOn], [CoilOff] FROM dbo.TestDescriptionSetup JOIN CHANGETABLE(CHANGES dbo.TestDescriptionSetup, @sync_last_received_anchor) CT ON CT.[ID_TestSetup] = dbo.TestDescriptionSetup.[ID_TestSetup] WHERE (CT.SYS_CHANGE_OPERATION = 'I' AND CT.SYS_CHANGE_CREATION_VERSION  &lt;= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestDescriptionSetup')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestDescriptionSetup')  END " commandType="Text" name="TestDescriptionSetupSyncTableSelectIncrementalInsertsCommand" commandKind="SelectIncrementalInsertsCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_initialized3" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor11" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary9" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_new_received_anchor3" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="ff3b6d56-33d4-415d-9eb4-f67c223ea5cc" commandText="IF @sync_initialized &gt; 0  BEGIN SELECT CT.[ID_TestSetup] FROM CHANGETABLE(CHANGES dbo.TestDescriptionSetup, @sync_last_received_anchor) CT WHERE (CT.SYS_CHANGE_OPERATION = 'D' AND CT.SYS_CHANGE_VERSION &lt;= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestDescriptionSetup')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestDescriptionSetup')  END " commandType="Text" name="TestDescriptionSetupSyncTableSelectIncrementalDeletesCommand" commandKind="SelectIncrementalDeletesCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_initialized4" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor12" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_new_received_anchor4" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary10" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="93ce02df-036c-4845-8dd1-1295b5e6b43b" commandText="IF @sync_initialized &gt; 0  BEGIN SELECT dbo.TestDescriptionSetup.[ID_TestSetup], [TestName], [Step], [RequestedTime], [PressureDischargeSetup], [PressureSuctionSetup], [HotBoxTemperatureMin], [HotBoxTemperatureMax], [CompressorLimitTemp], [RPMsetup], [ECVOn], [ECVOff], [ECVHz], [ECVDC], [CoilOn], [CoilOff] FROM dbo.TestDescriptionSetup JOIN CHANGETABLE(CHANGES dbo.TestDescriptionSetup, @sync_last_received_anchor) CT ON CT.[ID_TestSetup] = dbo.TestDescriptionSetup.[ID_TestSetup] WHERE (CT.SYS_CHANGE_OPERATION = 'U' AND CT.SYS_CHANGE_VERSION &lt;= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestDescriptionSetup')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestDescriptionSetup')  END " commandType="Text" name="TestDescriptionSetupSyncTableSelectIncrementalUpdatesCommand" commandKind="SelectIncrementalUpdatesCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_initialized5" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor13" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_new_received_anchor5" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary11" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="d9a1c6fc-e86a-4bae-b814-8f33214271ed" commandText=";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) INSERT INTO dbo.TestParameters ([ID_TestSetupParameters], [TestInputID], [Data], [Time], [Pdischarge], [Psuction], [Tdischarge], [Tsuction], [TcondenserIn], [TcondenserOut], [TEvapuratorIn], [TEvapuratorOut], [TAirIn], [TAirOut], [HAirIn], [HAirOut], [TCompressor], [THotbox], [RPM], [CoilVoltage], [CoilCurrent], [ECVVoltage], [ECVCurrent], [ClutchTotalCycles]) VALUES (@ID_TestSetupParameters, @TestInputID, @Data, @Time, @Pdischarge, @Psuction, @Tdischarge, @Tsuction, @TcondenserIn, @TcondenserOut, @TEvapuratorIn, @TEvapuratorOut, @TAirIn, @TAirOut, @HAirIn, @HAirOut, @TCompressor, @THotbox, @RPM, @CoilVoltage, @CoilCurrent, @ECVVoltage, @ECVCurrent, @ClutchTotalCycles) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestParameters')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestParameters') " commandType="Text" name="TestParametersSyncTableInsertCommand" commandKind="InsertCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary12" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestSetupParameters" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TestInputID" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Data" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Time" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Pdischarge" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Psuction" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Tdischarge" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Tsuction" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TcondenserIn" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TcondenserOut" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TEvapuratorIn" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TEvapuratorOut" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TAirIn" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TAirOut" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@HAirIn" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@HAirOut" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TCompressor" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@THotbox" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@RPM" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CoilVoltage" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CoilCurrent" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ECVVoltage" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ECVCurrent" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ClutchTotalCycles" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_row_count6" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor14" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="6b57f312-54ec-4e02-bb03-bbe64750d233" commandText=";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) DELETE dbo.TestParameters FROM dbo.TestParameters JOIN CHANGETABLE(VERSION dbo.TestParameters, ([ID_TestSetupParameters]), (@ID_TestSetupParameters)) CT  ON CT.[ID_TestSetupParameters] = dbo.TestParameters.[ID_TestSetupParameters] WHERE (@sync_force_write = 1 OR CT.SYS_CHANGE_VERSION IS NULL OR CT.SYS_CHANGE_VERSION &lt;= @sync_last_received_anchor OR (CT.SYS_CHANGE_CONTEXT IS NOT NULL AND CT.SYS_CHANGE_CONTEXT = @sync_client_id_binary)) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestParameters')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestParameters') " commandType="Text" name="TestParametersSyncTableDeleteCommand" commandKind="DeleteCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary13" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestSetupParameters1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_force_write4" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor15" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_row_count7" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="0fd18494-dc33-4bca-a050-1dfcbce8d2d4" commandText=";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) UPDATE dbo.TestParameters SET [TestInputID] = @TestInputID, [Data] = @Data, [Time] = @Time, [Pdischarge] = @Pdischarge, [Psuction] = @Psuction, [Tdischarge] = @Tdischarge, [Tsuction] = @Tsuction, [TcondenserIn] = @TcondenserIn, [TcondenserOut] = @TcondenserOut, [TEvapuratorIn] = @TEvapuratorIn, [TEvapuratorOut] = @TEvapuratorOut, [TAirIn] = @TAirIn, [TAirOut] = @TAirOut, [HAirIn] = @HAirIn, [HAirOut] = @HAirOut, [TCompressor] = @TCompressor, [THotbox] = @THotbox, [RPM] = @RPM, [CoilVoltage] = @CoilVoltage, [CoilCurrent] = @CoilCurrent, [ECVVoltage] = @ECVVoltage, [ECVCurrent] = @ECVCurrent, [ClutchTotalCycles] = @ClutchTotalCycles FROM dbo.TestParameters  JOIN CHANGETABLE(VERSION dbo.TestParameters, ([ID_TestSetupParameters]), (@ID_TestSetupParameters)) CT  ON CT.[ID_TestSetupParameters] = dbo.TestParameters.[ID_TestSetupParameters] WHERE (@sync_force_write = 1 OR CT.SYS_CHANGE_VERSION IS NULL OR CT.SYS_CHANGE_VERSION &lt;= @sync_last_received_anchor OR (CT.SYS_CHANGE_CONTEXT IS NOT NULL AND CT.SYS_CHANGE_CONTEXT = @sync_client_id_binary)) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestParameters')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestParameters') " commandType="Text" name="TestParametersSyncTableUpdateCommand" commandKind="UpdateCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TestInputID1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Data1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Time1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Pdischarge1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Psuction1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Tdischarge1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@Tsuction1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TcondenserIn1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TcondenserOut1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TEvapuratorIn1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TEvapuratorOut1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TAirIn1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TAirOut1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@HAirIn1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@HAirOut1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@TCompressor1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@THotbox1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@RPM1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CoilVoltage1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@CoilCurrent1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ECVVoltage1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ECVCurrent1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ClutchTotalCycles1" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestSetupParameters2" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_force_write5" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor16" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary14" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_row_count8" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="2b08f49d-9fd4-4d7e-ba35-b795b36796b2" commandText="SELECT CT.[ID_TestSetupParameters], CT.SYS_CHANGE_CONTEXT, CT.SYS_CHANGE_VERSION FROM CHANGETABLE(CHANGES dbo.TestParameters, @sync_last_received_anchor) CT WHERE (CT.[ID_TestSetupParameters] = @ID_TestSetupParameters AND CT.SYS_CHANGE_OPERATION = 'D')" commandType="Text" name="TestParametersSyncTableSelectConflictDeletedRowsCommand" commandKind="SelectConflictDeletedRowsCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor17" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestSetupParameters3" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="9999a6a5-69e6-499b-9c5f-4640ea5e0a24" commandText="SELECT dbo.TestParameters.[ID_TestSetupParameters], [TestInputID], [Data], [Time], [Pdischarge], [Psuction], [Tdischarge], [Tsuction], [TcondenserIn], [TcondenserOut], [TEvapuratorIn], [TEvapuratorOut], [TAirIn], [TAirOut], [HAirIn], [HAirOut], [TCompressor], [THotbox], [RPM], [CoilVoltage], [CoilCurrent], [ECVVoltage], [ECVCurrent], [ClutchTotalCycles], CT.SYS_CHANGE_CONTEXT, CT.SYS_CHANGE_VERSION FROM dbo.TestParameters JOIN CHANGETABLE(VERSION dbo.TestParameters, ([ID_TestSetupParameters]), (@ID_TestSetupParameters)) CT  ON CT.[ID_TestSetupParameters] = dbo.TestParameters.[ID_TestSetupParameters]" commandType="Text" name="TestParametersSyncTableSelectConflictUpdatedRowsCommand" commandKind="SelectConflictUpdatedRowsCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@ID_TestSetupParameters4" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="124e1637-be7f-44eb-b029-2ab6c1080e58" commandText="IF @sync_initialized = 0 SELECT dbo.TestParameters.[ID_TestSetupParameters], [TestInputID], [Data], [Time], [Pdischarge], [Psuction], [Tdischarge], [Tsuction], [TcondenserIn], [TcondenserOut], [TEvapuratorIn], [TEvapuratorOut], [TAirIn], [TAirOut], [HAirIn], [HAirOut], [TCompressor], [THotbox], [RPM], [CoilVoltage], [CoilCurrent], [ECVVoltage], [ECVCurrent], [ClutchTotalCycles] FROM dbo.TestParameters LEFT OUTER JOIN CHANGETABLE(CHANGES dbo.TestParameters, @sync_last_received_anchor) CT ON CT.[ID_TestSetupParameters] = dbo.TestParameters.[ID_TestSetupParameters] WHERE (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary) ELSE  BEGIN SELECT dbo.TestParameters.[ID_TestSetupParameters], [TestInputID], [Data], [Time], [Pdischarge], [Psuction], [Tdischarge], [Tsuction], [TcondenserIn], [TcondenserOut], [TEvapuratorIn], [TEvapuratorOut], [TAirIn], [TAirOut], [HAirIn], [HAirOut], [TCompressor], [THotbox], [RPM], [CoilVoltage], [CoilCurrent], [ECVVoltage], [ECVCurrent], [ClutchTotalCycles] FROM dbo.TestParameters JOIN CHANGETABLE(CHANGES dbo.TestParameters, @sync_last_received_anchor) CT ON CT.[ID_TestSetupParameters] = dbo.TestParameters.[ID_TestSetupParameters] WHERE (CT.SYS_CHANGE_OPERATION = 'I' AND CT.SYS_CHANGE_CREATION_VERSION  &lt;= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestParameters')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestParameters')  END " commandType="Text" name="TestParametersSyncTableSelectIncrementalInsertsCommand" commandKind="SelectIncrementalInsertsCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_initialized6" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor18" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary15" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_new_received_anchor6" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="6e969c6b-effb-4dd4-876c-7120eaf575b3" commandText="IF @sync_initialized &gt; 0  BEGIN SELECT CT.[ID_TestSetupParameters] FROM CHANGETABLE(CHANGES dbo.TestParameters, @sync_last_received_anchor) CT WHERE (CT.SYS_CHANGE_OPERATION = 'D' AND CT.SYS_CHANGE_VERSION &lt;= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestParameters')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestParameters')  END " commandType="Text" name="TestParametersSyncTableSelectIncrementalDeletesCommand" commandKind="SelectIncrementalDeletesCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_initialized7" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor19" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_new_received_anchor7" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary16" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="a7475da9-a701-4a10-b2e5-c85b7960f1c9" commandText="IF @sync_initialized &gt; 0  BEGIN SELECT dbo.TestParameters.[ID_TestSetupParameters], [TestInputID], [Data], [Time], [Pdischarge], [Psuction], [Tdischarge], [Tsuction], [TcondenserIn], [TcondenserOut], [TEvapuratorIn], [TEvapuratorOut], [TAirIn], [TAirOut], [HAirIn], [HAirOut], [TCompressor], [THotbox], [RPM], [CoilVoltage], [CoilCurrent], [ECVVoltage], [ECVCurrent], [ClutchTotalCycles] FROM dbo.TestParameters JOIN CHANGETABLE(CHANGES dbo.TestParameters, @sync_last_received_anchor) CT ON CT.[ID_TestSetupParameters] = dbo.TestParameters.[ID_TestSetupParameters] WHERE (CT.SYS_CHANGE_OPERATION = 'U' AND CT.SYS_CHANGE_VERSION &lt;= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT &lt;&gt; @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.TestParameters')) &gt; @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.TestParameters')  END " commandType="Text" name="TestParametersSyncTableSelectIncrementalUpdatesCommand" commandKind="SelectIncrementalUpdatesCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_initialized8" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_last_received_anchor20" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_new_received_anchor8" />
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_client_id_binary17" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+    <syncAdapterCommand Id="de1eac0c-4f78-4adc-af3e-6eaacf1a44c3" commandText="Select @sync_new_received_anchor = CHANGE_TRACKING_CURRENT_VERSION()" commandType="Text" name="selectNewAnchorCmd" commandKind="SelectNewAnchorCommand">
+      <syncAdapterCommandParameters>
+        <syncAdapterCommandParameterMoniker name="/faeae50e-b280-4e37-b86b-1b34d800c298/@sync_new_received_anchor9" />
+      </syncAdapterCommandParameters>
+    </syncAdapterCommand>
+  </syncAdapterCommands>
+  <syncAdapterCommandParameters>
+    <syncAdapterCommandParameter Id="478decf1-dc57-45de-a83d-9ff819b2494f" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="2b4fbbde-b96e-4a1e-96a6-cfac2af51766" parameterType="Int" parameterName="@ID_TestInput" name="@ID_TestInput" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="2510c488-b3bb-47b4-9035-3de15ce91e4b" parameterType="NVarChar" parameterName="@TestNameInput" name="@TestNameInput" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="c1f7d50b-156c-4457-82aa-26821df843d5" parameterType="DateTime" parameterName="@StartDate" name="@StartDate" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="7ddc0757-d937-4501-8e8c-b337ca440884" parameterType="NVarChar" parameterName="@CompressorDescription" name="@CompressorDescription" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="900ec6e1-8376-4cdd-8575-0c69744ac0f7" parameterType="NVarChar" parameterName="@Requester" name="@Requester" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="bda00405-2c15-4722-a1ad-28d9672b39a7" parameterType="Bit" parameterName="@CompressorPass" name="@CompressorPass" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="0f1f8945-4f74-4047-bda4-203103e5a74f" parameterType="DateTime" parameterName="@FinishDate" name="@FinishDate" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="de84d033-6824-482a-8cb9-50b27246b12c" parameterType="Int" parameterName="@ID_TestDescSetup" name="@ID_TestDescSetup" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="2aebd3cc-41eb-4245-8bcd-e51c0dcbb85e" parameterType="NVarChar" parameterName="@Comments" name="@Comments" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="7fb3b343-aa54-4dfc-a18b-be05388ed1e8" parameterType="Int" parameterName="@sync_row_count" name="@sync_row_count" parameterDirection="Output" />
+    <syncAdapterCommandParameter Id="40408b98-71c4-4258-8414-cf56c8a848f4" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="4eb9e5ba-2a6a-4450-8b72-bc4134234228" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="2f45c46c-c2f4-4a54-a221-3788cac34de7" parameterType="Int" parameterName="@ID_TestInput" name="@ID_TestInput1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="3df3aea1-1931-46c6-b2b1-a9218bed9a8e" parameterType="Bit" parameterName="@sync_force_write" name="@sync_force_write" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="7a43f977-fd54-4980-9945-eb6c30a24237" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="76389b31-beb8-4427-b609-3bf25d405cc3" parameterType="Int" parameterName="@sync_row_count" name="@sync_row_count1" parameterDirection="Output" />
+    <syncAdapterCommandParameter Id="7e7da0ea-49c7-4235-a39e-b66835690281" parameterType="NVarChar" parameterName="@TestNameInput" name="@TestNameInput1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="a51341e8-f89a-4c55-b626-f9f753b8b5be" parameterType="DateTime" parameterName="@StartDate" name="@StartDate1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="e796d48c-1b5e-40bd-83c9-23e9c487245d" parameterType="NVarChar" parameterName="@CompressorDescription" name="@CompressorDescription1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="273e5005-4409-44f3-84eb-ae516458d622" parameterType="NVarChar" parameterName="@Requester" name="@Requester1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="1947a1a1-eced-4fd7-a282-2444c088515f" parameterType="Bit" parameterName="@CompressorPass" name="@CompressorPass1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="e6c9fe13-c898-4c62-a3f8-2084d9df62c7" parameterType="DateTime" parameterName="@FinishDate" name="@FinishDate1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="cb08af92-1f73-4091-87e1-54b6364ecbd8" parameterType="Int" parameterName="@ID_TestDescSetup" name="@ID_TestDescSetup1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="0116d8d9-4337-4d03-99a6-73c07423e407" parameterType="NVarChar" parameterName="@Comments" name="@Comments1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="e5646d68-4f9f-40c5-aa6b-b1e7e4bb5214" parameterType="Int" parameterName="@ID_TestInput" name="@ID_TestInput2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="ea08bf98-f0c8-460c-8664-874aaa0ef80d" parameterType="Bit" parameterName="@sync_force_write" name="@sync_force_write1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="80e320b6-1458-4c3e-b2d6-877da5bd93e8" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="ea0b5d86-c63c-4573-9f9b-61858a52573d" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="bd9643cd-9a81-440b-beb6-2e501b2ba286" parameterType="Int" parameterName="@sync_row_count" name="@sync_row_count2" parameterDirection="Output" />
+    <syncAdapterCommandParameter Id="971f5eaf-1f1d-4e89-9c14-330075ba8290" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor3" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="c3dc5fa3-52bd-4e2b-a840-a9dd9e617072" parameterType="Int" parameterName="@ID_TestInput" name="@ID_TestInput3" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="e3813ab6-50a2-469a-80f8-3d481c1e8ee3" parameterType="Int" parameterName="@ID_TestInput" name="@ID_TestInput4" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="8117160b-20b9-4ca3-81ba-77c8775441ef" parameterType="Bit" parameterName="@sync_initialized" name="@sync_initialized" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="4a801871-8785-4d28-af5f-62d42d67a661" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor4" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="1e0dee06-d159-43a7-b1c3-8fcb656c7ac2" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary3" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="8eb0dc77-345d-4772-8a76-ee86bf4ed65a" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="3692598e-ba7b-432d-be53-e692733777f6" parameterType="Bit" parameterName="@sync_initialized" name="@sync_initialized1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="345cff5a-394c-4408-a4ad-13bf906b91ac" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor5" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="d28a8fad-a59b-4f68-9268-1e7a483c8698" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="0264f43b-c573-482a-8c3e-98c6802f9408" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary4" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="b5b418dc-f164-4a08-98a6-60f77ef9dfdb" parameterType="Bit" parameterName="@sync_initialized" name="@sync_initialized2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="d8e964eb-e5e1-4a81-91cf-2e0e2b524bf5" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor6" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="79f43da1-a3a0-4b76-b980-4372c4c3a0a6" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="b823eca0-4561-439c-a7d2-5333f89c724c" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary5" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="befe6d62-9b42-40f4-8515-1fbb97bf4a88" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary6" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="11adf8ba-6c64-48b5-89a3-330e2cad41bb" parameterType="Int" parameterName="@ID_TestSetup" name="@ID_TestSetup" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="c5e13662-88ee-4356-931b-e8d3fcf4f6ec" parameterType="NVarChar" parameterName="@TestName" name="@TestName" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="c3782938-f382-4f5a-8802-561445b4db56" parameterType="Int" parameterName="@Step" name="@Step" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="b95be6fb-f3c1-492c-8f91-2fd9b575405d" parameterType="Int" parameterName="@RequestedTime" name="@RequestedTime" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="3a55ea92-7553-41b1-8e52-1a493052c50f" parameterType="Float" parameterName="@PressureDischargeSetup" name="@PressureDischargeSetup" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="b9503ac1-514e-4d01-b1ec-e6943f91b3ba" parameterType="Float" parameterName="@PressureSuctionSetup" name="@PressureSuctionSetup" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="f78ac977-5b63-46a8-af04-e2b7c3866083" parameterType="Float" parameterName="@HotBoxTemperatureMin" name="@HotBoxTemperatureMin" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="7ff1c07b-d71c-45f1-b20b-23c21ee009a5" parameterType="Float" parameterName="@HotBoxTemperatureMax" name="@HotBoxTemperatureMax" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="79640c06-de75-4864-97a6-2e6d0751c9c9" parameterType="Float" parameterName="@CompressorLimitTemp" name="@CompressorLimitTemp" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="12b8172d-6e32-4bf4-8041-49d4ba63f5b4" parameterType="Int" parameterName="@RPMsetup" name="@RPMsetup" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="470ed578-af17-4574-a0b9-db1da52f3778" parameterType="Int" parameterName="@ECVOn" name="@ECVOn" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="25587b9f-2a67-4d11-96e0-e3a192776240" parameterType="Int" parameterName="@ECVOff" name="@ECVOff" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="e886d761-1f6c-4a40-925b-b792ba9c285e" parameterType="Int" parameterName="@ECVHz" name="@ECVHz" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="703dafe6-6f01-4447-98ce-c15abc37b1d3" parameterType="Int" parameterName="@ECVDC" name="@ECVDC" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="de03d90e-9d2f-4c4c-b986-fab835e95a8a" parameterType="Int" parameterName="@CoilOn" name="@CoilOn" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="5526e987-befe-41f7-bee2-2627e7ff1c96" parameterType="Int" parameterName="@CoilOff" name="@CoilOff" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="bd8da5a0-6933-40cd-8331-9a7de864dce0" parameterType="Int" parameterName="@sync_row_count" name="@sync_row_count3" parameterDirection="Output" />
+    <syncAdapterCommandParameter Id="c1746601-8ee6-40e6-bbfe-d359037bf9ab" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor7" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="e35123ba-0f94-4731-9000-2af641339101" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary7" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="d78dbafe-6ebb-409f-99ff-79bfe1df0309" parameterType="Int" parameterName="@ID_TestSetup" name="@ID_TestSetup1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="c9d02ee9-9fce-4fde-b977-1187ca278769" parameterType="Bit" parameterName="@sync_force_write" name="@sync_force_write2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="3c264d3f-fa41-4229-83d2-84f2d32b679f" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor8" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="494ee0f8-6456-40b0-8fb1-14187bbc8114" parameterType="Int" parameterName="@sync_row_count" name="@sync_row_count4" parameterDirection="Output" />
+    <syncAdapterCommandParameter Id="d1ec966d-ede0-43bc-a16c-932c52c6d671" parameterType="NVarChar" parameterName="@TestName" name="@TestName1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="599e2811-ce8f-4bdc-aced-a2d6748b4955" parameterType="Int" parameterName="@Step" name="@Step1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="0fab6b7d-aabf-4809-a482-c56651032784" parameterType="Int" parameterName="@RequestedTime" name="@RequestedTime1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="52da973c-dac3-47a4-a427-12b048262d49" parameterType="Float" parameterName="@PressureDischargeSetup" name="@PressureDischargeSetup1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="d01e2961-8ddb-4352-8add-96fcd39848f7" parameterType="Float" parameterName="@PressureSuctionSetup" name="@PressureSuctionSetup1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="dafa0f44-1380-4afb-a06b-f20cb221cce3" parameterType="Float" parameterName="@HotBoxTemperatureMin" name="@HotBoxTemperatureMin1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="376be4f8-35dd-4fc0-9605-7d8e6974aaa6" parameterType="Float" parameterName="@HotBoxTemperatureMax" name="@HotBoxTemperatureMax1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="2dfb7cce-de57-47c5-b534-e27b7817a850" parameterType="Float" parameterName="@CompressorLimitTemp" name="@CompressorLimitTemp1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="2f10f860-ec1e-4ba4-8789-49c2da106f9a" parameterType="Int" parameterName="@RPMsetup" name="@RPMsetup1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="ed31196c-7d17-41f1-b5c9-14ac555247a1" parameterType="Int" parameterName="@ECVOn" name="@ECVOn1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="66a701c2-be85-4d49-85ae-e70cb342ba79" parameterType="Int" parameterName="@ECVOff" name="@ECVOff1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="a780e066-b456-4af0-8844-a2425c7e28cf" parameterType="Int" parameterName="@ECVHz" name="@ECVHz1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="1836e8eb-e87f-441b-9988-29c46c28ec20" parameterType="Int" parameterName="@ECVDC" name="@ECVDC1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="133683bb-8572-4107-8b7b-26646292bf76" parameterType="Int" parameterName="@CoilOn" name="@CoilOn1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="ce41c23e-6810-4f28-9829-c0bb61486ed8" parameterType="Int" parameterName="@CoilOff" name="@CoilOff1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="30dd7821-da58-4e6c-9daa-f0b8b1bfc82c" parameterType="Int" parameterName="@ID_TestSetup" name="@ID_TestSetup2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="a5732b74-2f7b-4965-a8e5-eb2f9ca85d4c" parameterType="Bit" parameterName="@sync_force_write" name="@sync_force_write3" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="9ccdfb68-6e4a-49a6-a88d-829f4c3d77b3" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor9" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="8db5ad33-c183-4275-835e-22377ddcb0a5" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary8" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="a96b4c45-b40e-47e1-8ba5-3602bc30ce72" parameterType="Int" parameterName="@sync_row_count" name="@sync_row_count5" parameterDirection="Output" />
+    <syncAdapterCommandParameter Id="9dd943b0-895b-420b-9734-8daf24ac469c" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor10" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="350e7367-5be8-43b5-a992-004965bfca37" parameterType="Int" parameterName="@ID_TestSetup" name="@ID_TestSetup3" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="d405c8f7-9ab7-40c0-b76c-3b6e415fca37" parameterType="Int" parameterName="@ID_TestSetup" name="@ID_TestSetup4" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="d3e8732c-d80c-47c0-81f1-fae9161b5664" parameterType="Bit" parameterName="@sync_initialized" name="@sync_initialized3" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="3d470419-6922-4386-8e23-f9ff37567dd4" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor11" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="5cd3bc75-8a8b-427f-9e2d-b98bc3212e0a" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary9" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="f04f7323-9185-4313-99cc-ce08acd437d1" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor3" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="f2a55488-c0b6-43a0-ac78-dc001c105935" parameterType="Bit" parameterName="@sync_initialized" name="@sync_initialized4" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="d60dc3c3-3770-43ea-88bf-5f860d7055a3" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor12" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="969ba16d-25e3-4331-97d9-5414d452d76d" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor4" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="727cfd27-7c8c-4788-b1c2-ac2524ae8a55" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary10" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="59f657c2-749d-47c6-abeb-f4f7e101d6a5" parameterType="Bit" parameterName="@sync_initialized" name="@sync_initialized5" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="5bf7df54-8a32-4b5d-a96b-448f76e0437b" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor13" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="b59f09d3-180a-4edb-84be-29844129cdca" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor5" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="02f46380-df26-482b-a888-0de20c8038b7" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary11" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="be64cc62-ccbe-4222-8017-6339a32e342b" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary12" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="b7e0eb2e-0527-4069-b1dc-35a5c450716c" parameterType="Int" parameterName="@ID_TestSetupParameters" name="@ID_TestSetupParameters" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="ed9069e2-4c96-49ee-9370-0d96efbbca09" parameterType="Int" parameterName="@TestInputID" name="@TestInputID" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="e2848c78-7717-41b5-9056-3abae0148b70" parameterType="Date" parameterName="@Data" name="@Data" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="87bc2c71-35f2-4148-afc1-523ddc5c1c8d" parameterType="Time" parameterName="@Time" name="@Time" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="dd8788bc-f2ff-4507-9a1b-ad4c659aa558" parameterType="Float" parameterName="@Pdischarge" name="@Pdischarge" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="8fc22193-b2f3-44a9-859b-d4db01bc22be" parameterType="Float" parameterName="@Psuction" name="@Psuction" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="89a663ce-4daa-4c63-b7ca-cea9b72f16f5" parameterType="Float" parameterName="@Tdischarge" name="@Tdischarge" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="5760b5b4-9483-4edb-ba7c-16bcaf767f47" parameterType="Float" parameterName="@Tsuction" name="@Tsuction" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="96cfb17a-329d-45a3-8cc7-133cad538274" parameterType="Float" parameterName="@TcondenserIn" name="@TcondenserIn" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="e431c9cb-8ac3-4e82-a5fa-499d6fb7132f" parameterType="Float" parameterName="@TcondenserOut" name="@TcondenserOut" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="8bdef4bd-473a-4a82-9708-f4c4068286c3" parameterType="Float" parameterName="@TEvapuratorIn" name="@TEvapuratorIn" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="eddf217e-c3d8-4e7a-926b-5ca2f39a50cb" parameterType="Float" parameterName="@TEvapuratorOut" name="@TEvapuratorOut" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="cd4b8834-2116-4bed-a2b3-832e219953f4" parameterType="Float" parameterName="@TAirIn" name="@TAirIn" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="ee6720bd-a8f9-4e42-88a5-cc8096c3e215" parameterType="Float" parameterName="@TAirOut" name="@TAirOut" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="2045df4d-0c9c-4bc4-8ceb-e446ce629afc" parameterType="Float" parameterName="@HAirIn" name="@HAirIn" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="bfe366b0-b3e7-4e1c-9c53-d194caa152cc" parameterType="Float" parameterName="@HAirOut" name="@HAirOut" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="1532727e-093a-4bab-b902-ad89b3b8936a" parameterType="Float" parameterName="@TCompressor" name="@TCompressor" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="5f5636e7-26e0-4da4-8376-b86971451c6c" parameterType="Float" parameterName="@THotbox" name="@THotbox" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="f5e4f25d-8bc5-4080-83e9-1b7c4f865707" parameterType="Float" parameterName="@RPM" name="@RPM" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="f1e4050b-f1f4-4146-be43-c86f871c62f4" parameterType="Float" parameterName="@CoilVoltage" name="@CoilVoltage" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="6bca9765-e461-4c82-ac50-d33501a88ec8" parameterType="Float" parameterName="@CoilCurrent" name="@CoilCurrent" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="00151467-6771-4da6-9195-8cbcb1b1dc9e" parameterType="Float" parameterName="@ECVVoltage" name="@ECVVoltage" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="940b56e8-733b-4667-bd78-064850362693" parameterType="Float" parameterName="@ECVCurrent" name="@ECVCurrent" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="3f969949-8730-4467-b50d-8bc1e91c7b34" parameterType="Int" parameterName="@ClutchTotalCycles" name="@ClutchTotalCycles" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="fa57f625-3a42-49a5-91b6-7d691edf9749" parameterType="Int" parameterName="@sync_row_count" name="@sync_row_count6" parameterDirection="Output" />
+    <syncAdapterCommandParameter Id="df05adde-aa41-4e71-9e3f-6813c9c499fb" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor14" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="6eaa17ad-49be-45b6-a036-0df16661d998" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary13" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="91075f1c-92e4-4f08-9bde-ba56cc8cdba4" parameterType="Int" parameterName="@ID_TestSetupParameters" name="@ID_TestSetupParameters1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="9afa7c9c-1761-466b-b5fa-8ac98af543cf" parameterType="Bit" parameterName="@sync_force_write" name="@sync_force_write4" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="7438bb2a-1869-418a-add2-b5d3216dd38e" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor15" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="a78244c4-47a9-459d-978c-ce7d708df0f8" parameterType="Int" parameterName="@sync_row_count" name="@sync_row_count7" parameterDirection="Output" />
+    <syncAdapterCommandParameter Id="14f45d13-a7cb-42dd-b1d7-247aaebf0369" parameterType="Int" parameterName="@TestInputID" name="@TestInputID1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="c4f5187e-d612-4a2c-80e8-089936c397ca" parameterType="Date" parameterName="@Data" name="@Data1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="51b41adf-cbce-45ee-886e-44faaa430828" parameterType="Time" parameterName="@Time" name="@Time1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="005a84db-7968-4af1-9f86-aa39cee0b16d" parameterType="Float" parameterName="@Pdischarge" name="@Pdischarge1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="3666657e-8251-4a6b-97c6-40f4edfe8c6e" parameterType="Float" parameterName="@Psuction" name="@Psuction1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="f840eae2-7e73-419d-8fe5-900af23b1ca7" parameterType="Float" parameterName="@Tdischarge" name="@Tdischarge1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="236faa29-b5ba-495c-a59b-70c4f805a99f" parameterType="Float" parameterName="@Tsuction" name="@Tsuction1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="29e2ffab-6f45-4b13-b5a6-4ec0c5e92274" parameterType="Float" parameterName="@TcondenserIn" name="@TcondenserIn1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="f0e0e374-b3f2-4f06-ab30-ba748bafd056" parameterType="Float" parameterName="@TcondenserOut" name="@TcondenserOut1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="9bdd4593-da4f-43db-b60a-96c85514d2c0" parameterType="Float" parameterName="@TEvapuratorIn" name="@TEvapuratorIn1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="a4b316bc-5133-4dbb-8e6a-7e6eba2ec37f" parameterType="Float" parameterName="@TEvapuratorOut" name="@TEvapuratorOut1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="741eebd0-385c-4a18-9698-f1b43781cc23" parameterType="Float" parameterName="@TAirIn" name="@TAirIn1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="ee435398-d2b4-47fb-8764-e73414ad5519" parameterType="Float" parameterName="@TAirOut" name="@TAirOut1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="8643c621-31d7-45bd-aadc-30e29cfc1558" parameterType="Float" parameterName="@HAirIn" name="@HAirIn1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="b4900484-b263-436e-8e83-3fb918075e2f" parameterType="Float" parameterName="@HAirOut" name="@HAirOut1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="43c4734b-ba9c-42f2-a34b-746fb418ae4a" parameterType="Float" parameterName="@TCompressor" name="@TCompressor1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="7c556596-66fa-4c99-b32a-ee586e63ed23" parameterType="Float" parameterName="@THotbox" name="@THotbox1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="0ec446a2-2984-41c7-be4a-bd74f1bfe00d" parameterType="Float" parameterName="@RPM" name="@RPM1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="96a6bf04-c2a3-454b-88c8-5bc6ddc8208a" parameterType="Float" parameterName="@CoilVoltage" name="@CoilVoltage1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="7c311afa-e766-4809-a1a8-83d09ad29320" parameterType="Float" parameterName="@CoilCurrent" name="@CoilCurrent1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="261a5eb2-282d-4bea-8119-5e773ece311b" parameterType="Float" parameterName="@ECVVoltage" name="@ECVVoltage1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="3da1e270-b216-4978-9fb3-9aa76dcb0c95" parameterType="Float" parameterName="@ECVCurrent" name="@ECVCurrent1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="19b3fa89-46a8-4bae-8cf8-4cba3627bff7" parameterType="Int" parameterName="@ClutchTotalCycles" name="@ClutchTotalCycles1" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="bec6bf45-3c8c-435b-8647-202c7d1e3e1b" parameterType="Int" parameterName="@ID_TestSetupParameters" name="@ID_TestSetupParameters2" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="76d6438a-d071-48af-b6f4-3b64ad58840e" parameterType="Bit" parameterName="@sync_force_write" name="@sync_force_write5" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="c1bae23f-2627-4524-b37c-8a746d9e9895" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor16" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="0857c62e-43e0-4204-a24b-3714e828aec9" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary14" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="1b4f63ad-3978-4282-b9a5-794a3171c0dc" parameterType="Int" parameterName="@sync_row_count" name="@sync_row_count8" parameterDirection="Output" />
+    <syncAdapterCommandParameter Id="8a40c844-bc30-4a24-9091-33bd66035a7a" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor17" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="42c035f6-ae9c-478d-9dcc-3fc360deaa04" parameterType="Int" parameterName="@ID_TestSetupParameters" name="@ID_TestSetupParameters3" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="6fa95050-fd13-42ff-8555-b1b00a1b9385" parameterType="Int" parameterName="@ID_TestSetupParameters" name="@ID_TestSetupParameters4" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="6c700499-0371-4ced-994e-edb2f33042ca" parameterType="Bit" parameterName="@sync_initialized" name="@sync_initialized6" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="7fc3090a-d580-4741-ad4b-4060517240df" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor18" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="3ed9e0ef-cf3d-4b2f-a45b-73cb6256c32a" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary15" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="1a066f65-2378-451d-837a-db700b53fdd4" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor6" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="933a6bd6-efda-4c35-ae79-581da15a9d94" parameterType="Bit" parameterName="@sync_initialized" name="@sync_initialized7" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="449db3ae-7e20-4737-8835-e5645041a317" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor19" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="3c14ab67-9ef1-44a0-bea9-d49b45ffafe0" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor7" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="5b5233bf-3464-4bc9-9f05-7a6a5852f649" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary16" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="e02cecd8-b420-4f55-92a3-77670c377f1d" parameterType="Bit" parameterName="@sync_initialized" name="@sync_initialized8" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="cd367ebd-a389-4414-92db-094a86bbeaf5" parameterType="BigInt" parameterName="@sync_last_received_anchor" name="@sync_last_received_anchor20" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="b7938580-36fb-4270-827c-5545beec92dc" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor8" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="952cf6f7-30b1-4506-8f66-d3fb30f2ba01" parameterType="VarBinary" parameterName="@sync_client_id_binary" name="@sync_client_id_binary17" parameterDirection="Input" />
+    <syncAdapterCommandParameter Id="c3e5a3f6-79a9-454b-90aa-29a69c2701df" parameterType="BigInt" parameterName="@sync_new_received_anchor" name="@sync_new_received_anchor9" parameterDirection="Output" />
+  </syncAdapterCommandParameters>
+  <syncConnections>
+    <syncConnection Id="7c0b5a7d-d417-40d6-b18a-bce26c8f0303" name="ClientConnection" connectionDisplayString="ClientDATABASEConnectionString (Settings)" isAppSettings="true" appSettingsObjectName="Settings" appSettingsPropertyName="ClientDATABASEConnectionString" appSettingsPropertyReference="" />
+    <syncConnection Id="d2594a70-e92e-46f6-b33d-5361438c8f11" name="ServerConnection" connectionDisplayString="DatabaseConnectionString (Settings)" isAppSettings="true" appSettingsObjectName="Settings" appSettingsPropertyName="DatabaseConnectionString" appSettingsPropertyReference="" />
+  </syncConnections>
+</syncDesignerSurface>
