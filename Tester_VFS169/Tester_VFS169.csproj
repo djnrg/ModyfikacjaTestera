@@ -152,9 +152,6 @@
     <EmbeddedResource Include="FormSetup.resx">
       <DependentUpon>FormSetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormStartNewTest.resx">
-      <DependentUpon>FormStartNewTest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormTemperature.resx">
       <DependentUpon>FormTemperature.cs</DependentUpon>
     </EmbeddedResource>

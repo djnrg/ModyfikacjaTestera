@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO.Ports;              //uzycie derektywy Ports
 using System.Xml;                   //uzycie dyrektyw XML
+using System.IO;                    //uzycie dyrektyw IO
 
 namespace Tester_VFS169
 {
@@ -34,7 +35,7 @@ namespace Tester_VFS169
         private int t = 0;          //  sekundy
         private int s1 = 0;         //  minuty
         private int s2 = 0;         //  godiny
-        private bool dzialanie = false;
+        public static bool dzialanie = false;
 
         /// <value>
         /// Obliczenie ilości cykli cewki
@@ -43,12 +44,12 @@ namespace Tester_VFS169
         int iloscCykliLast = 0;
 
         /// <value>
-        /// Deklaracja zmiennych wykorzystywanych w XML
+        /// Deklaracja folderów i plików
         /// </value>
-        private string TestSettings = "Test Settings.xml";
-        
-        
-        public FormACLoop f = new FormACLoop();
+        private string GlobalFolder;
+        private string TestSettings = "Settings.xml";
+        private string PlikRaportu = "Report.txt";
+      
 
 
         public FormMain()
@@ -192,7 +193,7 @@ namespace Tester_VFS169
                 this.Invoke(new Action<TextBox, string>(SetTextBox), new object[] { tb, value });
                 return;
             }
-            //tb.AppendText(value + Environment.NewLine);
+
             tb.Text = value;
         }
 
@@ -214,6 +215,7 @@ namespace Tester_VFS169
                 this.Invoke(new Action<Label, string>(SetTextLabel), new object[] { lab, value });
                 return;
             }
+
             lab.Text = value;
 
         }
@@ -242,7 +244,6 @@ namespace Tester_VFS169
 
                     StripStatusDane.Text = "OK";
                     
-                    
                     /*
                     0       //Serial.print  (Tsuc);					
                     1       //Serial.print  (Tdis);					
@@ -266,11 +267,7 @@ namespace Tester_VFS169
                     19      //Serial.print  (rpm);
                     */
 
-                    f.SetTBEvapOut = zmienne[5].ToString();
-                    Application.DoEvents();
-                    
-                    
-                    
+                                       
                     //Discharge
                     gaugeDischarge.Value = zmienne[13];
                     SetTextLabel(gaugeDischargeLAB, zmienne[13].ToString());
@@ -476,9 +473,6 @@ namespace Tester_VFS169
                     }
         #endif
 
-
-
-
         }
 
 
@@ -501,10 +495,10 @@ namespace Tester_VFS169
         /// <param name="e"></param>
         private void aCLoopToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //FormACLoop ACloopForm = new FormACLoop();
-            //ACloopForm.Show();
-            //f = new FormACLoop();
-            f.Show();
+            //FormACLoop f = new FormACLoop();
+            //f.Show();
+
+            aCLoopToolStripMenuItem.Checked = true;
         }
 
 
@@ -575,6 +569,12 @@ namespace Tester_VFS169
                 xml.WriteElementString("Cykles", iloscCykli.ToString());
                 xml.WriteEndElement();
 
+                xml.WriteStartElement("DeafaltSettingsLocation");
+                xml.WriteElementString("GlobalLocation",  GlobalFolder.ToString());
+                xml.WriteElementString("SettingsLocation", TestSettings.ToString());
+                xml.WriteElementString("ReportLocation", PlikRaportu.ToString());
+                xml.WriteEndElement();
+
 
                 xml.WriteEndElement();
 
@@ -595,8 +595,6 @@ namespace Tester_VFS169
                 
             }
 
-            
-
         }
 
 
@@ -607,6 +605,12 @@ namespace Tester_VFS169
         /// <param name="e"></param>
         private void continueTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            if (openFileSetting.ShowDialog() == DialogResult.OK)
+            {
+                TestSettings = openFileSetting.FileName;
+            }
+            
             XmlTextReader xml = null;
 
             try
@@ -627,6 +631,15 @@ namespace Tester_VFS169
                 xml.ReadStartElement("CoilCyclesTotal");
                 iloscCykli = int.Parse(xml.ReadElementString("Cykles"));
                 xml.ReadEndElement();
+
+
+                xml.ReadStartElement("DeafaltSettingsLocation");
+                GlobalFolder = xml.ReadElementString("GlobalLocation");
+                TestSettings = xml.ReadElementString("SettingsLocation");
+                PlikRaportu = xml.ReadElementString("ReportLocation");
+                
+                xml.ReadEndElement();
+
 
                 xml.ReadEndElement();
 
@@ -656,17 +669,38 @@ namespace Tester_VFS169
             timerCOM.Start();
         }
 
+
+        /// <summary>
+        /// Inicjalizacja pliku raportu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void setupToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormSetupGeneral FSG = new FormSetupGeneral();
+              
+            if (SaveFileReport.ShowDialog() == DialogResult.OK)
+            {
+                PlikRaportu = SaveFileReport.FileName;
+                label25.Text = PlikRaportu;
 
-            FSG.ShowDialog();
+
+                if (!File.Exists(@PlikRaportu))
+                {
+                    using (FileStream fileStream = new FileStream(PlikRaportu, FileMode.Append, FileAccess.Write, FileShare.None))
+                    {
+                        using (StreamWriter streamWriter = new StreamWriter(fileStream))
+                        {
+                            streamWriter.WriteLine("DURABILITY TESTER VFS169");
+                            streamWriter.WriteLine("Rozpoczęcie Testu: " + DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString());
+
+                            
+
+                        }
+                    }
+                }
+            }
         }
 
-        private void startNewTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void commentsToTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -681,7 +715,48 @@ namespace Tester_VFS169
         }
 
 
+        private void backlogFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (saveFileSetting.ShowDialog() == DialogResult.OK)
+            {
+                TestSettings = saveFileSetting.FileName;
+            }
+        }
 
+        /// <summary>
+        /// Ustawienie globalnego folderu dla aplikacji
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void globalFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserGlobal.ShowDialog() == DialogResult.OK)
+            {
+                GlobalFolder = folderBrowserGlobal.SelectedPath;
+                SaveFileReport.InitialDirectory = GlobalFolder;
+                saveFileSetting.InitialDirectory = GlobalFolder;
+                openFileSetting.InitialDirectory = GlobalFolder;
+            }
+        }
+
+        public void WriteDataLog(string logFileName, string data)
+        {
+            if (!File.Exists(logFileName))
+            {
+                using (FileStream fileStream = new FileStream(logFileName, FileMode.Append, FileAccess.Write, FileShare.None))
+                {
+                    using (StreamWriter streamWriter = new StreamWriter(fileStream))
+                    {
+                        streamWriter.WriteLine(data);
+                    }
+                }
+            }
+        }
+
+        private void SuctionBox_Enter(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

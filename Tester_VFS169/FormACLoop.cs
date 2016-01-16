@@ -13,20 +13,10 @@ namespace Tester_VFS169
     public partial class FormACLoop : Form
     {
         
-        //Tester_VFS169.FormMain.zmienne[0].ToString()
-        
         public FormACLoop()
         {
             InitializeComponent();
             
-        }
-
-        public string SetTBEvapOut
-        {
-            set
-            {
-                TBEvapOut.Text = value;
-            }
         }
 
 
@@ -48,7 +38,6 @@ namespace Tester_VFS169
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //this.Close();
             this.Hide();
         }
 
@@ -63,6 +52,7 @@ namespace Tester_VFS169
                 this.TopMost = false;
             }
         }
+
 
     }
 }

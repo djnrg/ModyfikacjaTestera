@@ -16,6 +16,5 @@ D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Deb
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.pdb
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormComments.resources
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormFinishTest.resources
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormStartNewTest.resources
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Debug\Database.mdf
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Debug\Database_log.ldf
