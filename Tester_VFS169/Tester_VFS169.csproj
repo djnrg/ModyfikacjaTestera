@@ -81,6 +81,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseCache.sync</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormComments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,23 +104,11 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPressures.cs">
+    <Compile Include="FormNTD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPressures.Designer.cs">
-      <DependentUpon>FormPressures.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormSetup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSetup.Designer.cs">
-      <DependentUpon>FormSetup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTemperature.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTemperature.Designer.cs">
-      <DependentUpon>FormTemperature.cs</DependentUpon>
+    <Compile Include="FormNTD.Designer.cs">
+      <DependentUpon>FormNTD.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,14 +130,8 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPressures.resx">
-      <DependentUpon>FormPressures.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSetup.resx">
-      <DependentUpon>FormSetup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTemperature.resx">
-      <DependentUpon>FormTemperature.cs</DependentUpon>
+    <EmbeddedResource Include="FormNTD.resx">
+      <DependentUpon>FormNTD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -166,6 +153,17 @@
       <LastGenOutput>DatabaseCache.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="DatabaseDataSet.xsc">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseDataSet.xss">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -178,11 +176,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="icons\Settings.ico" />
     <Content Include="icons\Speed-test.ico" />

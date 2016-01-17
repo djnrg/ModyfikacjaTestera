@@ -327,7 +327,9 @@ namespace Tester_VFS169
                     thermometerHotbox.Value = zmienne[6];
                     SetTextBox(thermometerHotboxTB, zmienne[6].ToString() + " °C");
                     SetTextBox(TBACHotboxTemp, zmienne[6].ToString() + " °C");
-                    if (zmienne[6] >= Convert.ToDouble(textBoxHBmin.Text) & zmienne[6] <= Convert.ToDouble(textBoxHBmax.Text))
+
+
+                    if (zmienne[6] >= (Convert.ToDouble(textBoxHBmax.Text)-5) & (zmienne[6] <= Convert.ToDouble(textBoxHBmax.Text)+5))
                     {
                         ledHotbox.Value = true;
                     }
@@ -385,6 +387,12 @@ namespace Tester_VFS169
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'databaseDataSet.TestDescriptionInput' . Możesz go przenieść lub usunąć.
+            this.testDescriptionInputTableAdapter.Fill(this.databaseDataSet.TestDescriptionInput);
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'databaseDataSet.TestDescriptionSetup' . Możesz go przenieść lub usunąć.
+            this.testDescriptionSetupTableAdapter.Fill(this.databaseDataSet.TestDescriptionSetup);
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'databaseDataSet.TestParameters' . Możesz go przenieść lub usunąć.
+            this.testParametersTableAdapter.Fill(this.databaseDataSet.TestParameters);
 #if DEBUG
             timerStoper.Interval = 10;        //Ustwienie timera dla stopera na 1 sekude     
             buttonDisconnect.Visible = true;
@@ -642,7 +650,6 @@ namespace Tester_VFS169
                 xml.WriteElementString("ReportLocation", PlikRaportu.ToString());
                 xml.WriteEndElement();
 
-
                 xml.WriteEndElement();
 
 
@@ -867,8 +874,11 @@ namespace Tester_VFS169
             System.Windows.Forms.Clipboard.SetText(textBoxReportInfo.Text);
         }
 
-
-
+        private void newTestDescriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormNTD FNTD = new FormNTD();
+            FNTD.ShowDialog();
+        }
 
 
     }

@@ -67,7 +67,6 @@
             this.setupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.newTestDescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editTestDescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.testDescriptioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,17 +99,6 @@
             this.buttonStart = new System.Windows.Forms.Button();
             this.labelStoper = new System.Windows.Forms.Label();
             this.BoxDischrge = new System.Windows.Forms.GroupBox();
-            this.BoxChart = new System.Windows.Forms.GroupBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.waveformGraph2 = new NationalInstruments.UI.WindowsForms.WaveformGraph();
-            this.waveformPlot2 = new NationalInstruments.UI.WaveformPlot();
-            this.xAxis2 = new NationalInstruments.UI.XAxis();
-            this.yAxis2 = new NationalInstruments.UI.YAxis();
-            this.waveformGraph1 = new NationalInstruments.UI.WindowsForms.WaveformGraph();
-            this.waveformPlot1 = new NationalInstruments.UI.WaveformPlot();
-            this.xAxis1 = new NationalInstruments.UI.XAxis();
-            this.yAxis1 = new NationalInstruments.UI.YAxis();
             this.label26 = new System.Windows.Forms.Label();
             this.gaugeDischargeLAB = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -119,6 +107,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.thermometerDischarge = new NationalInstruments.UI.WindowsForms.Thermometer();
             this.gaugeDischarge = new NationalInstruments.UI.WindowsForms.Gauge();
+            this.BoxChart = new System.Windows.Forms.GroupBox();
+            this.waveformGraph2 = new NationalInstruments.UI.WindowsForms.WaveformGraph();
+            this.waveformPlot2 = new NationalInstruments.UI.WaveformPlot();
+            this.xAxis2 = new NationalInstruments.UI.XAxis();
+            this.yAxis2 = new NationalInstruments.UI.YAxis();
+            this.waveformGraph1 = new NationalInstruments.UI.WindowsForms.WaveformGraph();
+            this.waveformPlot1 = new NationalInstruments.UI.WaveformPlot();
+            this.xAxis1 = new NationalInstruments.UI.XAxis();
+            this.yAxis1 = new NationalInstruments.UI.YAxis();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.BoxSuction = new System.Windows.Forms.GroupBox();
             this.label27 = new System.Windows.Forms.Label();
             this.gaugeSuctionLAB = new System.Windows.Forms.Label();
@@ -175,6 +174,7 @@
             this.slide1 = new NationalInstruments.UI.WindowsForms.Slide();
             this.meterRPM = new NationalInstruments.UI.WindowsForms.Meter();
             this.BoxCompressor = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.thermometerCompressorTB = new System.Windows.Forms.TextBox();
             this.textBoxCompressorLimit = new System.Windows.Forms.TextBox();
@@ -184,13 +184,15 @@
             this.thermometerHotbox = new NationalInstruments.UI.WindowsForms.Thermometer();
             this.ledHotbox = new NationalInstruments.UI.WindowsForms.Led();
             this.textBoxHBmax = new System.Windows.Forms.TextBox();
-            this.textBoxHBmin = new System.Windows.Forms.TextBox();
             this.thermometerHotboxTB = new System.Windows.Forms.TextBox();
             this.BoxHotbox = new System.Windows.Forms.GroupBox();
-            this.label24 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.buttonDisconnect = new System.Windows.Forms.Button();
             this.BoxInformation = new System.Windows.Forms.GroupBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.butCopyReport = new System.Windows.Forms.Button();
+            this.ButCopySettings = new System.Windows.Forms.Button();
             this.textBoxReportInfo = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.textBoxSettingsInfo = new System.Windows.Forms.TextBox();
@@ -213,19 +215,27 @@
             this.TBACCondenserINTemp = new System.Windows.Forms.TextBox();
             this.TBACCompressorTemp = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ButCopySettings = new System.Windows.Forms.Button();
-            this.butCopyReport = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
+            this.testDescriptionSetupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet = new Tester_VFS169.DatabaseDataSet();
+            this.testParametersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.testParametersTableAdapter = new Tester_VFS169.DatabaseDataSetTableAdapters.TestParametersTableAdapter();
+            this.testParametersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.testDescriptionSetupTableAdapter = new Tester_VFS169.DatabaseDataSetTableAdapters.TestDescriptionSetupTableAdapter();
+            this.TestSelected = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.fKTestDescriptionInputTestDescriptionSetup1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.testDescriptionInputTableAdapter = new Tester_VFS169.DatabaseDataSetTableAdapters.TestDescriptionInputTableAdapter();
+            this.fKTestDescriptionInputTestDescriptionSetup1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.menuMain.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ledStoper)).BeginInit();
             this.BoxDischrge.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.thermometerDischarge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gaugeDischarge)).BeginInit();
             this.BoxChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.waveformGraph2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.waveformGraph1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thermometerDischarge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gaugeDischarge)).BeginInit();
             this.BoxSuction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.thermometerSuction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gaugeSuction)).BeginInit();
@@ -250,6 +260,12 @@
             this.BoxInformation.SuspendLayout();
             this.BoxAC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testDescriptionSetupBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testParametersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testParametersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKTestDescriptionInputTestDescriptionSetup1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKTestDescriptionInputTestDescriptionSetup1BindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuMain
@@ -278,7 +294,6 @@
             this.setupToolStripMenuItem,
             this.toolStripSeparator2,
             this.newTestDescriptionToolStripMenuItem,
-            this.editTestDescriptionToolStripMenuItem,
             this.toolStripSeparator6,
             this.exitToolStripMenuItem1});
             this.programSetupToolStripMenuItem.Name = "programSetupToolStripMenuItem";
@@ -290,7 +305,7 @@
             this.exitToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.exitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.exitToolStripMenuItem.Text = "COM Port";
             // 
             // StripCOM
@@ -311,21 +326,21 @@
             // 
             this.StripConnect.Enabled = false;
             this.StripConnect.Name = "StripConnect";
-            this.StripConnect.Size = new System.Drawing.Size(182, 22);
+            this.StripConnect.Size = new System.Drawing.Size(181, 22);
             this.StripConnect.Text = "Connect!!!";
             this.StripConnect.Click += new System.EventHandler(this.StripConnect_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(179, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
             // 
             // globalFolderToolStripMenuItem
             // 
             this.globalFolderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.defaultSettingsToolStripMenuItem});
             this.globalFolderToolStripMenuItem.Name = "globalFolderToolStripMenuItem";
-            this.globalFolderToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.globalFolderToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.globalFolderToolStripMenuItem.Text = "Global Folder";
             this.globalFolderToolStripMenuItem.Click += new System.EventHandler(this.globalFolderToolStripMenuItem_Click);
             // 
@@ -339,43 +354,38 @@
             // backlogFolderToolStripMenuItem
             // 
             this.backlogFolderToolStripMenuItem.Name = "backlogFolderToolStripMenuItem";
-            this.backlogFolderToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.backlogFolderToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.backlogFolderToolStripMenuItem.Text = "Change Settings file";
             this.backlogFolderToolStripMenuItem.Click += new System.EventHandler(this.backlogFolderToolStripMenuItem_Click);
             // 
             // setupToolStripMenuItem
             // 
             this.setupToolStripMenuItem.Name = "setupToolStripMenuItem";
-            this.setupToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.setupToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.setupToolStripMenuItem.Text = "Report SaveAs...";
             this.setupToolStripMenuItem.Click += new System.EventHandler(this.setupToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(179, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(178, 6);
             // 
             // newTestDescriptionToolStripMenuItem
             // 
             this.newTestDescriptionToolStripMenuItem.Name = "newTestDescriptionToolStripMenuItem";
-            this.newTestDescriptionToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.newTestDescriptionToolStripMenuItem.Text = "New test description";
-            // 
-            // editTestDescriptionToolStripMenuItem
-            // 
-            this.editTestDescriptionToolStripMenuItem.Name = "editTestDescriptionToolStripMenuItem";
-            this.editTestDescriptionToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.editTestDescriptionToolStripMenuItem.Text = "Edit test description";
+            this.newTestDescriptionToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.newTestDescriptionToolStripMenuItem.Text = "Test description";
+            this.newTestDescriptionToolStripMenuItem.Click += new System.EventHandler(this.newTestDescriptionToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(179, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(178, 6);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(182, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
@@ -452,7 +462,7 @@
             // aCLoopToolStripMenuItem
             // 
             this.aCLoopToolStripMenuItem.Name = "aCLoopToolStripMenuItem";
-            this.aCLoopToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aCLoopToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.aCLoopToolStripMenuItem.Text = "A/C Loop";
             this.aCLoopToolStripMenuItem.Click += new System.EventHandler(this.aCLoopToolStripMenuItem_Click);
             // 
@@ -460,7 +470,7 @@
             // 
             this.chartToolStripMenuItem.Name = "chartToolStripMenuItem";
             this.chartToolStripMenuItem.ShowShortcutKeys = false;
-            this.chartToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.chartToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.chartToolStripMenuItem.Text = "Graph";
             this.chartToolStripMenuItem.Click += new System.EventHandler(this.pressuresToolStripMenuItem_Click);
             // 
@@ -628,78 +638,6 @@
             this.BoxDischrge.TabStop = false;
             this.BoxDischrge.Text = "Discharge";
             // 
-            // BoxChart
-            // 
-            this.BoxChart.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.BoxChart.Controls.Add(this.waveformGraph2);
-            this.BoxChart.Controls.Add(this.waveformGraph1);
-            this.BoxChart.Controls.Add(this.label29);
-            this.BoxChart.Controls.Add(this.label28);
-            this.BoxChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BoxChart.Location = new System.Drawing.Point(9, 27);
-            this.BoxChart.Name = "BoxChart";
-            this.BoxChart.Size = new System.Drawing.Size(984, 711);
-            this.BoxChart.TabIndex = 13;
-            this.BoxChart.TabStop = false;
-            this.BoxChart.Text = "Graph";
-            this.BoxChart.Visible = false;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 382);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(111, 20);
-            this.label29.TabIndex = 3;
-            this.label29.Text = "Temperature";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 30);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(80, 20);
-            this.label28.TabIndex = 2;
-            this.label28.Text = "Pressure";
-            // 
-            // waveformGraph2
-            // 
-            this.waveformGraph2.Location = new System.Drawing.Point(9, 405);
-            this.waveformGraph2.Name = "waveformGraph2";
-            this.waveformGraph2.Plots.AddRange(new NationalInstruments.UI.WaveformPlot[] {
-            this.waveformPlot2});
-            this.waveformGraph2.Size = new System.Drawing.Size(969, 303);
-            this.waveformGraph2.TabIndex = 1;
-            this.waveformGraph2.UseColorGenerator = true;
-            this.waveformGraph2.XAxes.AddRange(new NationalInstruments.UI.XAxis[] {
-            this.xAxis2});
-            this.waveformGraph2.YAxes.AddRange(new NationalInstruments.UI.YAxis[] {
-            this.yAxis2});
-            // 
-            // waveformPlot2
-            // 
-            this.waveformPlot2.XAxis = this.xAxis2;
-            this.waveformPlot2.YAxis = this.yAxis2;
-            // 
-            // waveformGraph1
-            // 
-            this.waveformGraph1.Location = new System.Drawing.Point(9, 61);
-            this.waveformGraph1.Name = "waveformGraph1";
-            this.waveformGraph1.Plots.AddRange(new NationalInstruments.UI.WaveformPlot[] {
-            this.waveformPlot1});
-            this.waveformGraph1.Size = new System.Drawing.Size(966, 310);
-            this.waveformGraph1.TabIndex = 0;
-            this.waveformGraph1.UseColorGenerator = true;
-            this.waveformGraph1.XAxes.AddRange(new NationalInstruments.UI.XAxis[] {
-            this.xAxis1});
-            this.waveformGraph1.YAxes.AddRange(new NationalInstruments.UI.YAxis[] {
-            this.yAxis1});
-            // 
-            // waveformPlot1
-            // 
-            this.waveformPlot1.XAxis = this.xAxis1;
-            this.waveformPlot1.YAxis = this.yAxis1;
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -726,6 +664,7 @@
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "PressureDischargeSetup", true));
             this.textBox7.Location = new System.Drawing.Point(137, 348);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 26);
@@ -807,6 +746,78 @@
             this.gaugeDischarge.Size = new System.Drawing.Size(300, 300);
             this.gaugeDischarge.TabIndex = 0;
             // 
+            // BoxChart
+            // 
+            this.BoxChart.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BoxChart.Controls.Add(this.waveformGraph2);
+            this.BoxChart.Controls.Add(this.waveformGraph1);
+            this.BoxChart.Controls.Add(this.label29);
+            this.BoxChart.Controls.Add(this.label28);
+            this.BoxChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.BoxChart.Location = new System.Drawing.Point(9, 27);
+            this.BoxChart.Name = "BoxChart";
+            this.BoxChart.Size = new System.Drawing.Size(984, 711);
+            this.BoxChart.TabIndex = 13;
+            this.BoxChart.TabStop = false;
+            this.BoxChart.Text = "Graph";
+            this.BoxChart.Visible = false;
+            // 
+            // waveformGraph2
+            // 
+            this.waveformGraph2.Location = new System.Drawing.Point(9, 405);
+            this.waveformGraph2.Name = "waveformGraph2";
+            this.waveformGraph2.Plots.AddRange(new NationalInstruments.UI.WaveformPlot[] {
+            this.waveformPlot2});
+            this.waveformGraph2.Size = new System.Drawing.Size(969, 303);
+            this.waveformGraph2.TabIndex = 1;
+            this.waveformGraph2.UseColorGenerator = true;
+            this.waveformGraph2.XAxes.AddRange(new NationalInstruments.UI.XAxis[] {
+            this.xAxis2});
+            this.waveformGraph2.YAxes.AddRange(new NationalInstruments.UI.YAxis[] {
+            this.yAxis2});
+            // 
+            // waveformPlot2
+            // 
+            this.waveformPlot2.XAxis = this.xAxis2;
+            this.waveformPlot2.YAxis = this.yAxis2;
+            // 
+            // waveformGraph1
+            // 
+            this.waveformGraph1.Location = new System.Drawing.Point(9, 61);
+            this.waveformGraph1.Name = "waveformGraph1";
+            this.waveformGraph1.Plots.AddRange(new NationalInstruments.UI.WaveformPlot[] {
+            this.waveformPlot1});
+            this.waveformGraph1.Size = new System.Drawing.Size(966, 310);
+            this.waveformGraph1.TabIndex = 0;
+            this.waveformGraph1.UseColorGenerator = true;
+            this.waveformGraph1.XAxes.AddRange(new NationalInstruments.UI.XAxis[] {
+            this.xAxis1});
+            this.waveformGraph1.YAxes.AddRange(new NationalInstruments.UI.YAxis[] {
+            this.yAxis1});
+            // 
+            // waveformPlot1
+            // 
+            this.waveformPlot1.XAxis = this.xAxis1;
+            this.waveformPlot1.YAxis = this.yAxis1;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(6, 382);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(111, 20);
+            this.label29.TabIndex = 3;
+            this.label29.Text = "Temperature";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 30);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(80, 20);
+            this.label28.TabIndex = 2;
+            this.label28.Text = "Pressure";
+            // 
             // BoxSuction
             // 
             this.BoxSuction.BackColor = System.Drawing.SystemColors.AppWorkspace;
@@ -852,6 +863,7 @@
             // textBox10
             // 
             this.textBox10.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "PressureSuctionSetup", true));
             this.textBox10.Location = new System.Drawing.Point(123, 348);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(100, 26);
@@ -947,7 +959,7 @@
             this.BoxCondenser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.BoxCondenser.Location = new System.Drawing.Point(9, 428);
             this.BoxCondenser.Name = "BoxCondenser";
-            this.BoxCondenser.Size = new System.Drawing.Size(293, 200);
+            this.BoxCondenser.Size = new System.Drawing.Size(293, 171);
             this.BoxCondenser.TabIndex = 7;
             this.BoxCondenser.TabStop = false;
             this.BoxCondenser.Text = "Condenser";
@@ -955,7 +967,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 26);
+            this.label1.Location = new System.Drawing.Point(6, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 16);
             this.label1.TabIndex = 0;
@@ -964,7 +976,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 119);
+            this.label2.Location = new System.Drawing.Point(6, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 1;
@@ -973,7 +985,7 @@
             // thermometerCondOutTB
             // 
             this.thermometerCondOutTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.thermometerCondOutTB.Location = new System.Drawing.Point(48, 116);
+            this.thermometerCondOutTB.Location = new System.Drawing.Point(48, 95);
             this.thermometerCondOutTB.Name = "thermometerCondOutTB";
             this.thermometerCondOutTB.ReadOnly = true;
             this.thermometerCondOutTB.Size = new System.Drawing.Size(100, 22);
@@ -983,7 +995,7 @@
             // thermometerCondInTB
             // 
             this.thermometerCondInTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.thermometerCondInTB.Location = new System.Drawing.Point(48, 21);
+            this.thermometerCondInTB.Location = new System.Drawing.Point(48, 18);
             this.thermometerCondInTB.Name = "thermometerCondInTB";
             this.thermometerCondInTB.ReadOnly = true;
             this.thermometerCondInTB.Size = new System.Drawing.Size(100, 22);
@@ -992,7 +1004,7 @@
             // 
             // thermometerCondOut
             // 
-            this.thermometerCondOut.Location = new System.Drawing.Point(6, 113);
+            this.thermometerCondOut.Location = new System.Drawing.Point(6, 92);
             this.thermometerCondOut.Name = "thermometerCondOut";
             this.thermometerCondOut.ScalePosition = NationalInstruments.UI.NumericScalePosition.Bottom;
             this.thermometerCondOut.Size = new System.Drawing.Size(285, 81);
@@ -1000,7 +1012,7 @@
             // 
             // thermometerCondIn
             // 
-            this.thermometerCondIn.Location = new System.Drawing.Point(6, 21);
+            this.thermometerCondIn.Location = new System.Drawing.Point(6, 18);
             this.thermometerCondIn.Name = "thermometerCondIn";
             this.thermometerCondIn.ScalePosition = NationalInstruments.UI.NumericScalePosition.Bottom;
             this.thermometerCondIn.Size = new System.Drawing.Size(285, 71);
@@ -1249,6 +1261,7 @@
             // 
             // textBox17
             // 
+            this.textBox17.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "CoilOff", true));
             this.textBox17.Location = new System.Drawing.Point(199, 25);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(100, 26);
@@ -1257,6 +1270,7 @@
             // 
             // textBox16
             // 
+            this.textBox16.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "CoilOn", true));
             this.textBox16.Location = new System.Drawing.Point(44, 25);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(100, 26);
@@ -1338,6 +1352,7 @@
             // 
             // textBox21
             // 
+            this.textBox21.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "ECVDC", true));
             this.textBox21.Location = new System.Drawing.Point(400, 22);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(65, 26);
@@ -1355,6 +1370,7 @@
             // 
             // textBox20
             // 
+            this.textBox20.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "ECVHz", true));
             this.textBox20.Location = new System.Drawing.Point(292, 22);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(65, 26);
@@ -1372,6 +1388,7 @@
             // 
             // textBox19
             // 
+            this.textBox19.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "ECVOff", true));
             this.textBox19.Location = new System.Drawing.Point(159, 23);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(60, 26);
@@ -1389,6 +1406,7 @@
             // 
             // textBox18
             // 
+            this.textBox18.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "ECVOn", true));
             this.textBox18.Location = new System.Drawing.Point(50, 23);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(60, 26);
@@ -1421,6 +1439,7 @@
             // slide1
             // 
             this.slide1.CoercionInterval = 10D;
+            this.slide1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.testDescriptionSetupBindingSource, "RPMsetup", true));
             this.slide1.Location = new System.Drawing.Point(6, 188);
             this.slide1.Name = "slide1";
             this.slide1.Range = new NationalInstruments.UI.Range(0D, 6000D);
@@ -1466,6 +1485,7 @@
             // BoxCompressor
             // 
             this.BoxCompressor.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BoxCompressor.Controls.Add(this.label24);
             this.BoxCompressor.Controls.Add(this.label22);
             this.BoxCompressor.Controls.Add(this.thermometerCompressorTB);
             this.BoxCompressor.Controls.Add(this.textBoxCompressorLimit);
@@ -1480,10 +1500,19 @@
             this.BoxCompressor.TabStop = false;
             this.BoxCompressor.Text = "Compressor";
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(150, 46);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(23, 16);
+            this.label24.TabIndex = 6;
+            this.label24.Text = "°C";
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(62, 46);
+            this.label22.Location = new System.Drawing.Point(61, 46);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(36, 16);
             this.label22.TabIndex = 5;
@@ -1501,9 +1530,10 @@
             // 
             // textBoxCompressorLimit
             // 
-            this.textBoxCompressorLimit.Location = new System.Drawing.Point(99, 42);
+            this.textBoxCompressorLimit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "CompressorLimitTemp", true));
+            this.textBoxCompressorLimit.Location = new System.Drawing.Point(98, 42);
             this.textBoxCompressorLimit.Name = "textBoxCompressorLimit";
-            this.textBoxCompressorLimit.Size = new System.Drawing.Size(67, 22);
+            this.textBoxCompressorLimit.Size = new System.Drawing.Size(52, 22);
             this.textBoxCompressorLimit.TabIndex = 3;
             this.textBoxCompressorLimit.Text = "91,3";
             this.textBoxCompressorLimit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1568,21 +1598,13 @@
             // 
             // textBoxHBmax
             // 
-            this.textBoxHBmax.Location = new System.Drawing.Point(115, 21);
+            this.textBoxHBmax.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "HotBoxTemperature", true));
+            this.textBoxHBmax.Location = new System.Drawing.Point(109, 21);
             this.textBoxHBmax.Name = "textBoxHBmax";
-            this.textBoxHBmax.Size = new System.Drawing.Size(64, 22);
+            this.textBoxHBmax.Size = new System.Drawing.Size(53, 22);
             this.textBoxHBmax.TabIndex = 2;
             this.textBoxHBmax.Text = "105";
             this.textBoxHBmax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxHBmin
-            // 
-            this.textBoxHBmin.Location = new System.Drawing.Point(115, 110);
-            this.textBoxHBmin.Name = "textBoxHBmin";
-            this.textBoxHBmin.Size = new System.Drawing.Size(64, 22);
-            this.textBoxHBmin.TabIndex = 3;
-            this.textBoxHBmin.Text = "101";
-            this.textBoxHBmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // thermometerHotboxTB
             // 
@@ -1597,10 +1619,9 @@
             // BoxHotbox
             // 
             this.BoxHotbox.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.BoxHotbox.Controls.Add(this.label24);
+            this.BoxHotbox.Controls.Add(this.label32);
             this.BoxHotbox.Controls.Add(this.label23);
             this.BoxHotbox.Controls.Add(this.thermometerHotboxTB);
-            this.BoxHotbox.Controls.Add(this.textBoxHBmin);
             this.BoxHotbox.Controls.Add(this.textBoxHBmax);
             this.BoxHotbox.Controls.Add(this.ledHotbox);
             this.BoxHotbox.Controls.Add(this.thermometerHotbox);
@@ -1612,27 +1633,27 @@
             this.BoxHotbox.TabStop = false;
             this.BoxHotbox.Text = "Hotbox";
             // 
-            // label24
+            // label32
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(78, 114);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(32, 16);
-            this.label24.TabIndex = 7;
-            this.label24.Text = "Min";
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(162, 24);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(23, 16);
+            this.label32.TabIndex = 7;
+            this.label32.Text = "°C";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(78, 24);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(36, 16);
+            this.label23.Size = new System.Drawing.Size(31, 16);
             this.label23.TabIndex = 6;
-            this.label23.Text = "Max";
+            this.label23.Text = "Set";
             // 
             // buttonDisconnect
             // 
-            this.buttonDisconnect.Location = new System.Drawing.Point(101, 30);
+            this.buttonDisconnect.Location = new System.Drawing.Point(101, 26);
             this.buttonDisconnect.Name = "buttonDisconnect";
             this.buttonDisconnect.Size = new System.Drawing.Size(118, 54);
             this.buttonDisconnect.TabIndex = 17;
@@ -1643,6 +1664,8 @@
             // 
             // BoxInformation
             // 
+            this.BoxInformation.Controls.Add(this.label33);
+            this.BoxInformation.Controls.Add(this.TestSelected);
             this.BoxInformation.Controls.Add(this.buttonDisconnect);
             this.BoxInformation.Controls.Add(this.label31);
             this.BoxInformation.Controls.Add(this.butCopyReport);
@@ -1652,16 +1675,45 @@
             this.BoxInformation.Controls.Add(this.textBoxSettingsInfo);
             this.BoxInformation.Controls.Add(this.label25);
             this.BoxInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BoxInformation.Location = new System.Drawing.Point(9, 635);
+            this.BoxInformation.Location = new System.Drawing.Point(9, 604);
             this.BoxInformation.Name = "BoxInformation";
-            this.BoxInformation.Size = new System.Drawing.Size(293, 100);
+            this.BoxInformation.Size = new System.Drawing.Size(293, 134);
             this.BoxInformation.TabIndex = 18;
             this.BoxInformation.TabStop = false;
             this.BoxInformation.Text = "Current information";
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(195, 9);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(93, 15);
+            this.label31.TabIndex = 6;
+            this.label31.Text = "Copy location";
+            // 
+            // butCopyReport
+            // 
+            this.butCopyReport.Location = new System.Drawing.Point(264, 55);
+            this.butCopyReport.Name = "butCopyReport";
+            this.butCopyReport.Size = new System.Drawing.Size(23, 23);
+            this.butCopyReport.TabIndex = 5;
+            this.butCopyReport.Text = "R";
+            this.butCopyReport.UseVisualStyleBackColor = true;
+            this.butCopyReport.Click += new System.EventHandler(this.butCopyReport_Click);
+            // 
+            // ButCopySettings
+            // 
+            this.ButCopySettings.Location = new System.Drawing.Point(264, 28);
+            this.ButCopySettings.Name = "ButCopySettings";
+            this.ButCopySettings.Size = new System.Drawing.Size(23, 23);
+            this.ButCopySettings.TabIndex = 4;
+            this.ButCopySettings.Text = "S";
+            this.ButCopySettings.UseVisualStyleBackColor = true;
+            this.ButCopySettings.Click += new System.EventHandler(this.ButCopySettings_Click);
+            // 
             // textBoxReportInfo
             // 
-            this.textBoxReportInfo.Location = new System.Drawing.Point(67, 59);
+            this.textBoxReportInfo.Location = new System.Drawing.Point(67, 56);
             this.textBoxReportInfo.Name = "textBoxReportInfo";
             this.textBoxReportInfo.Size = new System.Drawing.Size(191, 21);
             this.textBoxReportInfo.TabIndex = 3;
@@ -1670,7 +1722,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 65);
+            this.label30.Location = new System.Drawing.Point(6, 59);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(50, 15);
             this.label30.TabIndex = 2;
@@ -1678,7 +1730,7 @@
             // 
             // textBoxSettingsInfo
             // 
-            this.textBoxSettingsInfo.Location = new System.Drawing.Point(67, 31);
+            this.textBoxSettingsInfo.Location = new System.Drawing.Point(67, 28);
             this.textBoxSettingsInfo.Name = "textBoxSettingsInfo";
             this.textBoxSettingsInfo.Size = new System.Drawing.Size(191, 21);
             this.textBoxSettingsInfo.TabIndex = 1;
@@ -1687,7 +1739,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 33);
+            this.label25.Location = new System.Drawing.Point(6, 30);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(59, 15);
             this.label25.TabIndex = 0;
@@ -1860,34 +1912,67 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // ButCopySettings
+            // testDescriptionSetupBindingSource
             // 
-            this.ButCopySettings.Location = new System.Drawing.Point(264, 31);
-            this.ButCopySettings.Name = "ButCopySettings";
-            this.ButCopySettings.Size = new System.Drawing.Size(23, 23);
-            this.ButCopySettings.TabIndex = 4;
-            this.ButCopySettings.Text = "S";
-            this.ButCopySettings.UseVisualStyleBackColor = true;
-            this.ButCopySettings.Click += new System.EventHandler(this.ButCopySettings_Click);
+            this.testDescriptionSetupBindingSource.DataMember = "TestDescriptionSetup";
+            this.testDescriptionSetupBindingSource.DataSource = this.databaseDataSet;
             // 
-            // butCopyReport
+            // databaseDataSet
             // 
-            this.butCopyReport.Location = new System.Drawing.Point(264, 58);
-            this.butCopyReport.Name = "butCopyReport";
-            this.butCopyReport.Size = new System.Drawing.Size(23, 23);
-            this.butCopyReport.TabIndex = 5;
-            this.butCopyReport.Text = "R";
-            this.butCopyReport.UseVisualStyleBackColor = true;
-            this.butCopyReport.Click += new System.EventHandler(this.butCopyReport_Click);
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label31
+            // testParametersBindingSource
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(195, 12);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(93, 15);
-            this.label31.TabIndex = 6;
-            this.label31.Text = "Copy location";
+            this.testParametersBindingSource.DataMember = "TestParameters";
+            this.testParametersBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // testParametersTableAdapter
+            // 
+            this.testParametersTableAdapter.ClearBeforeFill = true;
+            // 
+            // testParametersBindingSource1
+            // 
+            this.testParametersBindingSource1.DataMember = "TestParameters";
+            this.testParametersBindingSource1.DataSource = this.databaseDataSet;
+            // 
+            // testDescriptionSetupTableAdapter
+            // 
+            this.testDescriptionSetupTableAdapter.ClearBeforeFill = true;
+            // 
+            // TestSelected
+            // 
+            this.TestSelected.DataSource = this.testDescriptionSetupBindingSource;
+            this.TestSelected.DisplayMember = "TestName";
+            this.TestSelected.FormattingEnabled = true;
+            this.TestSelected.Location = new System.Drawing.Point(83, 86);
+            this.TestSelected.Name = "TestSelected";
+            this.TestSelected.Size = new System.Drawing.Size(204, 23);
+            this.TestSelected.TabIndex = 18;
+            this.TestSelected.ValueMember = "ID_TestInput";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(5, 90);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(72, 15);
+            this.label33.TabIndex = 19;
+            this.label33.Text = "Test spec.";
+            // 
+            // fKTestDescriptionInputTestDescriptionSetup1BindingSource
+            // 
+            this.fKTestDescriptionInputTestDescriptionSetup1BindingSource.DataMember = "FK_TestDescriptionInput_TestDescriptionSetup1";
+            this.fKTestDescriptionInputTestDescriptionSetup1BindingSource.DataSource = this.testDescriptionSetupBindingSource;
+            // 
+            // testDescriptionInputTableAdapter
+            // 
+            this.testDescriptionInputTableAdapter.ClearBeforeFill = true;
+            // 
+            // fKTestDescriptionInputTestDescriptionSetup1BindingSource1
+            // 
+            this.fKTestDescriptionInputTestDescriptionSetup1BindingSource1.DataMember = "FK_TestDescriptionInput_TestDescriptionSetup1";
+            this.fKTestDescriptionInputTestDescriptionSetup1BindingSource1.DataSource = this.testDescriptionSetupBindingSource;
             // 
             // FormMain
             // 
@@ -1932,12 +2017,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.ledStoper)).EndInit();
             this.BoxDischrge.ResumeLayout(false);
             this.BoxDischrge.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.thermometerDischarge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gaugeDischarge)).EndInit();
             this.BoxChart.ResumeLayout(false);
             this.BoxChart.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.waveformGraph2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.waveformGraph1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thermometerDischarge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gaugeDischarge)).EndInit();
             this.BoxSuction.ResumeLayout(false);
             this.BoxSuction.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.thermometerSuction)).EndInit();
@@ -1971,6 +2056,12 @@
             this.BoxAC.ResumeLayout(false);
             this.BoxAC.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testDescriptionSetupBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testParametersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testParametersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKTestDescriptionInputTestDescriptionSetup1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKTestDescriptionInputTestDescriptionSetup1BindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2080,7 +2171,6 @@
         private NationalInstruments.UI.WindowsForms.Thermometer thermometerHotbox;
         private NationalInstruments.UI.WindowsForms.Led ledHotbox;
         private System.Windows.Forms.TextBox textBoxHBmax;
-        private System.Windows.Forms.TextBox textBoxHBmin;
         private System.Windows.Forms.TextBox thermometerHotboxTB;
         private System.Windows.Forms.GroupBox BoxHotbox;
         private NationalInstruments.UI.WindowsForms.Led ledStoper;
@@ -2092,14 +2182,12 @@
         private System.Windows.Forms.Button buttonDisconnect;
         private NationalInstruments.UI.WindowsForms.Led ledCoil;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.ToolStripMenuItem backlogFolderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newTestDescriptionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editTestDescriptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.GroupBox BoxInformation;
         private System.Windows.Forms.SaveFileDialog SaveFileReport;
@@ -2140,6 +2228,19 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button butCopyReport;
         private System.Windows.Forms.Button ButCopySettings;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label32;
+        private DatabaseDataSet databaseDataSet;
+        private System.Windows.Forms.BindingSource testParametersBindingSource;
+        private DatabaseDataSetTableAdapters.TestParametersTableAdapter testParametersTableAdapter;
+        private System.Windows.Forms.BindingSource testParametersBindingSource1;
+        private System.Windows.Forms.BindingSource testDescriptionSetupBindingSource;
+        private DatabaseDataSetTableAdapters.TestDescriptionSetupTableAdapter testDescriptionSetupTableAdapter;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox TestSelected;
+        private System.Windows.Forms.BindingSource fKTestDescriptionInputTestDescriptionSetup1BindingSource;
+        private DatabaseDataSetTableAdapters.TestDescriptionInputTableAdapter testDescriptionInputTableAdapter;
+        private System.Windows.Forms.BindingSource fKTestDescriptionInputTestDescriptionSetup1BindingSource1;
     }
 }
 

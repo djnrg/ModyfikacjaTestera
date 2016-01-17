@@ -4,9 +4,6 @@ D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Debug\T
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.csprojResolveAssemblyReference.cache
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.AboutBox.resources
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormMain.resources
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormPressures.resources
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormSetupGeneral.resources
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormTemperature.resources
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.Properties.Resources.resources
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.SplashScreen.resources
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.csproj.GenerateResource.Cache
@@ -17,3 +14,4 @@ D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Deb
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormFinishTest.resources
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Debug\Database.mdf
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Debug\Database_log.ldf
+D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormNTD.resources
