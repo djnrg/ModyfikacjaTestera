@@ -81,12 +81,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseCache.sync</DependentUpon>
     </Compile>
-    <Compile Include="FormACLoop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormACLoop.Designer.cs">
-      <DependentUpon>FormACLoop.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormComments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,9 +127,6 @@
     </Compile>
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormACLoop.resx">
-      <DependentUpon>FormACLoop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormComments.resx">
       <DependentUpon>FormComments.cs</DependentUpon>

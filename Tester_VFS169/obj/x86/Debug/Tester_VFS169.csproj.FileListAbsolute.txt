@@ -3,7 +3,6 @@ D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Debug\T
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Debug\Tester_VFS169.pdb
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.csprojResolveAssemblyReference.cache
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.AboutBox.resources
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormACLoop.resources
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormMain.resources
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormPressures.resources
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormSetupGeneral.resources

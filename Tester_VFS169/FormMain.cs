@@ -14,8 +14,8 @@ namespace Tester_VFS169
 {
     public partial class FormMain : Form
     {
-        
-        
+
+
 
         public static double[] zmienne;
         /// <value>
@@ -46,17 +46,15 @@ namespace Tester_VFS169
         /// <value>
         /// Deklaracja folderów i plików
         /// </value>
-        private string GlobalFolder;
-        private string TestSettings = "Settings.xml";
-        private string PlikRaportu = "Report.txt";
-      
+        public static string GlobalFolder;
+        public static string TestSettings;// = "Settings.xml";
+        public static string PlikRaportu;// = "Report.txt";
+
 
 
         public FormMain()
         {
             InitializeComponent();
-            
-           
         }
 
         /// <summary>
@@ -67,14 +65,14 @@ namespace Tester_VFS169
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-        #if DEBUG
+#if DEBUG
 
-        #else
+#else
                     if (MessageBox.Show("Continue this application", "Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         e.Cancel = true;
                     }
-        #endif
+#endif
 
 
             //zamkniecie portu COM
@@ -240,10 +238,10 @@ namespace Tester_VFS169
                     ZmienneCOM = COM.ReadLine().Replace('.', ',').Split(';');          //19 wartosci
 
                     //double[] 
-                        zmienne = Array.ConvertAll(ZmienneCOM, Double.Parse);
+                    zmienne = Array.ConvertAll(ZmienneCOM, Double.Parse);
 
                     StripStatusDane.Text = "OK";
-                    
+
                     /*
                     0       //Serial.print  (Tsuc);					
                     1       //Serial.print  (Tdis);					
@@ -267,28 +265,37 @@ namespace Tester_VFS169
                     19      //Serial.print  (rpm);
                     */
 
-                                       
+
                     //Discharge
                     gaugeDischarge.Value = zmienne[13];
                     SetTextLabel(gaugeDischargeLAB, zmienne[13].ToString());
+                    SetTextBox(TBACDischargePress, zmienne[13].ToString() + " BarG");
+
                     thermometerDischarge.Value = zmienne[1];
                     SetTextBox(thermometerDischargeTB, zmienne[1].ToString() + " °C");
-                    
+                    SetTextBox(TBACDischargeTemp, zmienne[1].ToString() + " °C");
+
                     //Suction
                     gaugeSuction.Value = zmienne[12];
                     SetTextLabel(gaugeSuctionLAB, zmienne[12].ToString());
+                    SetTextBox(TBACSuctionPress, zmienne[12].ToString() + " BarG");
+
                     thermometerSuction.Value = zmienne[0];
                     SetTextBox(thermometerSuctionTB, zmienne[0].ToString() + " °C");
+                    SetTextBox(TBACSuctionTemp, zmienne[0].ToString() + " °C");
 
                     //Condenser
                     thermometerCondIn.Value = zmienne[2];
                     SetTextBox(thermometerCondInTB, zmienne[2].ToString() + " °C");
+                    SetTextBox(TBACCondenserINTemp, zmienne[2].ToString() + " °C");
                     thermometerCondOut.Value = zmienne[3];
                     SetTextBox(thermometerCondOutTB, zmienne[3].ToString() + " °C");
+                    SetTextBox(TBACCondenserOUTTemp, zmienne[3].ToString() + " °C");
 
                     //Compressor
                     thermometerCompressor.Value = zmienne[7];
                     SetTextBox(thermometerCompressorTB, zmienne[7].ToString() + " °C");
+                    SetTextBox(TBACCompressorTemp, zmienne[7].ToString() + " °C");
 
                     if (zmienne[7] >= Convert.ToDouble(textBoxCompressorLimit.Text))
                     {
@@ -302,11 +309,16 @@ namespace Tester_VFS169
 
                     //Evapurator
                     SetTextBox(thermometerEvapInTB, zmienne[4].ToString() + " °C");
+                    SetTextBox(TBACEvapINTemp, zmienne[4].ToString() + " °C");
                     SetTextBox(thermometerEvapOutTB, zmienne[5].ToString() + " °C");
+                    SetTextBox(TBACEvapOUTTemp, zmienne[5].ToString() + " °C");
 
                     //Air in Evapurator
                     SetTextBox(thermometerAirInTB, zmienne[8].ToString() + " °C");
+                    SetTextBox(TBACAirINTemp, zmienne[8].ToString() + " °C");
                     SetTextBox(thermometerAirOutTB, zmienne[10].ToString() + " °C");
+                    SetTextBox(TBACAirOutTemp, zmienne[10].ToString() + " °C");
+
                     SetTextBox(HumidityAirInTB, zmienne[9].ToString() + " %");
                     SetTextBox(HumidityAirOutTB, zmienne[11].ToString() + " %");
 
@@ -314,6 +326,7 @@ namespace Tester_VFS169
                     //Hotbox
                     thermometerHotbox.Value = zmienne[6];
                     SetTextBox(thermometerHotboxTB, zmienne[6].ToString() + " °C");
+                    SetTextBox(TBACHotboxTemp, zmienne[6].ToString() + " °C");
                     if (zmienne[6] >= Convert.ToDouble(textBoxHBmin.Text) & zmienne[6] <= Convert.ToDouble(textBoxHBmax.Text))
                     {
                         ledHotbox.Value = true;
@@ -325,7 +338,7 @@ namespace Tester_VFS169
 
 
                     //Coil
-                    
+
                     meterCoilVoltage.Value = zmienne[14];
                     meterCoilCurrent.Value = zmienne[15];
 
@@ -343,11 +356,11 @@ namespace Tester_VFS169
                         iloscCykli++;
                         iloscCykliLast = 1;
                     }
-                    if (zmienne[18] == 0 & iloscCykliLast ==1)
+                    if (zmienne[18] == 0 & iloscCykliLast == 1)
                     {
                         iloscCykliLast = 0;
                     }
-                    
+
                     SetTextBox(textBoxCoilCycles, iloscCykli.ToString());
 
 
@@ -372,14 +385,14 @@ namespace Tester_VFS169
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            #if DEBUG
+#if DEBUG
             timerStoper.Interval = 10;        //Ustwienie timera dla stopera na 1 sekude     
             buttonDisconnect.Visible = true;
-            #else
+#else
             timerStoper.Interval = 1000;        //Ustwienie timera dla stopera na 1 sekude     
             SplashScreen SS = new SplashScreen();
             SS.ShowDialog();                    //Wyswietlenie splash scrren
-            #endif
+#endif
 
 
         }
@@ -447,19 +460,19 @@ namespace Tester_VFS169
         private void buttonReset_Click(object sender, EventArgs e)
         {
 
-        #if DEBUG
-                    {
-                        timerStoper.Enabled = false;
-                        s2 = 0; s1 = 0; t = 0;
-                        labelStoper.Text = "000:00:00";
-                        buttonStart.Text = "START";
-                        dzialanie = false;
-                        ledStoper.Value = false;
-                        iloscCykli = 0;
-                        iloscCykliLast = 0;
-                    }
+#if DEBUG
+            {
+                timerStoper.Enabled = false;
+                s2 = 0; s1 = 0; t = 0;
+                labelStoper.Text = "000:00:00";
+                buttonStart.Text = "START";
+                dzialanie = false;
+                ledStoper.Value = false;
+                iloscCykli = 0;
+                iloscCykliLast = 0;
+            }
 
-        #else
+#else
                     if (MessageBox.Show("Continue this test", "Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                     {
                         timerStoper.Enabled = false;
@@ -471,7 +484,7 @@ namespace Tester_VFS169
                         iloscCykli = 0;
                         iloscCykliLast = 0;
                     }
-        #endif
+#endif
 
         }
 
@@ -495,10 +508,41 @@ namespace Tester_VFS169
         /// <param name="e"></param>
         private void aCLoopToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //FormACLoop f = new FormACLoop();
-            //f.Show();
+            if (aCLoopToolStripMenuItem.Checked == true)
+            {
+                BoxDischrge.Visible = true;
+                BoxSuction.Visible = true;
+                BoxCompressor.Visible = true;
+                BoxEvapurator.Visible = true;
+                BoxCondenser.Visible = true;
+                BoxECV.Visible = true;
+                BoxHotbox.Visible = true;
+                BoxChart.Visible = false;
+                BoxInformation.Visible = true;
+                BoxAC.Visible = false;
 
-            aCLoopToolStripMenuItem.Checked = true;
+
+                aCLoopToolStripMenuItem.Checked = false;
+                chartToolStripMenuItem.Checked = false;
+            }
+
+            else
+            {
+                BoxDischrge.Visible = false;
+                BoxSuction.Visible = false;
+                BoxCompressor.Visible = false;
+                BoxEvapurator.Visible = false;
+                BoxCondenser.Visible = false;
+                BoxECV.Visible = false;
+                BoxHotbox.Visible = false;
+                BoxChart.Visible = false;
+                BoxInformation.Visible = true;
+                BoxAC.Visible = true;
+
+                aCLoopToolStripMenuItem.Checked = true;
+                chartToolStripMenuItem.Checked = false;
+            }
+
         }
 
 
@@ -515,25 +559,48 @@ namespace Tester_VFS169
 
 
         /// <summary>
-        /// Wyswietlanie okna dialogowego "Pressure"
+        /// Wyswietlanie okna dialogowego "Chart"
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void pressuresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormPressures FP = new FormPressures();
-            FP.Show();
-        }
+            if (chartToolStripMenuItem.Checked == true)
+            {
+                BoxDischrge.Visible = true;
+                BoxSuction.Visible = true;
+                BoxCompressor.Visible = true;
+                BoxEvapurator.Visible = true;
+                BoxCondenser.Visible = true;
+                BoxECV.Visible = true;
+                BoxHotbox.Visible = true;
+                BoxInformation.Visible = true;
+                BoxChart.Visible = false;
 
-        /// <summary>
-        /// Wyswietlanie okna dialogowego "Temperatures"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void temperatureToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormTemperature FT = new FormTemperature();
-            FT.Show();
+                BoxAC.Visible = false;
+
+
+                aCLoopToolStripMenuItem.Checked = false;
+                chartToolStripMenuItem.Checked = false;
+            }
+
+            else
+            {
+                BoxDischrge.Visible = false;
+                BoxSuction.Visible = false;
+                BoxCompressor.Visible = false;
+                BoxEvapurator.Visible = false;
+                BoxCondenser.Visible = false;
+                BoxECV.Visible = false;
+                BoxHotbox.Visible = false;
+                BoxInformation.Visible = false;
+                BoxChart.Visible = true;
+
+                BoxAC.Visible = false;
+
+                aCLoopToolStripMenuItem.Checked = false;
+                chartToolStripMenuItem.Checked = true;
+            }
         }
 
 
@@ -570,7 +637,7 @@ namespace Tester_VFS169
                 xml.WriteEndElement();
 
                 xml.WriteStartElement("DeafaltSettingsLocation");
-                xml.WriteElementString("GlobalLocation",  GlobalFolder.ToString());
+                xml.WriteElementString("GlobalLocation", GlobalFolder.ToString());
                 xml.WriteElementString("SettingsLocation", TestSettings.ToString());
                 xml.WriteElementString("ReportLocation", PlikRaportu.ToString());
                 xml.WriteEndElement();
@@ -578,7 +645,7 @@ namespace Tester_VFS169
 
                 xml.WriteEndElement();
 
-                xml.WriteEndDocument();
+
 
                 COM.Close();
             }
@@ -592,7 +659,6 @@ namespace Tester_VFS169
             finally
             {
                 xml.Close();
-                
             }
 
         }
@@ -610,7 +676,7 @@ namespace Tester_VFS169
             {
                 TestSettings = openFileSetting.FileName;
             }
-            
+
             XmlTextReader xml = null;
 
             try
@@ -618,7 +684,7 @@ namespace Tester_VFS169
                 xml = new XmlTextReader(TestSettings);
 
                 xml.ReadStartElement("Settings");
-                
+
                 xml.Read();
 
                 //<time>
@@ -637,7 +703,7 @@ namespace Tester_VFS169
                 GlobalFolder = xml.ReadElementString("GlobalLocation");
                 TestSettings = xml.ReadElementString("SettingsLocation");
                 PlikRaportu = xml.ReadElementString("ReportLocation");
-                
+
                 xml.ReadEndElement();
 
 
@@ -647,6 +713,11 @@ namespace Tester_VFS169
                 labelStoper.Text = String.Format("{0:D3}:{1:D2}:{2:d2}", s2, s1, t);
                 textBoxCoilCycles.Text = iloscCykli.ToString();
 
+                //Wyswetlanie Informcji o folderach
+                string RepS = TestSettings.Replace("/", @"\");
+                string RepR = TestSettings.Replace("/", @"\");
+                textBoxSettingsInfo.Text = RepS;
+                textBoxReportInfo.Text = RepR;
             }
 
             catch (Exception exc)
@@ -677,11 +748,11 @@ namespace Tester_VFS169
         /// <param name="e"></param>
         private void setupToolStripMenuItem_Click(object sender, EventArgs e)
         {
-              
+
             if (SaveFileReport.ShowDialog() == DialogResult.OK)
             {
                 PlikRaportu = SaveFileReport.FileName;
-                label25.Text = PlikRaportu;
+                textBoxReportInfo.Text = PlikRaportu;
 
 
                 if (!File.Exists(@PlikRaportu))
@@ -693,7 +764,7 @@ namespace Tester_VFS169
                             streamWriter.WriteLine("DURABILITY TESTER VFS169");
                             streamWriter.WriteLine("Rozpoczęcie Testu: " + DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString());
 
-                            
+
 
                         }
                     }
@@ -720,6 +791,7 @@ namespace Tester_VFS169
             if (saveFileSetting.ShowDialog() == DialogResult.OK)
             {
                 TestSettings = saveFileSetting.FileName;
+                textBoxSettingsInfo.Text = TestSettings;
             }
         }
 
@@ -739,7 +811,7 @@ namespace Tester_VFS169
             }
         }
 
-        public void WriteDataLog(string logFileName, string data)
+        public static void WriteDataLog(string logFileName, string data)
         {
             if (!File.Exists(logFileName))
             {
@@ -753,10 +825,51 @@ namespace Tester_VFS169
             }
         }
 
-        private void SuctionBox_Enter(object sender, EventArgs e)
+        private void defaultSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string TestSettingsDir = "c:/TESTER_VFS169/Settings/";
+            string PlikRaportyDir = "c:/TESTER_VFS169/Reports/";
+
+            TestSettings = "c:/TESTER_VFS169/Settings/Settings.xml";
+            PlikRaportu = "c:/TESTER_VFS169/Settings/Report.txt";
+            GlobalFolder = "c:/TESTER_VFS169/Settings/";
+
+
+            DirectoryInfo dirSetting = null;
+            if (!Directory.Exists(@TestSettings))
+            {
+                dirSetting = Directory.CreateDirectory(@TestSettingsDir);
+            }
+
+
+            DirectoryInfo dirReport = null;
+            if (!Directory.Exists(@TestSettings))
+            {
+                dirReport = Directory.CreateDirectory(@PlikRaportyDir);
+            }
+
+
+            string RepS = TestSettings.Replace("/", @"\");
+            string RepR = PlikRaportu.Replace("/", @"\");
+            textBoxSettingsInfo.Text = RepS;
+            textBoxReportInfo.Text = RepR;
+        }
+
+        private void ButCopySettings_Click(object sender, EventArgs e)
         {
 
+            System.Windows.Forms.Clipboard.SetText(textBoxSettingsInfo.Text);
+
         }
+
+        private void butCopyReport_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Clipboard.SetText(textBoxReportInfo.Text);
+        }
+
+
+
+
 
     }
 }
