@@ -635,7 +635,7 @@ namespace Tester_VFS169 {
             private void InitClass() {
                 this.columnID_Comments = new global::System.Data.DataColumn("ID_Comments", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_Comments);
-                this.columnID_TestInput = new global::System.Data.DataColumn("ID_TestInput", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnID_TestInput = new global::System.Data.DataColumn("ID_TestInput", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_TestInput);
                 this.columnData = new global::System.Data.DataColumn("Data", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData);
@@ -646,6 +646,7 @@ namespace Tester_VFS169 {
                 this.columnID_Comments.AllowDBNull = false;
                 this.columnID_Comments.Unique = true;
                 this.columnID_TestInput.AllowDBNull = false;
+                this.columnID_TestInput.MaxLength = 20;
                 this.columnData.AllowDBNull = false;
                 this.columnComments.AllowDBNull = false;
                 this.columnComments.MaxLength = 2147483647;
@@ -942,7 +943,7 @@ namespace Tester_VFS169 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestDescriptionInputRow AddTestDescriptionInputRow(int ID_TestInput, string TestNameInput, System.DateTime StartDate, string CompressorDescription, string Requester, bool CompressorPass, System.DateTime FinishDate, string Comments, TestDescriptionSetupRow parentTestDescriptionSetupRowByFK_TestDescriptionInput_TestDescriptionSetup1) {
+            public TestDescriptionInputRow AddTestDescriptionInputRow(string ID_TestInput, string TestNameInput, System.DateTime StartDate, string CompressorDescription, string Requester, bool CompressorPass, System.DateTime FinishDate, string Comments, TestDescriptionSetupRow parentTestDescriptionSetupRowByFK_TestDescriptionInput_TestDescriptionSetup1) {
                 TestDescriptionInputRow rowTestDescriptionInputRow = ((TestDescriptionInputRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_TestInput,
@@ -964,7 +965,7 @@ namespace Tester_VFS169 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestDescriptionInputRow FindByID_TestInput(int ID_TestInput) {
+            public TestDescriptionInputRow FindByID_TestInput(string ID_TestInput) {
                 return ((TestDescriptionInputRow)(this.Rows.Find(new object[] {
                             ID_TestInput})));
             }
@@ -1000,7 +1001,7 @@ namespace Tester_VFS169 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID_TestInput = new global::System.Data.DataColumn("ID_TestInput", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnID_TestInput = new global::System.Data.DataColumn("ID_TestInput", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_TestInput);
                 this.columnTestNameInput = new global::System.Data.DataColumn("TestNameInput", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTestNameInput);
@@ -1022,6 +1023,7 @@ namespace Tester_VFS169 {
                                 this.columnID_TestInput}, true));
                 this.columnID_TestInput.AllowDBNull = false;
                 this.columnID_TestInput.Unique = true;
+                this.columnID_TestInput.MaxLength = 20;
                 this.columnTestNameInput.MaxLength = 50;
                 this.columnCompressorDescription.MaxLength = 2147483647;
                 this.columnRequester.MaxLength = 2147483647;
@@ -1379,10 +1381,10 @@ namespace Tester_VFS169 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestDescriptionSetupRow AddTestDescriptionSetupRow(int ID_TestSetup, string TestName, int Step, int RequestedTime, double PressureDischargeSetup, double PressureSuctionSetup, double HotBoxTemperature, double CompressorLimitTemp, int RPMsetup, int ECVOn, int ECVOff, int ECVHz, int ECVDC, int CoilOn, int CoilOff) {
+            public TestDescriptionSetupRow AddTestDescriptionSetupRow(string TestName, int Step, int RequestedTime, double PressureDischargeSetup, double PressureSuctionSetup, double HotBoxTemperature, double CompressorLimitTemp, int RPMsetup, int ECVOn, int ECVOff, int ECVHz, int ECVDC, int CoilOn, int CoilOff) {
                 TestDescriptionSetupRow rowTestDescriptionSetupRow = ((TestDescriptionSetupRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_TestSetup,
+                        null,
                         TestName,
                         Step,
                         RequestedTime,
@@ -1478,6 +1480,8 @@ namespace Tester_VFS169 {
                 base.Columns.Add(this.columnCoilOff);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_TestSetup}, true));
+                this.columnID_TestSetup.AutoIncrement = true;
+                this.columnID_TestSetup.AutoIncrementSeed = 1;
                 this.columnID_TestSetup.AllowDBNull = false;
                 this.columnID_TestSetup.Unique = true;
                 this.columnTestName.AllowDBNull = false;
@@ -1933,7 +1937,6 @@ namespace Tester_VFS169 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TestParametersRow AddTestParametersRow(
-                        decimal ID_TestSetupParameters, 
                         TestDescriptionInputRow parentTestDescriptionInputRowByFK_TestParameters_TestDescriptionInput, 
                         System.DateTime Data, 
                         System.TimeSpan Time, 
@@ -1959,7 +1962,7 @@ namespace Tester_VFS169 {
                         int ClutchTotalCycles) {
                 TestParametersRow rowTestParametersRow = ((TestParametersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_TestSetupParameters,
+                        null,
                         null,
                         Data,
                         Time,
@@ -2046,7 +2049,7 @@ namespace Tester_VFS169 {
             private void InitClass() {
                 this.columnID_TestSetupParameters = new global::System.Data.DataColumn("ID_TestSetupParameters", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_TestSetupParameters);
-                this.columnTestInputID = new global::System.Data.DataColumn("TestInputID", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnTestInputID = new global::System.Data.DataColumn("TestInputID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTestInputID);
                 this.columnData = new global::System.Data.DataColumn("Data", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData);
@@ -2094,8 +2097,11 @@ namespace Tester_VFS169 {
                 base.Columns.Add(this.columnClutchTotalCycles);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_TestSetupParameters}, true));
+                this.columnID_TestSetupParameters.AutoIncrement = true;
+                this.columnID_TestSetupParameters.AutoIncrementSeed = 1;
                 this.columnID_TestSetupParameters.AllowDBNull = false;
                 this.columnID_TestSetupParameters.Unique = true;
+                this.columnTestInputID.MaxLength = 20;
                 this.columnData.AllowDBNull = false;
                 this.columnTime.AllowDBNull = false;
                 this.columnPdischarge.AllowDBNull = false;
@@ -3176,7 +3182,7 @@ namespace Tester_VFS169 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ToReportAllParametersRow AddToReportAllParametersRow(
-                        int ID_TestInput, 
+                        string ID_TestInput, 
                         string TestNameInput, 
                         System.DateTime StartDate, 
                         string CompressorDescription, 
@@ -3285,7 +3291,7 @@ namespace Tester_VFS169 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ToReportAllParametersRow FindByID_TestInputID_TestSetupExpr4ID_Comments(int ID_TestInput, int ID_TestSetup, decimal Expr4, int ID_Comments) {
+            public ToReportAllParametersRow FindByID_TestInputID_TestSetupExpr4ID_Comments(string ID_TestInput, int ID_TestSetup, decimal Expr4, int ID_Comments) {
                 return ((ToReportAllParametersRow)(this.Rows.Find(new object[] {
                             ID_TestInput,
                             ID_TestSetup,
@@ -3365,7 +3371,7 @@ namespace Tester_VFS169 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID_TestInput = new global::System.Data.DataColumn("ID_TestInput", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnID_TestInput = new global::System.Data.DataColumn("ID_TestInput", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_TestInput);
                 this.columnTestNameInput = new global::System.Data.DataColumn("TestNameInput", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTestNameInput);
@@ -3471,6 +3477,7 @@ namespace Tester_VFS169 {
                                 this.columnExpr4,
                                 this.columnID_Comments}, true));
                 this.columnID_TestInput.AllowDBNull = false;
+                this.columnID_TestInput.MaxLength = 20;
                 this.columnTestNameInput.MaxLength = 50;
                 this.columnCompressorDescription.MaxLength = 2147483647;
                 this.columnRequester.MaxLength = 2147483647;
@@ -3665,9 +3672,9 @@ namespace Tester_VFS169 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_TestInput {
+            public string ID_TestInput {
                 get {
-                    return ((int)(this[this.tableTestComments.ID_TestInputColumn]));
+                    return ((string)(this[this.tableTestComments.ID_TestInputColumn]));
                 }
                 set {
                     this[this.tableTestComments.ID_TestInputColumn] = value;
@@ -3724,9 +3731,9 @@ namespace Tester_VFS169 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_TestInput {
+            public string ID_TestInput {
                 get {
-                    return ((int)(this[this.tableTestDescriptionInput.ID_TestInputColumn]));
+                    return ((string)(this[this.tableTestDescriptionInput.ID_TestInputColumn]));
                 }
                 set {
                     this[this.tableTestDescriptionInput.ID_TestInputColumn] = value;
@@ -4313,10 +4320,10 @@ namespace Tester_VFS169 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int TestInputID {
+            public string TestInputID {
                 get {
                     try {
-                        return ((int)(this[this.tableTestParameters.TestInputIDColumn]));
+                        return ((string)(this[this.tableTestParameters.TestInputIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'TestInputID\' in table \'TestParameters\' is DBNull.", e);
@@ -4780,9 +4787,9 @@ namespace Tester_VFS169 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_TestInput {
+            public string ID_TestInput {
                 get {
-                    return ((int)(this[this.tableToReportAllParameters.ID_TestInputColumn]));
+                    return ((string)(this[this.tableToReportAllParameters.ID_TestInputColumn]));
                 }
                 set {
                     this[this.tableToReportAllParameters.ID_TestInputColumn] = value;
@@ -5910,7 +5917,7 @@ namespace Tester_VFS169.DatabaseDataSetTableAdapters {
                 "ND ([ID_TestInput] = @Original_ID_TestInput) AND ([Data] = @Original_Data))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Comments", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Comments", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TestInput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TestInput", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -5920,7 +5927,7 @@ namespace Tester_VFS169.DatabaseDataSetTableAdapters {
                 "s)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Comments", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TestInput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TestInput", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -5929,11 +5936,11 @@ namespace Tester_VFS169.DatabaseDataSetTableAdapters {
 SELECT ID_Comments, ID_TestInput, Data, Comments FROM TestComments WHERE (ID_Comments = @ID_Comments)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Comments", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TestInput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TestInput", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Comments", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Comments", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TestInput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TestInput", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -6011,9 +6018,14 @@ SELECT ID_Comments, ID_TestInput, Data, Comments FROM TestComments WHERE (ID_Com
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_Comments, int Original_ID_TestInput, System.DateTime Original_Data) {
+        public virtual int Delete(int Original_ID_Comments, string Original_ID_TestInput, System.DateTime Original_Data) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Comments));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_TestInput));
+            if ((Original_ID_TestInput == null)) {
+                throw new global::System.ArgumentNullException("Original_ID_TestInput");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_ID_TestInput));
+            }
             this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Data));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6035,9 +6047,14 @@ SELECT ID_Comments, ID_TestInput, Data, Comments FROM TestComments WHERE (ID_Com
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_Comments, int ID_TestInput, System.DateTime Data, string Comments) {
+        public virtual int Insert(int ID_Comments, string ID_TestInput, System.DateTime Data, string Comments) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_Comments));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ID_TestInput));
+            if ((ID_TestInput == null)) {
+                throw new global::System.ArgumentNullException("ID_TestInput");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ID_TestInput));
+            }
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Data));
             if ((Comments == null)) {
                 throw new global::System.ArgumentNullException("Comments");
@@ -6065,9 +6082,14 @@ SELECT ID_Comments, ID_TestInput, Data, Comments FROM TestComments WHERE (ID_Com
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_Comments, int ID_TestInput, System.DateTime Data, string Comments, int Original_ID_Comments, int Original_ID_TestInput, System.DateTime Original_Data) {
+        public virtual int Update(int ID_Comments, string ID_TestInput, System.DateTime Data, string Comments, int Original_ID_Comments, string Original_ID_TestInput, System.DateTime Original_Data) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_Comments));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ID_TestInput));
+            if ((ID_TestInput == null)) {
+                throw new global::System.ArgumentNullException("ID_TestInput");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ID_TestInput));
+            }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Data));
             if ((Comments == null)) {
                 throw new global::System.ArgumentNullException("Comments");
@@ -6076,7 +6098,12 @@ SELECT ID_Comments, ID_TestInput, Data, Comments FROM TestComments WHERE (ID_Com
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Comments));
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_Comments));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID_TestInput));
+            if ((Original_ID_TestInput == null)) {
+                throw new global::System.ArgumentNullException("Original_ID_TestInput");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_ID_TestInput));
+            }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_Data));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6098,7 +6125,7 @@ SELECT ID_Comments, ID_TestInput, Data, Comments FROM TestComments WHERE (ID_Com
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_TestInput, System.DateTime Data, string Comments, int Original_ID_Comments, int Original_ID_TestInput, System.DateTime Original_Data) {
+        public virtual int Update(string ID_TestInput, System.DateTime Data, string Comments, int Original_ID_Comments, string Original_ID_TestInput, System.DateTime Original_Data) {
             return this.Update(Original_ID_Comments, ID_TestInput, Data, Comments, Original_ID_Comments, Original_ID_TestInput, Original_Data);
         }
     }
@@ -6238,7 +6265,7 @@ SELECT ID_Comments, ID_TestInput, Data, Comments FROM TestComments WHERE (ID_Com
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[TestDescriptionInput] WHERE (([ID_TestInput] = @Original_ID_TestInput) AND ((@IsNull_TestNameInput = 1 AND [TestNameInput] IS NULL) OR ([TestNameInput] = @Original_TestNameInput)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_CompressorPass = 1 AND [CompressorPass] IS NULL) OR ([CompressorPass] = @Original_CompressorPass)) AND ((@IsNull_FinishDate = 1 AND [FinishDate] IS NULL) OR ([FinishDate] = @Original_FinishDate)) AND ((@IsNull_ID_TestDescSetup = 1 AND [ID_TestDescSetup] IS NULL) OR ([ID_TestDescSetup] = @Original_ID_TestDescSetup)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TestInput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TestInput", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TestNameInput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestNameInput", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestNameInput", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestNameInput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StartDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -6254,7 +6281,7 @@ SELECT ID_Comments, ID_TestInput, Data, Comments FROM TestComments WHERE (ID_Com
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TestDescriptionInput] ([ID_TestInput], [TestNameInput], [StartDate], [CompressorDescription], [Requester], [CompressorPass], [FinishDate], [Comments], [ID_TestDescSetup]) VALUES (@ID_TestInput, @TestNameInput, @StartDate, @CompressorDescription, @Requester, @CompressorPass, @FinishDate, @Comments, @ID_TestDescSetup);
 SELECT ID_TestInput, TestNameInput, StartDate, CompressorDescription, Requester, CompressorPass, FinishDate, Comments, ID_TestDescSetup FROM TestDescriptionInput WHERE (ID_TestInput = @ID_TestInput)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TestInput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TestInput", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestNameInput", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestNameInput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CompressorDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CompressorDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6268,7 +6295,7 @@ SELECT ID_TestInput, TestNameInput, StartDate, CompressorDescription, Requester,
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TestDescriptionInput] SET [ID_TestInput] = @ID_TestInput, [TestNameInput] = @TestNameInput, [StartDate] = @StartDate, [CompressorDescription] = @CompressorDescription, [Requester] = @Requester, [CompressorPass] = @CompressorPass, [FinishDate] = @FinishDate, [Comments] = @Comments, [ID_TestDescSetup] = @ID_TestDescSetup WHERE (([ID_TestInput] = @Original_ID_TestInput) AND ((@IsNull_TestNameInput = 1 AND [TestNameInput] IS NULL) OR ([TestNameInput] = @Original_TestNameInput)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_CompressorPass = 1 AND [CompressorPass] IS NULL) OR ([CompressorPass] = @Original_CompressorPass)) AND ((@IsNull_FinishDate = 1 AND [FinishDate] IS NULL) OR ([FinishDate] = @Original_FinishDate)) AND ((@IsNull_ID_TestDescSetup = 1 AND [ID_TestDescSetup] IS NULL) OR ([ID_TestDescSetup] = @Original_ID_TestDescSetup)));
 SELECT ID_TestInput, TestNameInput, StartDate, CompressorDescription, Requester, CompressorPass, FinishDate, Comments, ID_TestDescSetup FROM TestDescriptionInput WHERE (ID_TestInput = @ID_TestInput)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TestInput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TestInput", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestNameInput", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestNameInput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CompressorDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CompressorDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6277,7 +6304,7 @@ SELECT ID_TestInput, TestNameInput, StartDate, CompressorDescription, Requester,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FinishDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FinishDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TestDescSetup", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestDescSetup", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TestInput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TestInput", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestInput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TestNameInput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestNameInput", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestNameInput", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestNameInput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StartDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -6366,8 +6393,13 @@ SELECT ID_TestInput, TestNameInput, StartDate, CompressorDescription, Requester,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_TestInput, string Original_TestNameInput, global::System.Nullable<global::System.DateTime> Original_StartDate, global::System.Nullable<bool> Original_CompressorPass, global::System.Nullable<global::System.DateTime> Original_FinishDate, global::System.Nullable<int> Original_ID_TestDescSetup) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_TestInput));
+        public virtual int Delete(string Original_ID_TestInput, string Original_TestNameInput, global::System.Nullable<global::System.DateTime> Original_StartDate, global::System.Nullable<bool> Original_CompressorPass, global::System.Nullable<global::System.DateTime> Original_FinishDate, global::System.Nullable<int> Original_ID_TestDescSetup) {
+            if ((Original_ID_TestInput == null)) {
+                throw new global::System.ArgumentNullException("Original_ID_TestInput");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_ID_TestInput));
+            }
             if ((Original_TestNameInput == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -6428,8 +6460,13 @@ SELECT ID_TestInput, TestNameInput, StartDate, CompressorDescription, Requester,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_TestInput, string TestNameInput, global::System.Nullable<global::System.DateTime> StartDate, string CompressorDescription, string Requester, global::System.Nullable<bool> CompressorPass, global::System.Nullable<global::System.DateTime> FinishDate, string Comments, global::System.Nullable<int> ID_TestDescSetup) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_TestInput));
+        public virtual int Insert(string ID_TestInput, string TestNameInput, global::System.Nullable<global::System.DateTime> StartDate, string CompressorDescription, string Requester, global::System.Nullable<bool> CompressorPass, global::System.Nullable<global::System.DateTime> FinishDate, string Comments, global::System.Nullable<int> ID_TestDescSetup) {
+            if ((ID_TestInput == null)) {
+                throw new global::System.ArgumentNullException("ID_TestInput");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ID_TestInput));
+            }
             if ((TestNameInput == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -6498,8 +6535,13 @@ SELECT ID_TestInput, TestNameInput, StartDate, CompressorDescription, Requester,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_TestInput, string TestNameInput, global::System.Nullable<global::System.DateTime> StartDate, string CompressorDescription, string Requester, global::System.Nullable<bool> CompressorPass, global::System.Nullable<global::System.DateTime> FinishDate, string Comments, global::System.Nullable<int> ID_TestDescSetup, int Original_ID_TestInput, string Original_TestNameInput, global::System.Nullable<global::System.DateTime> Original_StartDate, global::System.Nullable<bool> Original_CompressorPass, global::System.Nullable<global::System.DateTime> Original_FinishDate, global::System.Nullable<int> Original_ID_TestDescSetup) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_TestInput));
+        public virtual int Update(string ID_TestInput, string TestNameInput, global::System.Nullable<global::System.DateTime> StartDate, string CompressorDescription, string Requester, global::System.Nullable<bool> CompressorPass, global::System.Nullable<global::System.DateTime> FinishDate, string Comments, global::System.Nullable<int> ID_TestDescSetup, string Original_ID_TestInput, string Original_TestNameInput, global::System.Nullable<global::System.DateTime> Original_StartDate, global::System.Nullable<bool> Original_CompressorPass, global::System.Nullable<global::System.DateTime> Original_FinishDate, global::System.Nullable<int> Original_ID_TestDescSetup) {
+            if ((ID_TestInput == null)) {
+                throw new global::System.ArgumentNullException("ID_TestInput");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ID_TestInput));
+            }
             if ((TestNameInput == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -6548,7 +6590,12 @@ SELECT ID_TestInput, TestNameInput, StartDate, CompressorDescription, Requester,
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_ID_TestInput));
+            if ((Original_ID_TestInput == null)) {
+                throw new global::System.ArgumentNullException("Original_ID_TestInput");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_ID_TestInput));
+            }
             if ((Original_TestNameInput == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
@@ -6609,7 +6656,7 @@ SELECT ID_TestInput, TestNameInput, StartDate, CompressorDescription, Requester,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string TestNameInput, global::System.Nullable<global::System.DateTime> StartDate, string CompressorDescription, string Requester, global::System.Nullable<bool> CompressorPass, global::System.Nullable<global::System.DateTime> FinishDate, string Comments, global::System.Nullable<int> ID_TestDescSetup, int Original_ID_TestInput, string Original_TestNameInput, global::System.Nullable<global::System.DateTime> Original_StartDate, global::System.Nullable<bool> Original_CompressorPass, global::System.Nullable<global::System.DateTime> Original_FinishDate, global::System.Nullable<int> Original_ID_TestDescSetup) {
+        public virtual int Update(string TestNameInput, global::System.Nullable<global::System.DateTime> StartDate, string CompressorDescription, string Requester, global::System.Nullable<bool> CompressorPass, global::System.Nullable<global::System.DateTime> FinishDate, string Comments, global::System.Nullable<int> ID_TestDescSetup, string Original_ID_TestInput, string Original_TestNameInput, global::System.Nullable<global::System.DateTime> Original_StartDate, global::System.Nullable<bool> Original_CompressorPass, global::System.Nullable<global::System.DateTime> Original_FinishDate, global::System.Nullable<int> Original_ID_TestDescSetup) {
             return this.Update(Original_ID_TestInput, TestNameInput, StartDate, CompressorDescription, Requester, CompressorPass, FinishDate, Comments, ID_TestDescSetup, Original_ID_TestInput, Original_TestNameInput, Original_StartDate, Original_CompressorPass, Original_FinishDate, Original_ID_TestDescSetup);
         }
     }
@@ -7437,7 +7484,7 @@ SELECT ID_TestSetup, TestName, Step, RequestedTime, PressureDischargeSetup, Pres
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TestSetupParameters", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestSetupParameters", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TestInputID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestInputID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestInputID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestInputID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestInputID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestInputID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Pdischarge", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pdischarge", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -7466,7 +7513,7 @@ SELECT ID_TestSetup, TestName, Step, RequestedTime, PressureDischargeSetup, Pres
 SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Tdischarge, Tsuction, TcondenserIn, TcondenserOut, TEvapuratorIn, TEvapuratorOut, TAirIn, TAirOut, HAirIn, HAirOut, TCompressor, THotbox, RPM, CoilVoltage, CoilCurrent, ECVVoltage, ECVCurrent, ClutchTotalCycles FROM TestParameters WHERE (ID_TestSetupParameters = @ID_TestSetupParameters)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TestSetupParameters", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestSetupParameters", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestInputID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestInputID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestInputID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestInputID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pdischarge", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pdischarge", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7520,7 +7567,7 @@ SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Td
                 "tupParameters = @ID_TestSetupParameters)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_TestSetupParameters", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestSetupParameters", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestInputID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestInputID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestInputID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestInputID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pdischarge", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pdischarge", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7545,7 +7592,7 @@ SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Td
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClutchTotalCycles", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClutchTotalCycles", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_TestSetupParameters", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_TestSetupParameters", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TestInputID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestInputID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestInputID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestInputID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestInputID", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestInputID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Time", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Pdischarge", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pdischarge", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -7646,7 +7693,7 @@ SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Td
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
         public virtual int Delete(
                     decimal Original_ID_TestSetupParameters, 
-                    global::System.Nullable<int> Original_TestInputID, 
+                    string Original_TestInputID, 
                     System.DateTime Original_Data, 
                     System.TimeSpan Original_Time, 
                     double Original_Pdischarge, 
@@ -7670,13 +7717,13 @@ SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Td
                     double Original_ECVCurrent, 
                     int Original_ClutchTotalCycles) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_ID_TestSetupParameters));
-            if ((Original_TestInputID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_TestInputID.Value));
-            }
-            else {
+            if ((Original_TestInputID == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_TestInputID));
             }
             this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_Data));
             this.Adapter.DeleteCommand.Parameters[4].Value = ((System.TimeSpan)(Original_Time));
@@ -7722,7 +7769,7 @@ SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Td
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(
                     decimal ID_TestSetupParameters, 
-                    global::System.Nullable<int> TestInputID, 
+                    string TestInputID, 
                     System.DateTime Data, 
                     System.TimeSpan Time, 
                     double Pdischarge, 
@@ -7746,11 +7793,11 @@ SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Td
                     double ECVCurrent, 
                     int ClutchTotalCycles) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(ID_TestSetupParameters));
-            if ((TestInputID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(TestInputID.Value));
+            if ((TestInputID == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(TestInputID));
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Data));
             this.Adapter.InsertCommand.Parameters[3].Value = ((System.TimeSpan)(Time));
@@ -7796,7 +7843,7 @@ SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Td
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     decimal ID_TestSetupParameters, 
-                    global::System.Nullable<int> TestInputID, 
+                    string TestInputID, 
                     System.DateTime Data, 
                     System.TimeSpan Time, 
                     double Pdischarge, 
@@ -7820,7 +7867,7 @@ SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Td
                     double ECVCurrent, 
                     int ClutchTotalCycles, 
                     decimal Original_ID_TestSetupParameters, 
-                    global::System.Nullable<int> Original_TestInputID, 
+                    string Original_TestInputID, 
                     System.DateTime Original_Data, 
                     System.TimeSpan Original_Time, 
                     double Original_Pdischarge, 
@@ -7844,11 +7891,11 @@ SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Td
                     double Original_ECVCurrent, 
                     int Original_ClutchTotalCycles) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(ID_TestSetupParameters));
-            if ((TestInputID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(TestInputID.Value));
+            if ((TestInputID == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(TestInputID));
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Data));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((System.TimeSpan)(Time));
@@ -7873,13 +7920,13 @@ SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Td
             this.Adapter.UpdateCommand.Parameters[22].Value = ((double)(ECVCurrent));
             this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(ClutchTotalCycles));
             this.Adapter.UpdateCommand.Parameters[24].Value = ((decimal)(Original_ID_TestSetupParameters));
-            if ((Original_TestInputID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_TestInputID.Value));
-            }
-            else {
+            if ((Original_TestInputID == null)) {
                 this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_TestInputID));
             }
             this.Adapter.UpdateCommand.Parameters[27].Value = ((System.DateTime)(Original_Data));
             this.Adapter.UpdateCommand.Parameters[28].Value = ((System.TimeSpan)(Original_Time));
@@ -7924,7 +7971,7 @@ SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Td
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    global::System.Nullable<int> TestInputID, 
+                    string TestInputID, 
                     System.DateTime Data, 
                     System.TimeSpan Time, 
                     double Pdischarge, 
@@ -7948,7 +7995,7 @@ SELECT ID_TestSetupParameters, TestInputID, Data, Time, Pdischarge, Psuction, Td
                     double ECVCurrent, 
                     int ClutchTotalCycles, 
                     decimal Original_ID_TestSetupParameters, 
-                    global::System.Nullable<int> Original_TestInputID, 
+                    string Original_TestInputID, 
                     System.DateTime Original_Data, 
                     System.TimeSpan Original_Time, 
                     double Original_Pdischarge, 

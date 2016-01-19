@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNTD));
             System.Windows.Forms.Label iD_TestSetupLabel;
             System.Windows.Forms.Label testNameLabel;
             System.Windows.Forms.Label stepLabel;
@@ -45,24 +44,24 @@
             System.Windows.Forms.Label eCVDCLabel;
             System.Windows.Forms.Label coilOnLabel;
             System.Windows.Forms.Label coilOffLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNTD));
             this.databaseDataSet = new Tester_VFS169.DatabaseDataSet();
             this.testDescriptionSetupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testDescriptionSetupTableAdapter = new Tester_VFS169.DatabaseDataSetTableAdapters.TestDescriptionSetupTableAdapter();
             this.tableAdapterManager = new Tester_VFS169.DatabaseDataSetTableAdapters.TableAdapterManager();
             this.testDescriptionSetupBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.testDescriptionSetupBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.iD_TestSetupNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.testNameTextBox = new System.Windows.Forms.TextBox();
             this.requestedTimeTextBox = new System.Windows.Forms.TextBox();
             this.pressureDischargeSetupTextBox = new System.Windows.Forms.TextBox();
@@ -91,6 +90,7 @@
             this.stepNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.iD_TestSetupLabel2 = new System.Windows.Forms.Label();
             iD_TestSetupLabel = new System.Windows.Forms.Label();
             testNameLabel = new System.Windows.Forms.Label();
             stepLabel = new System.Windows.Forms.Label();
@@ -110,9 +110,158 @@
             ((System.ComponentModel.ISupportInitialize)(this.testDescriptionSetupBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDescriptionSetupBindingNavigator)).BeginInit();
             this.testDescriptionSetupBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iD_TestSetupNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stepNumericUpDown)).BeginInit();
             this.SuspendLayout();
+            // 
+            // iD_TestSetupLabel
+            // 
+            iD_TestSetupLabel.AutoSize = true;
+            iD_TestSetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            iD_TestSetupLabel.Location = new System.Drawing.Point(7, 35);
+            iD_TestSetupLabel.Name = "iD_TestSetupLabel";
+            iD_TestSetupLabel.Size = new System.Drawing.Size(90, 13);
+            iD_TestSetupLabel.TabIndex = 1;
+            iD_TestSetupLabel.Text = "ID Test Setup:";
+            // 
+            // testNameLabel
+            // 
+            testNameLabel.AutoSize = true;
+            testNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            testNameLabel.Location = new System.Drawing.Point(7, 64);
+            testNameLabel.Name = "testNameLabel";
+            testNameLabel.Size = new System.Drawing.Size(72, 13);
+            testNameLabel.TabIndex = 3;
+            testNameLabel.Text = "Test Name:";
+            // 
+            // stepLabel
+            // 
+            stepLabel.AutoSize = true;
+            stepLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            stepLabel.Location = new System.Drawing.Point(7, 92);
+            stepLabel.Name = "stepLabel";
+            stepLabel.Size = new System.Drawing.Size(37, 13);
+            stepLabel.TabIndex = 5;
+            stepLabel.Text = "Step:";
+            // 
+            // requestedTimeLabel
+            // 
+            requestedTimeLabel.AutoSize = true;
+            requestedTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            requestedTimeLabel.Location = new System.Drawing.Point(7, 118);
+            requestedTimeLabel.Name = "requestedTimeLabel";
+            requestedTimeLabel.Size = new System.Drawing.Size(103, 13);
+            requestedTimeLabel.TabIndex = 7;
+            requestedTimeLabel.Text = "Requested Time:";
+            // 
+            // pressureDischargeSetupLabel
+            // 
+            pressureDischargeSetupLabel.AutoSize = true;
+            pressureDischargeSetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            pressureDischargeSetupLabel.Location = new System.Drawing.Point(7, 144);
+            pressureDischargeSetupLabel.Name = "pressureDischargeSetupLabel";
+            pressureDischargeSetupLabel.Size = new System.Drawing.Size(158, 13);
+            pressureDischargeSetupLabel.TabIndex = 9;
+            pressureDischargeSetupLabel.Text = "Pressure Discharge Setup:";
+            // 
+            // pressureSuctionSetupLabel
+            // 
+            pressureSuctionSetupLabel.AutoSize = true;
+            pressureSuctionSetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            pressureSuctionSetupLabel.Location = new System.Drawing.Point(7, 170);
+            pressureSuctionSetupLabel.Name = "pressureSuctionSetupLabel";
+            pressureSuctionSetupLabel.Size = new System.Drawing.Size(144, 13);
+            pressureSuctionSetupLabel.TabIndex = 11;
+            pressureSuctionSetupLabel.Text = "Pressure Suction Setup:";
+            // 
+            // hotBoxTemperatureLabel
+            // 
+            hotBoxTemperatureLabel.AutoSize = true;
+            hotBoxTemperatureLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            hotBoxTemperatureLabel.Location = new System.Drawing.Point(7, 196);
+            hotBoxTemperatureLabel.Name = "hotBoxTemperatureLabel";
+            hotBoxTemperatureLabel.Size = new System.Drawing.Size(131, 13);
+            hotBoxTemperatureLabel.TabIndex = 13;
+            hotBoxTemperatureLabel.Text = "Hot Box Temperature:";
+            // 
+            // compressorLimitTempLabel
+            // 
+            compressorLimitTempLabel.AutoSize = true;
+            compressorLimitTempLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            compressorLimitTempLabel.Location = new System.Drawing.Point(7, 222);
+            compressorLimitTempLabel.Name = "compressorLimitTempLabel";
+            compressorLimitTempLabel.Size = new System.Drawing.Size(141, 13);
+            compressorLimitTempLabel.TabIndex = 15;
+            compressorLimitTempLabel.Text = "Compressor Limit Temp:";
+            // 
+            // rPMsetupLabel
+            // 
+            rPMsetupLabel.AutoSize = true;
+            rPMsetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            rPMsetupLabel.Location = new System.Drawing.Point(7, 248);
+            rPMsetupLabel.Name = "rPMsetupLabel";
+            rPMsetupLabel.Size = new System.Drawing.Size(69, 13);
+            rPMsetupLabel.TabIndex = 17;
+            rPMsetupLabel.Text = "RPMsetup:";
+            // 
+            // eCVOnLabel
+            // 
+            eCVOnLabel.AutoSize = true;
+            eCVOnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            eCVOnLabel.Location = new System.Drawing.Point(7, 274);
+            eCVOnLabel.Name = "eCVOnLabel";
+            eCVOnLabel.Size = new System.Drawing.Size(51, 13);
+            eCVOnLabel.TabIndex = 19;
+            eCVOnLabel.Text = "ECVOn:";
+            // 
+            // eCVOffLabel
+            // 
+            eCVOffLabel.AutoSize = true;
+            eCVOffLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            eCVOffLabel.Location = new System.Drawing.Point(7, 300);
+            eCVOffLabel.Name = "eCVOffLabel";
+            eCVOffLabel.Size = new System.Drawing.Size(52, 13);
+            eCVOffLabel.TabIndex = 21;
+            eCVOffLabel.Text = "ECVOff:";
+            // 
+            // eCVHzLabel
+            // 
+            eCVHzLabel.AutoSize = true;
+            eCVHzLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            eCVHzLabel.Location = new System.Drawing.Point(7, 326);
+            eCVHzLabel.Name = "eCVHzLabel";
+            eCVHzLabel.Size = new System.Drawing.Size(50, 13);
+            eCVHzLabel.TabIndex = 23;
+            eCVHzLabel.Text = "ECVHz:";
+            // 
+            // eCVDCLabel
+            // 
+            eCVDCLabel.AutoSize = true;
+            eCVDCLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            eCVDCLabel.Location = new System.Drawing.Point(7, 353);
+            eCVDCLabel.Name = "eCVDCLabel";
+            eCVDCLabel.Size = new System.Drawing.Size(52, 13);
+            eCVDCLabel.TabIndex = 25;
+            eCVDCLabel.Text = "ECVDC:";
+            // 
+            // coilOnLabel
+            // 
+            coilOnLabel.AutoSize = true;
+            coilOnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            coilOnLabel.Location = new System.Drawing.Point(7, 379);
+            coilOnLabel.Name = "coilOnLabel";
+            coilOnLabel.Size = new System.Drawing.Size(52, 13);
+            coilOnLabel.TabIndex = 27;
+            coilOnLabel.Text = "Coil On:";
+            // 
+            // coilOffLabel
+            // 
+            coilOffLabel.AutoSize = true;
+            coilOffLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            coilOffLabel.Location = new System.Drawing.Point(7, 405);
+            coilOffLabel.Name = "coilOffLabel";
+            coilOffLabel.Size = new System.Drawing.Size(53, 13);
+            coilOffLabel.TabIndex = 29;
+            coilOffLabel.Text = "Coil Off:";
             // 
             // databaseDataSet
             // 
@@ -163,9 +312,34 @@
             this.testDescriptionSetupBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.testDescriptionSetupBindingNavigator.Name = "testDescriptionSetupBindingNavigator";
             this.testDescriptionSetupBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.testDescriptionSetupBindingNavigator.Size = new System.Drawing.Size(302, 25);
+            this.testDescriptionSetupBindingNavigator.Size = new System.Drawing.Size(295, 25);
             this.testDescriptionSetupBindingNavigator.TabIndex = 0;
             this.testDescriptionSetupBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Dodaj nowy";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorCountItem.Text = "z {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Suma elementów";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Usuń";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -199,16 +373,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Bieżąca pozycja";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(29, 22);
-            this.bindingNavigatorCountItem.Text = "z {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Suma elementów";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -231,26 +398,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Dodaj nowy";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Usuń";
             // 
             // testDescriptionSetupBindingNavigatorSaveItem
             // 
@@ -261,35 +410,6 @@
             this.testDescriptionSetupBindingNavigatorSaveItem.Text = "Zapisz dane";
             this.testDescriptionSetupBindingNavigatorSaveItem.Click += new System.EventHandler(this.testDescriptionSetupBindingNavigatorSaveItem_Click);
             // 
-            // iD_TestSetupLabel
-            // 
-            iD_TestSetupLabel.AutoSize = true;
-            iD_TestSetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            iD_TestSetupLabel.Location = new System.Drawing.Point(7, 35);
-            iD_TestSetupLabel.Name = "iD_TestSetupLabel";
-            iD_TestSetupLabel.Size = new System.Drawing.Size(90, 13);
-            iD_TestSetupLabel.TabIndex = 1;
-            iD_TestSetupLabel.Text = "ID Test Setup:";
-            // 
-            // iD_TestSetupNumericUpDown
-            // 
-            this.iD_TestSetupNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.testDescriptionSetupBindingSource, "ID_TestSetup", true));
-            this.iD_TestSetupNumericUpDown.Location = new System.Drawing.Point(122, 35);
-            this.iD_TestSetupNumericUpDown.Name = "iD_TestSetupNumericUpDown";
-            this.iD_TestSetupNumericUpDown.Size = new System.Drawing.Size(168, 20);
-            this.iD_TestSetupNumericUpDown.TabIndex = 2;
-            this.iD_TestSetupNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // testNameLabel
-            // 
-            testNameLabel.AutoSize = true;
-            testNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            testNameLabel.Location = new System.Drawing.Point(7, 64);
-            testNameLabel.Name = "testNameLabel";
-            testNameLabel.Size = new System.Drawing.Size(72, 13);
-            testNameLabel.TabIndex = 3;
-            testNameLabel.Text = "Test Name:";
-            // 
             // testNameTextBox
             // 
             this.testNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "TestName", true));
@@ -298,26 +418,6 @@
             this.testNameTextBox.Size = new System.Drawing.Size(168, 20);
             this.testNameTextBox.TabIndex = 4;
             this.testNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // stepLabel
-            // 
-            stepLabel.AutoSize = true;
-            stepLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            stepLabel.Location = new System.Drawing.Point(7, 92);
-            stepLabel.Name = "stepLabel";
-            stepLabel.Size = new System.Drawing.Size(37, 13);
-            stepLabel.TabIndex = 5;
-            stepLabel.Text = "Step:";
-            // 
-            // requestedTimeLabel
-            // 
-            requestedTimeLabel.AutoSize = true;
-            requestedTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            requestedTimeLabel.Location = new System.Drawing.Point(7, 118);
-            requestedTimeLabel.Name = "requestedTimeLabel";
-            requestedTimeLabel.Size = new System.Drawing.Size(103, 13);
-            requestedTimeLabel.TabIndex = 7;
-            requestedTimeLabel.Text = "Requested Time:";
             // 
             // requestedTimeTextBox
             // 
@@ -328,16 +428,6 @@
             this.requestedTimeTextBox.TabIndex = 8;
             this.requestedTimeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pressureDischargeSetupLabel
-            // 
-            pressureDischargeSetupLabel.AutoSize = true;
-            pressureDischargeSetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            pressureDischargeSetupLabel.Location = new System.Drawing.Point(7, 144);
-            pressureDischargeSetupLabel.Name = "pressureDischargeSetupLabel";
-            pressureDischargeSetupLabel.Size = new System.Drawing.Size(158, 13);
-            pressureDischargeSetupLabel.TabIndex = 9;
-            pressureDischargeSetupLabel.Text = "Pressure Discharge Setup:";
-            // 
             // pressureDischargeSetupTextBox
             // 
             this.pressureDischargeSetupTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "PressureDischargeSetup", true));
@@ -346,16 +436,6 @@
             this.pressureDischargeSetupTextBox.Size = new System.Drawing.Size(80, 20);
             this.pressureDischargeSetupTextBox.TabIndex = 10;
             this.pressureDischargeSetupTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pressureSuctionSetupLabel
-            // 
-            pressureSuctionSetupLabel.AutoSize = true;
-            pressureSuctionSetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            pressureSuctionSetupLabel.Location = new System.Drawing.Point(7, 170);
-            pressureSuctionSetupLabel.Name = "pressureSuctionSetupLabel";
-            pressureSuctionSetupLabel.Size = new System.Drawing.Size(144, 13);
-            pressureSuctionSetupLabel.TabIndex = 11;
-            pressureSuctionSetupLabel.Text = "Pressure Suction Setup:";
             // 
             // pressureSuctionSetupTextBox
             // 
@@ -366,16 +446,6 @@
             this.pressureSuctionSetupTextBox.TabIndex = 12;
             this.pressureSuctionSetupTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // hotBoxTemperatureLabel
-            // 
-            hotBoxTemperatureLabel.AutoSize = true;
-            hotBoxTemperatureLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            hotBoxTemperatureLabel.Location = new System.Drawing.Point(7, 196);
-            hotBoxTemperatureLabel.Name = "hotBoxTemperatureLabel";
-            hotBoxTemperatureLabel.Size = new System.Drawing.Size(131, 13);
-            hotBoxTemperatureLabel.TabIndex = 13;
-            hotBoxTemperatureLabel.Text = "Hot Box Temperature:";
-            // 
             // hotBoxTemperatureTextBox
             // 
             this.hotBoxTemperatureTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "HotBoxTemperature", true));
@@ -384,16 +454,6 @@
             this.hotBoxTemperatureTextBox.Size = new System.Drawing.Size(80, 20);
             this.hotBoxTemperatureTextBox.TabIndex = 14;
             this.hotBoxTemperatureTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // compressorLimitTempLabel
-            // 
-            compressorLimitTempLabel.AutoSize = true;
-            compressorLimitTempLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            compressorLimitTempLabel.Location = new System.Drawing.Point(7, 222);
-            compressorLimitTempLabel.Name = "compressorLimitTempLabel";
-            compressorLimitTempLabel.Size = new System.Drawing.Size(141, 13);
-            compressorLimitTempLabel.TabIndex = 15;
-            compressorLimitTempLabel.Text = "Compressor Limit Temp:";
             // 
             // compressorLimitTempTextBox
             // 
@@ -404,16 +464,6 @@
             this.compressorLimitTempTextBox.TabIndex = 16;
             this.compressorLimitTempTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // rPMsetupLabel
-            // 
-            rPMsetupLabel.AutoSize = true;
-            rPMsetupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            rPMsetupLabel.Location = new System.Drawing.Point(7, 248);
-            rPMsetupLabel.Name = "rPMsetupLabel";
-            rPMsetupLabel.Size = new System.Drawing.Size(69, 13);
-            rPMsetupLabel.TabIndex = 17;
-            rPMsetupLabel.Text = "RPMsetup:";
-            // 
             // rPMsetupTextBox
             // 
             this.rPMsetupTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "RPMsetup", true));
@@ -422,16 +472,6 @@
             this.rPMsetupTextBox.Size = new System.Drawing.Size(80, 20);
             this.rPMsetupTextBox.TabIndex = 18;
             this.rPMsetupTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // eCVOnLabel
-            // 
-            eCVOnLabel.AutoSize = true;
-            eCVOnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            eCVOnLabel.Location = new System.Drawing.Point(7, 274);
-            eCVOnLabel.Name = "eCVOnLabel";
-            eCVOnLabel.Size = new System.Drawing.Size(51, 13);
-            eCVOnLabel.TabIndex = 19;
-            eCVOnLabel.Text = "ECVOn:";
             // 
             // eCVOnTextBox
             // 
@@ -442,16 +482,6 @@
             this.eCVOnTextBox.TabIndex = 20;
             this.eCVOnTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // eCVOffLabel
-            // 
-            eCVOffLabel.AutoSize = true;
-            eCVOffLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            eCVOffLabel.Location = new System.Drawing.Point(7, 300);
-            eCVOffLabel.Name = "eCVOffLabel";
-            eCVOffLabel.Size = new System.Drawing.Size(52, 13);
-            eCVOffLabel.TabIndex = 21;
-            eCVOffLabel.Text = "ECVOff:";
-            // 
             // eCVOffTextBox
             // 
             this.eCVOffTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "ECVOff", true));
@@ -460,16 +490,6 @@
             this.eCVOffTextBox.Size = new System.Drawing.Size(80, 20);
             this.eCVOffTextBox.TabIndex = 22;
             this.eCVOffTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // eCVHzLabel
-            // 
-            eCVHzLabel.AutoSize = true;
-            eCVHzLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            eCVHzLabel.Location = new System.Drawing.Point(7, 326);
-            eCVHzLabel.Name = "eCVHzLabel";
-            eCVHzLabel.Size = new System.Drawing.Size(50, 13);
-            eCVHzLabel.TabIndex = 23;
-            eCVHzLabel.Text = "ECVHz:";
             // 
             // eCVHzComboBox
             // 
@@ -484,16 +504,6 @@
             this.eCVHzComboBox.Size = new System.Drawing.Size(80, 21);
             this.eCVHzComboBox.TabIndex = 24;
             // 
-            // eCVDCLabel
-            // 
-            eCVDCLabel.AutoSize = true;
-            eCVDCLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            eCVDCLabel.Location = new System.Drawing.Point(7, 353);
-            eCVDCLabel.Name = "eCVDCLabel";
-            eCVDCLabel.Size = new System.Drawing.Size(52, 13);
-            eCVDCLabel.TabIndex = 25;
-            eCVDCLabel.Text = "ECVDC:";
-            // 
             // eCVDCTextBox
             // 
             this.eCVDCTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "ECVDC", true));
@@ -503,16 +513,6 @@
             this.eCVDCTextBox.TabIndex = 26;
             this.eCVDCTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // coilOnLabel
-            // 
-            coilOnLabel.AutoSize = true;
-            coilOnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            coilOnLabel.Location = new System.Drawing.Point(7, 379);
-            coilOnLabel.Name = "coilOnLabel";
-            coilOnLabel.Size = new System.Drawing.Size(52, 13);
-            coilOnLabel.TabIndex = 27;
-            coilOnLabel.Text = "Coil On:";
-            // 
             // coilOnTextBox
             // 
             this.coilOnTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "CoilOn", true));
@@ -521,16 +521,6 @@
             this.coilOnTextBox.Size = new System.Drawing.Size(80, 20);
             this.coilOnTextBox.TabIndex = 28;
             this.coilOnTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // coilOffLabel
-            // 
-            coilOffLabel.AutoSize = true;
-            coilOffLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            coilOffLabel.Location = new System.Drawing.Point(7, 405);
-            coilOffLabel.Name = "coilOffLabel";
-            coilOffLabel.Size = new System.Drawing.Size(53, 13);
-            coilOffLabel.TabIndex = 29;
-            coilOffLabel.Text = "Coil Off:";
             // 
             // coilOffTextBox
             // 
@@ -680,12 +670,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // iD_TestSetupLabel2
+            // 
+            this.iD_TestSetupLabel2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "ID_TestSetup", true));
+            this.iD_TestSetupLabel2.Location = new System.Drawing.Point(119, 30);
+            this.iD_TestSetupLabel2.Name = "iD_TestSetupLabel2";
+            this.iD_TestSetupLabel2.Size = new System.Drawing.Size(171, 23);
+            this.iD_TestSetupLabel2.TabIndex = 47;
+            this.iD_TestSetupLabel2.Text = "label13";
+            this.iD_TestSetupLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormNTD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(302, 492);
+            this.ClientSize = new System.Drawing.Size(295, 502);
+            this.Controls.Add(this.iD_TestSetupLabel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.stepNumericUpDown);
@@ -702,7 +703,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(iD_TestSetupLabel);
-            this.Controls.Add(this.iD_TestSetupNumericUpDown);
             this.Controls.Add(testNameLabel);
             this.Controls.Add(this.testNameTextBox);
             this.Controls.Add(stepLabel);
@@ -743,7 +743,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.testDescriptionSetupBindingNavigator)).EndInit();
             this.testDescriptionSetupBindingNavigator.ResumeLayout(false);
             this.testDescriptionSetupBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iD_TestSetupNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stepNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -769,7 +768,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton testDescriptionSetupBindingNavigatorSaveItem;
-        private System.Windows.Forms.NumericUpDown iD_TestSetupNumericUpDown;
         private System.Windows.Forms.TextBox testNameTextBox;
         private System.Windows.Forms.TextBox requestedTimeTextBox;
         private System.Windows.Forms.TextBox pressureDischargeSetupTextBox;
@@ -798,5 +796,6 @@
         private System.Windows.Forms.NumericUpDown stepNumericUpDown;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label iD_TestSetupLabel2;
     }
 }

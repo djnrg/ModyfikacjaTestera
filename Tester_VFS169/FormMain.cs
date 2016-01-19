@@ -50,7 +50,7 @@ namespace Tester_VFS169
         public static string TestSettings;// = "Settings.xml";
         public static string PlikRaportu;// = "Report.txt";
 
-
+        private static bool TerminalStop = false;
 
         public FormMain()
         {
@@ -218,6 +218,27 @@ namespace Tester_VFS169
 
         }
 
+        /// <summary>
+        /// Metoda wpisywania wartosci do TEXT BOX
+        /// </summary>
+        /// <example>
+        /// SetTextBox(textBox1, zmienne[3].ToString());
+        /// textBox1 ===== nazwa kontrolki
+        /// zmienne[3].ToString() ===== wartosc przekazywana 
+        /// </example>
+        /// <param name="tb"></param>
+        /// <param name="value"></param>
+        public void SetTextBoxLines(TextBox tbl, string value)
+        {
+            if (InvokeRequired)
+            {
+                this.Invoke(new Action<TextBox, string>(SetTextBoxLines), new object[] { tbl, value });
+                return;
+            }
+
+            tbl.AppendText(value+Environment.NewLine);
+        }
+
 
         /// <summary>
         /// Wyswietlanie danych przychodzacych z SerialPort na kontrolki
@@ -237,9 +258,34 @@ namespace Tester_VFS169
 
                     ZmienneCOM = COM.ReadLine().Replace('.', ',').Split(';');          //19 wartosci
 
+
+
+
+                    if (tERMINALToolStripMenuItem.Checked == true && TerminalStop == false)
+                    {
+                    SetTextBoxLines(Terminal, ZmienneCOM[0] + " ; " + ZmienneCOM[1] + " ; " + ZmienneCOM[2] + " ; " + ZmienneCOM[3]
+                    + " ; " + ZmienneCOM[4] + " ; " + ZmienneCOM[5] + " ; " + ZmienneCOM[6] + " ; " + ZmienneCOM[7] + " ; " + ZmienneCOM[8]);
+                    }
+
+
+
                     //double[] 
                     zmienne = Array.ConvertAll(ZmienneCOM, Double.Parse);
 
+
+
+                        WriteDataLog(PlikRaportu, DateTime.Now.ToShortDateString() + ";" + DateTime.Now.ToLongTimeString()
+                            + ";" + String.Format("{0:D3}:{1:D2}:{2:d2}", s2, s1, t)
+                            + ";" + zmienne[0].ToString() + ";" + zmienne[1].ToString() + ";" + zmienne[2].ToString()
+                            + ";" + zmienne[3].ToString() + ";" + zmienne[4].ToString() + ";" + zmienne[5].ToString() + ";" + zmienne[6].ToString()
+                            + ";" + zmienne[7].ToString() + ";" + zmienne[8].ToString() + ";" + zmienne[9].ToString() + ";" + zmienne[10].ToString()
+                            + ";" + zmienne[11].ToString() + ";" + zmienne[12].ToString() + ";" + zmienne[13].ToString() + ";" + zmienne[14].ToString()
+                            + ";" + zmienne[15].ToString() + ";" + zmienne[16].ToString() + ";" + zmienne[17].ToString() + ";" + zmienne[18].ToString()
+                            + ";" + zmienne[19].ToString());
+
+              
+                    
+                    
                     StripStatusDane.Text = "OK";
 
                     /*
@@ -266,6 +312,22 @@ namespace Tester_VFS169
                     */
 
 
+                    //Plot generate
+                    WFPressureSuction.PlotYAppend(zmienne[12]);
+                    WFPressureDischarge.PlotYAppend(zmienne[13]);
+
+                    WFTempCompressor.PlotYAppend(zmienne[7]);
+                    WFTempCondenserIn.PlotYAppend(zmienne[2]);
+                    WFTempCondenserOut.PlotYAppend(zmienne[3]);
+                    WFTempDischarge.PlotYAppend(zmienne[1]);
+                    WFTempEvapIn.PlotYAppend(zmienne[4]);
+                    WFTempEvapOut.PlotYAppend(zmienne[5]);
+                    WFTempHotbox.PlotYAppend(zmienne[6]);
+                    WFTempSuction.PlotYAppend(zmienne[0]);
+
+
+
+
                     //Discharge
                     gaugeDischarge.Value = zmienne[13];
                     SetTextLabel(gaugeDischargeLAB, zmienne[13].ToString());
@@ -275,6 +337,7 @@ namespace Tester_VFS169
                     SetTextBox(thermometerDischargeTB, zmienne[1].ToString() + " °C");
                     SetTextBox(TBACDischargeTemp, zmienne[1].ToString() + " °C");
 
+                    
                     //Suction
                     gaugeSuction.Value = zmienne[12];
                     SetTextLabel(gaugeSuctionLAB, zmienne[12].ToString());
@@ -393,6 +456,9 @@ namespace Tester_VFS169
             this.testDescriptionSetupTableAdapter.Fill(this.databaseDataSet.TestDescriptionSetup);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'databaseDataSet.TestParameters' . Możesz go przenieść lub usunąć.
             this.testParametersTableAdapter.Fill(this.databaseDataSet.TestParameters);
+
+
+
 #if DEBUG
             timerStoper.Interval = 10;        //Ustwienie timera dla stopera na 1 sekude     
             buttonDisconnect.Visible = true;
@@ -609,8 +675,20 @@ namespace Tester_VFS169
                 aCLoopToolStripMenuItem.Checked = false;
                 chartToolStripMenuItem.Checked = true;
             }
-        }
 
+            
+            
+            WFPressureSuction.Visible = true;
+            WFPressureDischarge.Visible = true;
+            WFTempCompressor.Visible = false;
+            WFTempCondenserIn.Visible = false;
+            WFTempCondenserOut.Visible = false;
+            WFTempDischarge.Visible = true;
+            WFTempEvapIn.Visible = false;
+            WFTempEvapOut.Visible = false;
+            WFTempHotbox.Visible = false;
+            WFTempSuction.Visible = true;
+        }
 
         /// <summary>
         /// Zapisywanych danych do XML przy zamknieciu programu
@@ -619,6 +697,12 @@ namespace Tester_VFS169
         /// <param name="e"></param>
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
+            
+#if DEBUG
+
+#else
+
+
             XmlTextWriter xml = null;
 
             try
@@ -650,9 +734,11 @@ namespace Tester_VFS169
                 xml.WriteElementString("ReportLocation", PlikRaportu.ToString());
                 xml.WriteEndElement();
 
+                xml.WriteStartElement("TestParameters");
+                xml.WriteElementString("SelectedTest", TestSelected.SelectedText);
                 xml.WriteEndElement();
 
-
+                xml.WriteEndElement();
 
                 COM.Close();
             }
@@ -667,8 +753,9 @@ namespace Tester_VFS169
             {
                 xml.Close();
             }
-
+#endif
         }
+
 
 
         /// <summary>
@@ -738,6 +825,9 @@ namespace Tester_VFS169
 
         }
 
+
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             COM.Close();
@@ -770,9 +860,8 @@ namespace Tester_VFS169
                         {
                             streamWriter.WriteLine("DURABILITY TESTER VFS169");
                             streamWriter.WriteLine("Rozpoczęcie Testu: " + DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString());
-
-
-
+                            streamWriter.WriteLine("DataNow;TomeNow;TimeOfTest;Tsuc;TdisTcondenserIn;TcondenserOut;TevapuratorIn;TevapuratorOut;Thotbox;Tcompressor;TairIn;HairIn;TairOut;HairOut;Psuc;Pdis;COILvoltage;COILcurrent;ECVvoltage;ECVcurrent;Cewka;rpm");
+                            streamWriter.Close();
                         }
                     }
                 }
@@ -820,13 +909,14 @@ namespace Tester_VFS169
 
         public static void WriteDataLog(string logFileName, string data)
         {
-            if (!File.Exists(logFileName))
+            if (File.Exists(logFileName) & dzialanie == true)
             {
                 using (FileStream fileStream = new FileStream(logFileName, FileMode.Append, FileAccess.Write, FileShare.None))
                 {
                     using (StreamWriter streamWriter = new StreamWriter(fileStream))
                     {
                         streamWriter.WriteLine(data);
+                        streamWriter.Close();
                     }
                 }
             }
@@ -879,6 +969,255 @@ namespace Tester_VFS169
             FormNTD FNTD = new FormNTD();
             FNTD.ShowDialog();
         }
+
+        private void timerZegar_Tick(object sender, EventArgs e)
+        {
+            Zegar.Text = DateTime.Now.ToShortDateString() + "    " + DateTime.Now.ToLongTimeString();
+        }
+
+        private void startNewTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSNT FSNT = new FormSNT();
+            FSNT.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PlotBoxPressureSuction.Checked)
+            {
+                WFPressureSuction.Visible = true;
+                legendItem1.Visible = true;
+            }
+            else
+            {
+                WFPressureSuction.Visible = false;
+                legendItem1.Visible = false;
+            }
+
+            if (!PlotBoxPressureDischarge.Checked & !PlotBoxPressureSuction.Checked)
+            {
+                AxisPressure.Visible = false;
+            }
+            else
+            {
+                AxisPressure.Visible = true;
+            }
+        }
+
+
+        private void PlotPressureDischarge_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PlotBoxPressureDischarge.Checked)
+            {
+                WFPressureDischarge.Visible = true;
+                legendItem2.Visible = true;
+            }
+            else
+            {
+                WFPressureDischarge.Visible = false;
+                legendItem2.Visible = false;
+            }
+
+            if (!PlotBoxPressureDischarge.Checked & !PlotBoxPressureSuction.Checked)
+            {
+                AxisPressure.Visible = false;
+            }
+            else
+            {
+                AxisPressure.Visible = true;
+            }
+        }
+
+        private void PlotBoxTempSuction_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PlotBoxTempSuction.Checked)
+            {
+                WFTempSuction.Visible = true;
+                legendItem3.Visible = true;
+            }
+            else
+            {
+                WFTempSuction.Visible = false;
+                legendItem3.Visible = false;
+            }
+        }
+
+        private void PlotBoxTempDischarge_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PlotBoxTempDischarge.Checked)
+            {
+                WFTempDischarge.Visible = true;
+                legendItem4.Visible = true;
+            }
+            else
+            {
+                WFTempDischarge.Visible = false;
+                legendItem4.Visible = false;
+            }
+        }
+
+        private void PlotBoxTempCondenserIn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PlotBoxTempCondenserIn.Checked)
+            {
+                WFTempCondenserIn.Visible = true;
+                legendItem5.Visible = true;
+            }
+            else
+            {
+                WFTempCondenserIn.Visible = false;
+                legendItem5.Visible = false;
+            }
+        }
+
+        private void PlotBoxTempCondenserOut_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PlotBoxTempCondenserOut.Checked)
+            {
+                WFTempCondenserOut.Visible = true;
+                legendItem6.Visible = true;
+            }
+            else
+            {
+                WFTempCondenserOut.Visible = false;
+                legendItem6.Visible = false;
+            }
+        }
+
+        private void PlotBoxTempEvapIn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PlotBoxTempEvapIn.Checked)
+            {
+                WFTempEvapIn.Visible = true;
+                legendItem7.Visible = true;
+            }
+            else
+            {
+                WFTempEvapIn.Visible = false;
+                legendItem7.Visible = false;
+            }
+        }
+
+        private void PlotBoxTempEvapOut_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PlotBoxTempEvapOut.Checked)
+            {
+                WFTempEvapOut.Visible = true;
+                legendItem8.Visible = true;
+            }
+            else
+            {
+                WFTempEvapOut.Visible = false;
+                legendItem8.Visible = false;
+            }
+        }
+
+        private void PlotBoxTempCompressor_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PlotBoxTempCompressor.Checked)
+            {
+                WFTempCompressor.Visible = true;
+                legendItem9.Visible = true;
+            }
+            else
+            {
+                WFTempCompressor.Visible = false;
+                legendItem9.Visible = false;
+            }
+        }
+
+        private void PlotBoxTempHotbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PlotBoxTempHotbox.Checked)
+            {
+                WFTempHotbox.Visible = true;
+                legendItem10.Visible = true;
+            }
+            else
+            {
+                WFTempHotbox.Visible = false;
+                legendItem10.Visible = false;
+            }
+        }
+
+        private void TaxisBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (TaxisBox.Checked)
+            {
+                TaxisMIN.ReadOnly = true;
+                TaxisMAX.ReadOnly = true;
+                AxisTemperature.Mode = NationalInstruments.UI.AxisMode.AutoScaleLoose;
+            }
+            else
+            {
+                TaxisMIN.ReadOnly = false;
+                TaxisMAX.ReadOnly = false;
+                AxisTemperature.Mode = NationalInstruments.UI.AxisMode.Fixed;
+                //NationalInstruments.UI.Range TMinimumAxis = new NationalInstruments.UI.Range();
+                //TMinimumAxis.Minimum = Convert.ToDouble(TaxisMIN.Text);
+
+            }
+        }
+
+        private void PaxisBOX_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (PaxisBOX.Checked)
+            {
+                PaxisMIN.ReadOnly = true;
+                PaxisMAX.ReadOnly = true;
+                AxisPressure.Mode = NationalInstruments.UI.AxisMode.AutoScaleLoose;
+            }
+            else
+            {
+                PaxisMIN.ReadOnly = false;
+                PaxisMAX.ReadOnly = false;
+                AxisPressure.Mode = NationalInstruments.UI.AxisMode.Fixed;
+            }
+        }
+
+        private void tERMINALToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (tERMINALToolStripMenuItem.Checked == true)
+            {
+                BoxCoil.Visible = true;
+                BoxRPM.Visible = true;
+                BoxTerminal.Visible = false;
+                tERMINALToolStripMenuItem.Checked = false;
+
+            }
+            else
+            {
+                BoxCoil.Visible = false;
+                BoxRPM.Visible = false;
+                BoxTerminal.Visible = true;
+                tERMINALToolStripMenuItem.Checked = true;
+                
+            }
+        }
+
+        private void TerminalStopCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (TerminalStopCheck.Checked)
+            {
+                TerminalStop = true;
+            }
+            else
+            {
+                TerminalStop = false;
+            }
+        }
+
+        private void TerminalClearBut_Click(object sender, EventArgs e)
+        {
+            Terminal.Text = "";
+        }
+
+
 
 
     }

@@ -110,6 +110,18 @@
     <Compile Include="FormNTD.Designer.cs">
       <DependentUpon>FormNTD.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSNT.Designer.cs">
+      <DependentUpon>FormSNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTerminal.Designer.cs">
+      <DependentUpon>FormTerminal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashScreen.cs">
@@ -132,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNTD.resx">
       <DependentUpon>FormNTD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSNT.resx">
+      <DependentUpon>FormSNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTerminal.resx">
+      <DependentUpon>FormTerminal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
