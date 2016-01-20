@@ -585,10 +585,10 @@ namespace Tester_VFS169 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TestCommentsRow AddTestCommentsRow(int ID_Comments, TestDescriptionInputRow parentTestDescriptionInputRowByFK_TestComments_TestDescriptionInput, System.DateTime Data, string Comments) {
+            public TestCommentsRow AddTestCommentsRow(TestDescriptionInputRow parentTestDescriptionInputRowByFK_TestComments_TestDescriptionInput, System.DateTime Data, string Comments) {
                 TestCommentsRow rowTestCommentsRow = ((TestCommentsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_Comments,
+                        null,
                         null,
                         Data,
                         Comments};
@@ -643,6 +643,8 @@ namespace Tester_VFS169 {
                 base.Columns.Add(this.columnComments);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Comments}, true));
+                this.columnID_Comments.AutoIncrement = true;
+                this.columnID_Comments.AutoIncrementSeed = 1;
                 this.columnID_Comments.AllowDBNull = false;
                 this.columnID_Comments.Unique = true;
                 this.columnID_TestInput.AllowDBNull = false;

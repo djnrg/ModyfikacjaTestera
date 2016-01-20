@@ -64,11 +64,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 152);
+            this.label2.Location = new System.Drawing.Point(19, 152);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(201, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "(c) 2016";
+            this.label2.Text = "Copyright © 2016 by Tomasz Pasierbski. ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1

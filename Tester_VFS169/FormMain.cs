@@ -277,7 +277,7 @@ namespace Tester_VFS169
                         WriteDataLog(PlikRaportu, DateTime.Now.ToShortDateString() + ";" + DateTime.Now.ToLongTimeString()
                             + ";" + String.Format("{0:D3}:{1:D2}:{2:d2}", s2, s1, t)
                             + ";" + zmienne[0].ToString() + ";" + zmienne[1].ToString() + ";" + zmienne[2].ToString()
-                            + ";" + zmienne[3].ToString() + ";" + zmienne[4].ToString() + ";" + zmienne[5].ToString() + ";" + zmienne[6].ToString()
+                            + ";" + zmienne[3].ToString() + ";" + zmienne[5].ToString() + ";" + zmienne[4].ToString() + ";" + zmienne[6].ToString()
                             + ";" + zmienne[7].ToString() + ";" + zmienne[8].ToString() + ";" + zmienne[9].ToString() + ";" + zmienne[10].ToString()
                             + ";" + zmienne[11].ToString() + ";" + zmienne[12].ToString() + ";" + zmienne[13].ToString() + ";" + zmienne[14].ToString()
                             + ";" + zmienne[15].ToString() + ";" + zmienne[16].ToString() + ";" + zmienne[17].ToString() + ";" + zmienne[18].ToString()
@@ -320,8 +320,8 @@ namespace Tester_VFS169
                     WFTempCondenserIn.PlotYAppend(zmienne[2]);
                     WFTempCondenserOut.PlotYAppend(zmienne[3]);
                     WFTempDischarge.PlotYAppend(zmienne[1]);
-                    WFTempEvapIn.PlotYAppend(zmienne[4]);
-                    WFTempEvapOut.PlotYAppend(zmienne[5]);
+                    WFTempEvapIn.PlotYAppend(zmienne[5]);
+                    WFTempEvapOut.PlotYAppend(zmienne[4]);
                     WFTempHotbox.PlotYAppend(zmienne[6]);
                     WFTempSuction.PlotYAppend(zmienne[0]);
 
@@ -371,10 +371,10 @@ namespace Tester_VFS169
 
 
                     //Evapurator
-                    SetTextBox(thermometerEvapInTB, zmienne[4].ToString() + " °C");
-                    SetTextBox(TBACEvapINTemp, zmienne[4].ToString() + " °C");
-                    SetTextBox(thermometerEvapOutTB, zmienne[5].ToString() + " °C");
-                    SetTextBox(TBACEvapOUTTemp, zmienne[5].ToString() + " °C");
+                    SetTextBox(thermometerEvapInTB, zmienne[5].ToString() + " °C");
+                    SetTextBox(TBACEvapINTemp, zmienne[5].ToString() + " °C");
+                    SetTextBox(thermometerEvapOutTB, zmienne[4].ToString() + " °C");
+                    SetTextBox(TBACEvapOUTTemp, zmienne[4].ToString() + " °C");
 
                     //Air in Evapurator
                     SetTextBox(thermometerAirInTB, zmienne[8].ToString() + " °C");
@@ -734,9 +734,9 @@ namespace Tester_VFS169
                 xml.WriteElementString("ReportLocation", PlikRaportu.ToString());
                 xml.WriteEndElement();
 
-                xml.WriteStartElement("TestParameters");
-                xml.WriteElementString("SelectedTest", TestSelected.SelectedText);
-                xml.WriteEndElement();
+                //xml.WriteStartElement("TestParameters");
+                //xml.WriteElementString("SelectedTest", TestSelected.SelectedText);
+                //xml.WriteEndElement();
 
                 xml.WriteEndElement();
 
@@ -809,7 +809,7 @@ namespace Tester_VFS169
 
                 //Wyswetlanie Informcji o folderach
                 string RepS = TestSettings.Replace("/", @"\");
-                string RepR = TestSettings.Replace("/", @"\");
+                string RepR = PlikRaportu.Replace("/", @"\");
                 textBoxSettingsInfo.Text = RepS;
                 textBoxReportInfo.Text = RepR;
             }
@@ -1158,9 +1158,8 @@ namespace Tester_VFS169
                 TaxisMIN.ReadOnly = false;
                 TaxisMAX.ReadOnly = false;
                 AxisTemperature.Mode = NationalInstruments.UI.AxisMode.Fixed;
-                //NationalInstruments.UI.Range TMinimumAxis = new NationalInstruments.UI.Range();
-                //TMinimumAxis.Minimum = Convert.ToDouble(TaxisMIN.Text);
-
+                NationalInstruments.UI.Range TAxis = new NationalInstruments.UI.Range(Convert.ToDouble(TaxisMIN.Text), Convert.ToDouble(TaxisMAX.Text));
+                AxisTemperature.Range = TAxis;
             }
         }
 
@@ -1177,6 +1176,8 @@ namespace Tester_VFS169
                 PaxisMIN.ReadOnly = false;
                 PaxisMAX.ReadOnly = false;
                 AxisPressure.Mode = NationalInstruments.UI.AxisMode.Fixed;
+                NationalInstruments.UI.Range PAxis = new NationalInstruments.UI.Range(Convert.ToDouble(PaxisMIN.Text), Convert.ToDouble(PaxisMAX.Text));
+                AxisPressure.Range = PAxis;
             }
         }
 
@@ -1217,7 +1218,108 @@ namespace Tester_VFS169
             Terminal.Text = "";
         }
 
+        private void saveTestStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void TimeAxisBOX_CheckedChanged(object sender, EventArgs e)
+        {
+            if (TimeAxisBOX.Checked)
+            {
+                TimeAxisMIN.ReadOnly = true;
+                TimeAxisMAX.ReadOnly = true;
+                AxisPressure.Mode = NationalInstruments.UI.AxisMode.StripChart;
+                NationalInstruments.UI.Range TAxis = new NationalInstruments.UI.Range(0,30);
+                TimeAxis.Range = TAxis;
+            }
+            else
+            {
+                TimeAxisMIN.ReadOnly = false;
+                TimeAxisMAX.ReadOnly = false;
+                TimeAxis.Mode = NationalInstruments.UI.AxisMode.Fixed;
+                NationalInstruments.UI.Range TAxis = new NationalInstruments.UI.Range(Convert.ToDouble(TimeAxisMIN.Text), Convert.ToDouble(TimeAxisMAX.Text));
+                TimeAxis.Range = TAxis;
+            }
+        }
+
+        private void TaxisMIN_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                NationalInstruments.UI.Range TAxis = new NationalInstruments.UI.Range(Convert.ToDouble(TaxisMIN.Text), Convert.ToDouble(TaxisMAX.Text));
+                AxisTemperature.Range = TAxis;
+            }
+            catch
+            {
+                //MessageBox.Show("Wrong ValueType");
+            }
+        }
+
+        private void TaxisMAX_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                NationalInstruments.UI.Range TAxis = new NationalInstruments.UI.Range(Convert.ToDouble(TaxisMIN.Text), Convert.ToDouble(TaxisMAX.Text));
+                AxisTemperature.Range = TAxis;
+            }
+            catch
+            {
+                //MessageBox.Show("Wrong ValueType");
+            }
+        }
+
+        private void PaxisMIN_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                NationalInstruments.UI.Range PAxis = new NationalInstruments.UI.Range(Convert.ToDouble(PaxisMIN.Text), Convert.ToDouble(PaxisMAX.Text));
+                AxisPressure.Range = PAxis;
+            }
+            catch
+            {
+                //MessageBox.Show("Wrong ValueType");
+            }
+        }
+
+        private void PaxisMAX_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                NationalInstruments.UI.Range PAxis = new NationalInstruments.UI.Range(Convert.ToDouble(PaxisMIN.Text), Convert.ToDouble(PaxisMAX.Text));
+                AxisPressure.Range = PAxis;
+            }
+            catch
+            {
+                //MessageBox.Show("Wrong ValueType");
+            }
+        }
+
+        private void TimeAxisMIN_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                NationalInstruments.UI.Range TAxis = new NationalInstruments.UI.Range(Convert.ToDouble(TimeAxisMIN.Text), Convert.ToDouble(TimeAxisMAX.Text));
+                TimeAxis.Range = TAxis;
+            }
+            catch
+            {
+                //MessageBox.Show("Wrong ValueType");
+            }
+        }
+
+        private void TimeAxisMAX_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                NationalInstruments.UI.Range TAxis = new NationalInstruments.UI.Range(Convert.ToDouble(TimeAxisMIN.Text), Convert.ToDouble(TimeAxisMAX.Text));
+                TimeAxis.Range = TAxis;
+            }
+            catch
+            {
+                //MessageBox.Show("Wrong ValueType");
+            }
+        }
 
 
     }

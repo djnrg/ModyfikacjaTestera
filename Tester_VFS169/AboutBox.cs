@@ -21,11 +21,10 @@ namespace Tester_VFS169
             //this.textBoxDescription.Text = AssemblyDescription;
         }
 
-        private void okButton_Click(object sender, EventArgs e)
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
         {
 
         }
-
 
     }
 }

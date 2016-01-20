@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InstallerBuilderProject>
+  <Installer>
+    <ProductName>Tester VFS169</ProductName>
+    <ScheduleReboot>false</ScheduleReboot>
+    <ProductVersion>0.7.6</ProductVersion>
+    <UpgradeCode>{CABA7DFA-158A-422C-AFF6-1AA1DF2C4583}</UpgradeCode>
+    <Publisher>&lt;Unknown&gt;</Publisher>
+    <AllowDirectorySelection>true</AllowDirectorySelection>
+    <SelectedProducts>
+      <ProductSelection>
+        <Product>
+          <Id>{8FB91FB8-153E-4C6B-B71B-3D217A75D5F1}</Id>
+          <UpgradeCode>b431cda0-0424-4bf2-a16e-506267104e1b</UpgradeCode>
+          <Name>NI Measurement Studio Common .NET Language Runtime 2015 for .NET 4.0</Name>
+          <Version>15.0.49156</Version>
+          <Description>The NI Measurement Studio Common .NET Language Runtime 2015 for .NET 4.0</Description>
+          <InstallerInformation>
+            <Path>C:\ProgramData\National Instruments\MDF\ProductCache\</Path>
+            <Title>Local Cache</Title>
+            <Type>Cached</Type>
+          </InstallerInformation>
+          <FlavorId>Runtime</FlavorId>
+          <FlavorDisplayName>Full</FlavorDisplayName>
+        </Product>
+        <RemovedSoftDependencies />
+        <UseSpecificVersion>false</UseSpecificVersion>
+        <Features />
+        <Properties />
+      </ProductSelection>
+      <ProductSelection>
+        <Product>
+          <Id>{41A4D3B1-B1A6-4445-A1D6-A09DC8799B11}</Id>
+          <UpgradeCode>63bb9fc4-e4c1-4a01-9735-1ce3d5edcf40</UpgradeCode>
+          <Name>NI Measurement Studio UI .NET Language Runtime 2015 for .NET 4.0</Name>
+          <Version>15.0.49153</Version>
+          <Description>The NI Measurement Studio UI .NET Language Runtime 2015 for .NET 4.0</Description>
+          <InstallerInformation>
+            <Path>C:\ProgramData\National Instruments\MDF\ProductCache\</Path>
+            <Title>Local Cache</Title>
+            <Type>Cached</Type>
+          </InstallerInformation>
+          <FlavorId>Full</FlavorId>
+          <FlavorDisplayName>Runtime</FlavorDisplayName>
+        </Product>
+        <RemovedSoftDependencies />
+        <UseSpecificVersion>false</UseSpecificVersion>
+        <Features />
+        <Properties />
+      </ProductSelection>
+      <ProductSelection>
+        <Product>
+          <Id>{98237E58-B99C-4B77-93E0-32A881B930F6}</Id>
+          <UpgradeCode>0e192465-cc28-4c84-be81-710b71c595a3</UpgradeCode>
+          <Name>NI System Configuration Runtime 15.0.0</Name>
+          <Version>15.0.151</Version>
+          <Description>NI System Configuration Runtime provides libraries and other files necessary to support applications that discover and configure systems and devices using the NI System Configuration API.</Description>
+          <InstallerInformation>
+            <Path>C:\National Instruments Downloads\LabVIEW\2015\</Path>
+            <Title>LabVIEW 2015</Title>
+            <Type>Distribution</Type>
+          </InstallerInformation>
+          <FlavorId>DefaultFull</FlavorId>
+          <FlavorDisplayName>Full</FlavorDisplayName>
+        </Product>
+        <RemovedSoftDependencies />
+        <UseSpecificVersion>false</UseSpecificVersion>
+        <Features />
+        <Properties />
+      </ProductSelection>
+      <ProductSelection>
+        <Product>
+          <Id>{510323BA-77C2-4767-AE70-04932178D02B}</Id>
+          <UpgradeCode>67b28cdf-779f-4203-89ff-094fa1fde46c</UpgradeCode>
+          <Name>NI System Configuration .NET Language Runtime 15.0 for the .NET Framework 4.0</Name>
+          <Version>15.0.49152</Version>
+          <Description>NI System Configuration .NET Language Runtime provides libraries and other files necessary to support .NET applications that discover and configure systems and devices using the NI System Configuration API. Requires .NET 4.0 or 4.5.</Description>
+          <InstallerInformation>
+            <Path>C:\ProgramData\National Instruments\Update Service\Installers\NI_20151012_2345\Updates\NI System Configuration 15.0 15.0.0.30\</Path>
+            <Title>NI System Configuration 15.0</Title>
+            <Type>Distribution</Type>
+          </InstallerInformation>
+          <FlavorId>DefaultFull</FlavorId>
+          <FlavorDisplayName>Full</FlavorDisplayName>
+        </Product>
+        <RemovedSoftDependencies />
+        <UseSpecificVersion>false</UseSpecificVersion>
+        <Features />
+        <Properties />
+      </ProductSelection>
+      <ProductSelection>
+        <Product>
+          <Id>{27067A8A-F87B-4CD9-A1B9-05D0D97ECD10}</Id>
+          <UpgradeCode>69da64f2-1630-4c0c-947d-6cf5590a63a4</UpgradeCode>
+          <Name>Microsoft Silverlight 5.1</Name>
+          <Version>5.1.4005</Version>
+          <Description>Required by some National Instruments products. Refer to the descriptions of your selected products to determine whether you should include Silverlight in your installer.</Description>
+          <InstallerInformation>
+            <Path>C:\National Instruments Downloads\LabVIEW\2015\</Path>
+            <Title>LabVIEW 2015</Title>
+            <Type>Distribution</Type>
+          </InstallerInformation>
+          <FlavorId>_full_</FlavorId>
+          <FlavorDisplayName>Full</FlavorDisplayName>
+        </Product>
+        <RemovedSoftDependencies />
+        <UseSpecificVersion>false</UseSpecificVersion>
+        <Features />
+        <Properties />
+      </ProductSelection>
+    </SelectedProducts>
+    <InstallationUISettings>
+      <Language>English</Language>
+      <ReadMeFile />
+      <LicenseFile />
+      <WelcomeDialogTitle>Tester VFS169 </WelcomeDialogTitle>
+      <WelcomeDialogText>Welcome in installer new software</WelcomeDialogText>
+      <SingleDirectoryDialogText />
+      <EnableFeatureTreeDialog>false</EnableFeatureTreeDialog>
+    </InstallationUISettings>
+    <BuildOutputSettings>
+      <BuildDirectory>D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Instalacja TESTER VFS169</BuildDirectory>
+      <MediaSpanSizeInMegaBytes>4700</MediaSpanSizeInMegaBytes>
+      <BuildMode>MetaInstallerWithPatchSupport</BuildMode>
+      <VolumeLabel>Volume</VolumeLabel>
+    </BuildOutputSettings>
+    <LaunchCondition>
+      <MinimumOperatingSystem>Windows XP with Service Pack 3 (SP3)</MinimumOperatingSystem>
+      <MaximumOperatingSystem>None</MaximumOperatingSystem>
+      <MinimumDotNetVersion>None</MinimumDotNetVersion>
+    </LaunchCondition>
+    <BitnessMode>Mixed</BitnessMode>
+    <ApplicationDirectory>
+      <Path>TesterVFS169</Path>
+      <RootPath>ProgramFilesFolder</RootPath>
+      <PathType>RelativeToDirectoryTableKey</PathType>
+    </ApplicationDirectory>
+    <PropertyTable />
+    <Files>
+      <FileEntry>
+        <InstallToGAC>false</InstallToGAC>
+        <RegisterAsActiveXServer>false</RegisterAsActiveXServer>
+        <ComponentId>{6BCFEA57-A70F-48FE-BABA-777C3592BAB8}</ComponentId>
+        <SourceFullPath>D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Release\Database.mdf</SourceFullPath>
+        <FileName>Database.mdf</FileName>
+        <TargetPath>
+          <Path>TesterVFS169</Path>
+          <RootPath>ProgramFilesFolder</RootPath>
+          <PathType>RelativeToDirectoryTableKey</PathType>
+        </TargetPath>
+        <FeatureName />
+        <Condition />
+        <FileAttributeType>Normal</FileAttributeType>
+        <ProgramExecutionAttributesList>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>ResumeAfterRun</Mode>
+            <Condition />
+            <ExecutionTiming>LateDuringInstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>WaitForCompletion</Mode>
+            <Condition />
+            <ExecutionTiming>EarlyDuringUninstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+        </ProgramExecutionAttributesList>
+        <InstallationType>LocalOnly</InstallationType>
+        <FileShortcutAttributes />
+      </FileEntry>
+      <FileEntry>
+        <InstallToGAC>false</InstallToGAC>
+        <RegisterAsActiveXServer>false</RegisterAsActiveXServer>
+        <ComponentId>{3517F5FD-B74A-457E-B5A6-DC8A053AED30}</ComponentId>
+        <SourceFullPath>D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Release\Database_log.ldf</SourceFullPath>
+        <FileName>Database_log.ldf</FileName>
+        <TargetPath>
+          <Path>TesterVFS169</Path>
+          <RootPath>ProgramFilesFolder</RootPath>
+          <PathType>RelativeToDirectoryTableKey</PathType>
+        </TargetPath>
+        <FeatureName />
+        <Condition />
+        <FileAttributeType>Normal</FileAttributeType>
+        <ProgramExecutionAttributesList>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>ResumeAfterRun</Mode>
+            <Condition />
+            <ExecutionTiming>LateDuringInstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>WaitForCompletion</Mode>
+            <Condition />
+            <ExecutionTiming>EarlyDuringUninstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+        </ProgramExecutionAttributesList>
+        <InstallationType>LocalOnly</InstallationType>
+        <FileShortcutAttributes />
+      </FileEntry>
+      <FileEntry>
+        <InstallToGAC>false</InstallToGAC>
+        <RegisterAsActiveXServer>false</RegisterAsActiveXServer>
+        <ComponentId>{62C67334-F848-4907-8C33-EF32CD3FED52}</ComponentId>
+        <SourceFullPath>D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Release\Tester_VFS169.exe</SourceFullPath>
+        <FileName>Tester_VFS169.exe</FileName>
+        <TargetPath>
+          <Path>TesterVFS169</Path>
+          <RootPath>ProgramFilesFolder</RootPath>
+          <PathType>RelativeToDirectoryTableKey</PathType>
+        </TargetPath>
+        <FeatureName />
+        <Condition />
+        <FileAttributeType>Normal</FileAttributeType>
+        <ProgramExecutionAttributesList>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>ResumeAfterRun</Mode>
+            <Condition />
+            <ExecutionTiming>LateDuringInstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>WaitForCompletion</Mode>
+            <Condition />
+            <ExecutionTiming>EarlyDuringUninstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+        </ProgramExecutionAttributesList>
+        <InstallationType>LocalOnly</InstallationType>
+        <FileShortcutAttributes />
+      </FileEntry>
+      <FileEntry>
+        <InstallToGAC>false</InstallToGAC>
+        <RegisterAsActiveXServer>false</RegisterAsActiveXServer>
+        <ComponentId>{CD8942A2-5A48-4A31-887A-EC69D2D43DFA}</ComponentId>
+        <SourceFullPath>D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Release\Tester_VFS169.exe.config</SourceFullPath>
+        <FileName>Tester_VFS169.exe.config</FileName>
+        <TargetPath>
+          <Path>TesterVFS169</Path>
+          <RootPath>ProgramFilesFolder</RootPath>
+          <PathType>RelativeToDirectoryTableKey</PathType>
+        </TargetPath>
+        <FeatureName />
+        <Condition />
+        <FileAttributeType>Normal</FileAttributeType>
+        <ProgramExecutionAttributesList>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>ResumeAfterRun</Mode>
+            <Condition />
+            <ExecutionTiming>LateDuringInstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>WaitForCompletion</Mode>
+            <Condition />
+            <ExecutionTiming>EarlyDuringUninstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+        </ProgramExecutionAttributesList>
+        <InstallationType>LocalOnly</InstallationType>
+        <FileShortcutAttributes />
+      </FileEntry>
+      <FileEntry>
+        <InstallToGAC>false</InstallToGAC>
+        <RegisterAsActiveXServer>false</RegisterAsActiveXServer>
+        <ComponentId>{CE5F5620-57BE-4016-8DFC-75A59BF4718B}</ComponentId>
+        <SourceFullPath>D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Release\Tester_VFS169.pdb</SourceFullPath>
+        <FileName>Tester_VFS169.pdb</FileName>
+        <TargetPath>
+          <Path>TesterVFS169</Path>
+          <RootPath>ProgramFilesFolder</RootPath>
+          <PathType>RelativeToDirectoryTableKey</PathType>
+        </TargetPath>
+        <FeatureName />
+        <Condition />
+        <FileAttributeType>Normal</FileAttributeType>
+        <ProgramExecutionAttributesList>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>ResumeAfterRun</Mode>
+            <Condition />
+            <ExecutionTiming>LateDuringInstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>WaitForCompletion</Mode>
+            <Condition />
+            <ExecutionTiming>EarlyDuringUninstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+        </ProgramExecutionAttributesList>
+        <InstallationType>LocalOnly</InstallationType>
+        <FileShortcutAttributes />
+      </FileEntry>
+      <FileEntry>
+        <InstallToGAC>false</InstallToGAC>
+        <RegisterAsActiveXServer>false</RegisterAsActiveXServer>
+        <ComponentId>{6AE01D15-C2A8-4125-BCC6-9E2414354A4A}</ComponentId>
+        <SourceFullPath>D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Release\Tester_VFS169.vshost.exe</SourceFullPath>
+        <FileName>Tester_VFS169.vshost.exe</FileName>
+        <TargetPath>
+          <Path>TesterVFS169</Path>
+          <RootPath>ProgramFilesFolder</RootPath>
+          <PathType>RelativeToDirectoryTableKey</PathType>
+        </TargetPath>
+        <FeatureName />
+        <Condition />
+        <FileAttributeType>Normal</FileAttributeType>
+        <ProgramExecutionAttributesList>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>ResumeAfterRun</Mode>
+            <Condition />
+            <ExecutionTiming>LateDuringInstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>WaitForCompletion</Mode>
+            <Condition />
+            <ExecutionTiming>EarlyDuringUninstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+        </ProgramExecutionAttributesList>
+        <InstallationType>LocalOnly</InstallationType>
+        <FileShortcutAttributes />
+      </FileEntry>
+      <FileEntry>
+        <InstallToGAC>false</InstallToGAC>
+        <RegisterAsActiveXServer>false</RegisterAsActiveXServer>
+        <ComponentId>{E678F49D-0149-426C-89B5-A22796AA4BFA}</ComponentId>
+        <SourceFullPath>D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Release\Tester_VFS169.vshost.exe.config</SourceFullPath>
+        <FileName>Tester_VFS169.vshost.exe.config</FileName>
+        <TargetPath>
+          <Path>TesterVFS169</Path>
+          <RootPath>ProgramFilesFolder</RootPath>
+          <PathType>RelativeToDirectoryTableKey</PathType>
+        </TargetPath>
+        <FeatureName />
+        <Condition />
+        <FileAttributeType>Normal</FileAttributeType>
+        <ProgramExecutionAttributesList>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>ResumeAfterRun</Mode>
+            <Condition />
+            <ExecutionTiming>LateDuringInstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>WaitForCompletion</Mode>
+            <Condition />
+            <ExecutionTiming>EarlyDuringUninstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+        </ProgramExecutionAttributesList>
+        <InstallationType>LocalOnly</InstallationType>
+        <FileShortcutAttributes />
+      </FileEntry>
+      <FileEntry>
+        <InstallToGAC>false</InstallToGAC>
+        <RegisterAsActiveXServer>false</RegisterAsActiveXServer>
+        <ComponentId>{7B6DE5E4-9E2D-4C19-A36F-06F77269B0FA}</ComponentId>
+        <SourceFullPath>D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Release\Tester_VFS169.vshost.exe.manifest</SourceFullPath>
+        <FileName>Tester_VFS169.vshost.exe.manifest</FileName>
+        <TargetPath>
+          <Path>TesterVFS169</Path>
+          <RootPath>ProgramFilesFolder</RootPath>
+          <PathType>RelativeToDirectoryTableKey</PathType>
+        </TargetPath>
+        <FeatureName />
+        <Condition />
+        <FileAttributeType>Normal</FileAttributeType>
+        <ProgramExecutionAttributesList>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>ResumeAfterRun</Mode>
+            <Condition />
+            <ExecutionTiming>LateDuringInstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+          <ProgramExecutionAttributes>
+            <IsEnabled>false</IsEnabled>
+            <CommandLineArguments />
+            <Mode>WaitForCompletion</Mode>
+            <Condition />
+            <ExecutionTiming>EarlyDuringUninstall</ExecutionTiming>
+          </ProgramExecutionAttributes>
+        </ProgramExecutionAttributesList>
+        <InstallationType>LocalOnly</InstallationType>
+        <FileShortcutAttributes />
+      </FileEntry>
+    </Files>
+    <MergeModules />
+    <Registries />
+    <ApplicationsToRunOnTargetMachine />
+    <MAXConfigurationFile />
+    <InstallerFileSummary>
+      <Title>Tester VFS169</Title>
+      <Subject>Tester data logger</Subject>
+      <Keywords />
+      <Author>Tomasz Pasierbski</Author>
+      <Comments />
+      <ApplicationName />
+      <Security>NoRestriction</Security>
+    </InstallerFileSummary>
+    <WindowsProgramsSettings>
+      <HelpUrl />
+      <PublisherContact />
+      <SupportUrl />
+      <SupportPhone />
+      <ProductUpdatesUrl />
+      <Comments />
+    </WindowsProgramsSettings>
+    <Id>{50B83236-70A3-4326-8711-56807279304F}</Id>
+  </Installer>
+  <TargetDirectories>
+    <TargetDirectoryInformation>
+      <TargetPath>
+        <Path />
+        <RootPath>ProgramFilesFolder</RootPath>
+        <PathType>RelativeToDirectoryTableKey</PathType>
+      </TargetPath>
+      <IsUnlockDirectory>false</IsUnlockDirectory>
+    </TargetDirectoryInformation>
+    <TargetDirectoryInformation>
+      <TargetPath>
+        <Path>TesterVFS169</Path>
+        <RootPath>ProgramFilesFolder</RootPath>
+        <PathType>RelativeToDirectoryTableKey</PathType>
+      </TargetPath>
+      <IsUnlockDirectory>false</IsUnlockDirectory>
+    </TargetDirectoryInformation>
+  </TargetDirectories>
+  <VersionIncrementMode>IncrementAfterSuccessfulBuild</VersionIncrementMode>
+  <UserNotes />
+  <IsShowRuntimeInstallerOnly>True</IsShowRuntimeInstallerOnly>
+  <IsCustomInstallerName>True</IsCustomInstallerName>
+  <AutoIncludeInstallers>True</AutoIncludeInstallers>
+  <ProductSelectionInfoList>
+    <ProductSelectionInfo>
+      <Id>
+        <ProductId>{8FB91FB8-153E-4C6B-B71B-3D217A75D5F1}</ProductId>
+        <FlavorId>Runtime</FlavorId>
+      </Id>
+      <IsInstallerIncludedByUser>True</IsInstallerIncludedByUser>
+      <IsInstallerAutoIncluded>True</IsInstallerAutoIncluded>
+    </ProductSelectionInfo>
+    <ProductSelectionInfo>
+      <Id>
+        <ProductId>{41A4D3B1-B1A6-4445-A1D6-A09DC8799B11}</ProductId>
+        <FlavorId>Full</FlavorId>
+      </Id>
+      <IsInstallerIncludedByUser>False</IsInstallerIncludedByUser>
+      <IsInstallerAutoIncluded>True</IsInstallerAutoIncluded>
+    </ProductSelectionInfo>
+    <ProductSelectionInfo>
+      <Id>
+        <ProductId>{98237E58-B99C-4B77-93E0-32A881B930F6}</ProductId>
+        <FlavorId>DefaultFull</FlavorId>
+      </Id>
+      <IsInstallerIncludedByUser>True</IsInstallerIncludedByUser>
+      <IsInstallerAutoIncluded>True</IsInstallerAutoIncluded>
+    </ProductSelectionInfo>
+    <ProductSelectionInfo>
+      <Id>
+        <ProductId>{510323BA-77C2-4767-AE70-04932178D02B}</ProductId>
+        <FlavorId>DefaultFull</FlavorId>
+      </Id>
+      <IsInstallerIncludedByUser>True</IsInstallerIncludedByUser>
+      <IsInstallerAutoIncluded>True</IsInstallerAutoIncluded>
+    </ProductSelectionInfo>
+    <ProductSelectionInfo>
+      <Id>
+        <ProductId>{27067A8A-F87B-4CD9-A1B9-05D0D97ECD10}</ProductId>
+        <FlavorId>_full_</FlavorId>
+      </Id>
+      <IsInstallerIncludedByUser>True</IsInstallerIncludedByUser>
+      <IsInstallerAutoIncluded>True</IsInstallerAutoIncluded>
+    </ProductSelectionInfo>
+  </ProductSelectionInfoList>
+  <DigitalSignatureProperties>
+    <IsDigitallySignInstallerExe>False</IsDigitallySignInstallerExe>
+    <DigitalCertificateStore>MY</DigitalCertificateStore>
+    <CertificateName>Laptop\Tomek</CertificateName>
+    <TimeStampUrl />
+    <DescriptionUrl />
+  </DigitalSignatureProperties>
+</InstallerBuilderProject>

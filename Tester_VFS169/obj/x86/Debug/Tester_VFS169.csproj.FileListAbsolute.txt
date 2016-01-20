@@ -16,4 +16,3 @@ D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Debug\D
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\bin\Debug\Database_log.ldf
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormNTD.resources
 D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormSNT.resources
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Tester_VFS169\obj\x86\Debug\Tester_VFS169.FormTerminal.resources

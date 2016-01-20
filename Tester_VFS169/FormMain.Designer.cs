@@ -115,25 +115,28 @@
             this.thermometerDischarge = new NationalInstruments.UI.WindowsForms.Thermometer();
             this.gaugeDischarge = new NationalInstruments.UI.WindowsForms.Gauge();
             this.BoxChart = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.TaxisMAX = new System.Windows.Forms.TextBox();
+            this.TaxisBox = new System.Windows.Forms.CheckBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.TaxisMIN = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TimeAxisMAX = new System.Windows.Forms.TextBox();
+            this.TimeAxisMIN = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.TimeAxisBOX = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
             this.PaxisMAX = new System.Windows.Forms.TextBox();
             this.PaxisMIN = new System.Windows.Forms.TextBox();
-            this.TaxisMAX = new System.Windows.Forms.TextBox();
-            this.TaxisMIN = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.PaxisBOX = new System.Windows.Forms.CheckBox();
-            this.TaxisBox = new System.Windows.Forms.CheckBox();
             this.legend1 = new NationalInstruments.UI.WindowsForms.Legend();
             this.legendItem1 = new NationalInstruments.UI.LegendItem();
             this.WFPressureSuction = new NationalInstruments.UI.WaveformPlot();
-            this.xAxis1 = new NationalInstruments.UI.XAxis();
+            this.TimeAxis = new NationalInstruments.UI.XAxis();
             this.AxisPressure = new NationalInstruments.UI.YAxis();
             this.legendItem2 = new NationalInstruments.UI.LegendItem();
             this.WFPressureDischarge = new NationalInstruments.UI.WaveformPlot();
@@ -255,6 +258,9 @@
             this.openFileSetting = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserGlobal = new System.Windows.Forms.FolderBrowserDialog();
             this.BoxAC = new System.Windows.Forms.GroupBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.TBACHotboxTemp = new System.Windows.Forms.TextBox();
             this.TBACDischargeTemp = new System.Windows.Forms.TextBox();
             this.TBACSuctionTemp = new System.Windows.Forms.TextBox();
@@ -286,6 +292,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.thermometerDischarge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gaugeDischarge)).BeginInit();
             this.BoxChart.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.legend1)).BeginInit();
@@ -487,6 +494,7 @@
             this.saveTestStatusToolStripMenuItem.Name = "saveTestStatusToolStripMenuItem";
             this.saveTestStatusToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.saveTestStatusToolStripMenuItem.Text = "Save test status";
+            this.saveTestStatusToolStripMenuItem.Click += new System.EventHandler(this.saveTestStatusToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -495,7 +503,6 @@
             // 
             // finishTestToolStripMenuItem
             // 
-            this.finishTestToolStripMenuItem.Enabled = false;
             this.finishTestToolStripMenuItem.Name = "finishTestToolStripMenuItem";
             this.finishTestToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.finishTestToolStripMenuItem.Text = "Finish test";
@@ -547,6 +554,7 @@
             // 
             // helpToolStripMenuItem1
             // 
+            this.helpToolStripMenuItem1.Enabled = false;
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
             this.helpToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.helpToolStripMenuItem1.Text = "Help";
@@ -743,7 +751,7 @@
             this.BoxDischrge.Controls.Add(this.thermometerDischarge);
             this.BoxDischrge.Controls.Add(this.gaugeDischarge);
             this.BoxDischrge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BoxDischrge.Location = new System.Drawing.Point(8, 27);
+            this.BoxDischrge.Location = new System.Drawing.Point(514, 28);
             this.BoxDischrge.Name = "BoxDischrge";
             this.BoxDischrge.Size = new System.Drawing.Size(480, 400);
             this.BoxDischrge.TabIndex = 5;
@@ -861,6 +869,7 @@
             // BoxChart
             // 
             this.BoxChart.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BoxChart.Controls.Add(this.panel3);
             this.BoxChart.Controls.Add(this.panel2);
             this.BoxChart.Controls.Add(this.panel1);
             this.BoxChart.Controls.Add(this.legend1);
@@ -884,10 +893,80 @@
             this.BoxChart.Text = "Graph";
             this.BoxChart.Visible = false;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.TaxisMAX);
+            this.panel3.Controls.Add(this.TaxisBox);
+            this.panel3.Controls.Add(this.label28);
+            this.panel3.Controls.Add(this.TaxisMIN);
+            this.panel3.Controls.Add(this.label29);
+            this.panel3.Location = new System.Drawing.Point(6, 16);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(119, 66);
+            this.panel3.TabIndex = 17;
+            // 
+            // TaxisMAX
+            // 
+            this.TaxisMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.TaxisMAX.Location = new System.Drawing.Point(49, 41);
+            this.TaxisMAX.Name = "TaxisMAX";
+            this.TaxisMAX.ReadOnly = true;
+            this.TaxisMAX.Size = new System.Drawing.Size(60, 20);
+            this.TaxisMAX.TabIndex = 5;
+            this.TaxisMAX.Text = "60";
+            this.TaxisMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TaxisMAX.TextChanged += new System.EventHandler(this.TaxisMAX_TextChanged);
+            // 
+            // TaxisBox
+            // 
+            this.TaxisBox.AutoSize = true;
+            this.TaxisBox.Checked = true;
+            this.TaxisBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.TaxisBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.TaxisBox.Location = new System.Drawing.Point(6, 3);
+            this.TaxisBox.Name = "TaxisBox";
+            this.TaxisBox.Size = new System.Drawing.Size(95, 17);
+            this.TaxisBox.TabIndex = 0;
+            this.TaxisBox.Text = "Auto T. Axis";
+            this.TaxisBox.UseVisualStyleBackColor = true;
+            this.TaxisBox.CheckedChanged += new System.EventHandler(this.TaxisBox_CheckedChanged);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label28.Location = new System.Drawing.Point(3, 21);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(31, 13);
+            this.label28.TabIndex = 2;
+            this.label28.Text = "Min.";
+            // 
+            // TaxisMIN
+            // 
+            this.TaxisMIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.TaxisMIN.Location = new System.Drawing.Point(49, 18);
+            this.TaxisMIN.Name = "TaxisMIN";
+            this.TaxisMIN.ReadOnly = true;
+            this.TaxisMIN.Size = new System.Drawing.Size(60, 20);
+            this.TaxisMIN.TabIndex = 4;
+            this.TaxisMIN.Text = "0";
+            this.TaxisMIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TaxisMIN.TextChanged += new System.EventHandler(this.TaxisMIN_TextChanged);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label29.Location = new System.Drawing.Point(3, 45);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(34, 13);
+            this.label29.TabIndex = 3;
+            this.label29.Text = "Max.";
+            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.TimeAxisMAX);
+            this.panel2.Controls.Add(this.TimeAxisMIN);
             this.panel2.Controls.Add(this.label37);
             this.panel2.Controls.Add(this.label36);
             this.panel2.Controls.Add(this.TimeAxisBOX);
@@ -897,21 +976,27 @@
             this.panel2.Size = new System.Drawing.Size(132, 69);
             this.panel2.TabIndex = 16;
             // 
-            // textBox3
+            // TimeAxisMAX
             // 
-            this.textBox3.Location = new System.Drawing.Point(49, 46);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(60, 20);
-            this.textBox3.TabIndex = 4;
+            this.TimeAxisMAX.Location = new System.Drawing.Point(49, 46);
+            this.TimeAxisMAX.Name = "TimeAxisMAX";
+            this.TimeAxisMAX.ReadOnly = true;
+            this.TimeAxisMAX.Size = new System.Drawing.Size(60, 20);
+            this.TimeAxisMAX.TabIndex = 4;
+            this.TimeAxisMAX.Text = "300";
+            this.TimeAxisMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TimeAxisMAX.TextChanged += new System.EventHandler(this.TimeAxisMAX_TextChanged);
             // 
-            // textBox2
+            // TimeAxisMIN
             // 
-            this.textBox2.Location = new System.Drawing.Point(49, 21);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(60, 20);
-            this.textBox2.TabIndex = 3;
+            this.TimeAxisMIN.Location = new System.Drawing.Point(49, 21);
+            this.TimeAxisMIN.Name = "TimeAxisMIN";
+            this.TimeAxisMIN.ReadOnly = true;
+            this.TimeAxisMIN.Size = new System.Drawing.Size(60, 20);
+            this.TimeAxisMIN.TabIndex = 3;
+            this.TimeAxisMIN.Text = "0";
+            this.TimeAxisMIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TimeAxisMIN.TextChanged += new System.EventHandler(this.TimeAxisMIN_TextChanged);
             // 
             // label37
             // 
@@ -943,110 +1028,75 @@
             this.TimeAxisBOX.TabIndex = 0;
             this.TimeAxisBOX.Text = "Auto Time Axis ";
             this.TimeAxisBOX.UseVisualStyleBackColor = true;
+            this.TimeAxisBOX.CheckedChanged += new System.EventHandler(this.TimeAxisBOX_CheckedChanged);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label38);
+            this.panel1.Controls.Add(this.label40);
             this.panel1.Controls.Add(this.PaxisMAX);
             this.panel1.Controls.Add(this.PaxisMIN);
-            this.panel1.Controls.Add(this.TaxisMAX);
-            this.panel1.Controls.Add(this.TaxisMIN);
-            this.panel1.Controls.Add(this.label29);
-            this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.PaxisBOX);
-            this.panel1.Controls.Add(this.TaxisBox);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.panel1.Location = new System.Drawing.Point(742, 15);
+            this.panel1.Location = new System.Drawing.Point(861, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 67);
+            this.panel1.Size = new System.Drawing.Size(121, 67);
             this.panel1.TabIndex = 15;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(5, 23);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(31, 13);
+            this.label38.TabIndex = 8;
+            this.label38.Text = "Min.";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(5, 46);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(34, 13);
+            this.label40.TabIndex = 9;
+            this.label40.Text = "Max.";
             // 
             // PaxisMAX
             // 
             this.PaxisMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PaxisMAX.Location = new System.Drawing.Point(155, 42);
+            this.PaxisMAX.Location = new System.Drawing.Point(42, 42);
             this.PaxisMAX.Name = "PaxisMAX";
             this.PaxisMAX.ReadOnly = true;
             this.PaxisMAX.Size = new System.Drawing.Size(60, 20);
             this.PaxisMAX.TabIndex = 7;
             this.PaxisMAX.Text = "30";
             this.PaxisMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PaxisMAX.TextChanged += new System.EventHandler(this.PaxisMAX_TextChanged);
             // 
             // PaxisMIN
             // 
             this.PaxisMIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PaxisMIN.Location = new System.Drawing.Point(155, 20);
+            this.PaxisMIN.Location = new System.Drawing.Point(42, 20);
             this.PaxisMIN.Name = "PaxisMIN";
             this.PaxisMIN.ReadOnly = true;
             this.PaxisMIN.Size = new System.Drawing.Size(60, 20);
             this.PaxisMIN.TabIndex = 6;
             this.PaxisMIN.Text = "0";
             this.PaxisMIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // TaxisMAX
-            // 
-            this.TaxisMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.TaxisMAX.Location = new System.Drawing.Point(54, 42);
-            this.TaxisMAX.Name = "TaxisMAX";
-            this.TaxisMAX.ReadOnly = true;
-            this.TaxisMAX.Size = new System.Drawing.Size(60, 20);
-            this.TaxisMAX.TabIndex = 5;
-            this.TaxisMAX.Text = "60";
-            this.TaxisMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // TaxisMIN
-            // 
-            this.TaxisMIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.TaxisMIN.Location = new System.Drawing.Point(54, 20);
-            this.TaxisMIN.Name = "TaxisMIN";
-            this.TaxisMIN.ReadOnly = true;
-            this.TaxisMIN.Size = new System.Drawing.Size(60, 20);
-            this.TaxisMIN.TabIndex = 4;
-            this.TaxisMIN.Text = "0";
-            this.TaxisMIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(5, 46);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(34, 13);
-            this.label29.TabIndex = 3;
-            this.label29.Text = "Max.";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(5, 23);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(31, 13);
-            this.label28.TabIndex = 2;
-            this.label28.Text = "Min.";
+            this.PaxisMIN.TextChanged += new System.EventHandler(this.PaxisMIN_TextChanged);
             // 
             // PaxisBOX
             // 
             this.PaxisBOX.AutoSize = true;
             this.PaxisBOX.Checked = true;
             this.PaxisBOX.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.PaxisBOX.Location = new System.Drawing.Point(139, 3);
+            this.PaxisBOX.Location = new System.Drawing.Point(15, 3);
             this.PaxisBOX.Name = "PaxisBOX";
             this.PaxisBOX.Size = new System.Drawing.Size(95, 17);
             this.PaxisBOX.TabIndex = 1;
             this.PaxisBOX.Text = "Auto P. Axis";
             this.PaxisBOX.UseVisualStyleBackColor = true;
             this.PaxisBOX.CheckedChanged += new System.EventHandler(this.PaxisBOX_CheckedChanged_1);
-            // 
-            // TaxisBox
-            // 
-            this.TaxisBox.AutoSize = true;
-            this.TaxisBox.Checked = true;
-            this.TaxisBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.TaxisBox.Location = new System.Drawing.Point(38, 3);
-            this.TaxisBox.Name = "TaxisBox";
-            this.TaxisBox.Size = new System.Drawing.Size(95, 17);
-            this.TaxisBox.TabIndex = 0;
-            this.TaxisBox.Text = "Auto T. Axis";
-            this.TaxisBox.UseVisualStyleBackColor = true;
-            this.TaxisBox.CheckedChanged += new System.EventHandler(this.TaxisBox_CheckedChanged);
             // 
             // legend1
             // 
@@ -1074,14 +1124,15 @@
             // 
             // WFPressureSuction
             // 
-            this.WFPressureSuction.XAxis = this.xAxis1;
+            this.WFPressureSuction.HistoryCapacity = 36000;
+            this.WFPressureSuction.XAxis = this.TimeAxis;
             this.WFPressureSuction.YAxis = this.AxisPressure;
             // 
-            // xAxis1
+            // TimeAxis
             // 
-            this.xAxis1.Caption = "Time [sek]";
-            this.xAxis1.Mode = NationalInstruments.UI.AxisMode.StripChart;
-            this.xAxis1.Range = new NationalInstruments.UI.Range(0D, 600D);
+            this.TimeAxis.Caption = "Time [sek]";
+            this.TimeAxis.Mode = NationalInstruments.UI.AxisMode.StripChart;
+            this.TimeAxis.Range = new NationalInstruments.UI.Range(0D, 600D);
             // 
             // AxisPressure
             // 
@@ -1096,7 +1147,7 @@
             // 
             // WFPressureDischarge
             // 
-            this.WFPressureDischarge.XAxis = this.xAxis1;
+            this.WFPressureDischarge.XAxis = this.TimeAxis;
             this.WFPressureDischarge.YAxis = this.AxisPressure;
             // 
             // legendItem3
@@ -1106,7 +1157,7 @@
             // 
             // WFTempSuction
             // 
-            this.WFTempSuction.XAxis = this.xAxis1;
+            this.WFTempSuction.XAxis = this.TimeAxis;
             this.WFTempSuction.YAxis = this.AxisTemperature;
             // 
             // AxisTemperature
@@ -1120,7 +1171,7 @@
             // 
             // WFTempDischarge
             // 
-            this.WFTempDischarge.XAxis = this.xAxis1;
+            this.WFTempDischarge.XAxis = this.TimeAxis;
             this.WFTempDischarge.YAxis = this.AxisTemperature;
             // 
             // legendItem5
@@ -1131,7 +1182,7 @@
             // 
             // WFTempCondenserIn
             // 
-            this.WFTempCondenserIn.XAxis = this.xAxis1;
+            this.WFTempCondenserIn.XAxis = this.TimeAxis;
             this.WFTempCondenserIn.YAxis = this.AxisTemperature;
             // 
             // legendItem6
@@ -1142,7 +1193,7 @@
             // 
             // WFTempCondenserOut
             // 
-            this.WFTempCondenserOut.XAxis = this.xAxis1;
+            this.WFTempCondenserOut.XAxis = this.TimeAxis;
             this.WFTempCondenserOut.YAxis = this.AxisTemperature;
             // 
             // legendItem7
@@ -1153,7 +1204,7 @@
             // 
             // WFTempEvapIn
             // 
-            this.WFTempEvapIn.XAxis = this.xAxis1;
+            this.WFTempEvapIn.XAxis = this.TimeAxis;
             this.WFTempEvapIn.YAxis = this.AxisTemperature;
             // 
             // legendItem8
@@ -1164,7 +1215,7 @@
             // 
             // WFTempEvapOut
             // 
-            this.WFTempEvapOut.XAxis = this.xAxis1;
+            this.WFTempEvapOut.XAxis = this.TimeAxis;
             this.WFTempEvapOut.YAxis = this.AxisTemperature;
             // 
             // legendItem9
@@ -1175,7 +1226,7 @@
             // 
             // WFTempCompressor
             // 
-            this.WFTempCompressor.XAxis = this.xAxis1;
+            this.WFTempCompressor.XAxis = this.TimeAxis;
             this.WFTempCompressor.YAxis = this.AxisTemperature;
             // 
             // legendItem10
@@ -1186,14 +1237,14 @@
             // 
             // WFTempHotbox
             // 
-            this.WFTempHotbox.XAxis = this.xAxis1;
+            this.WFTempHotbox.XAxis = this.TimeAxis;
             this.WFTempHotbox.YAxis = this.AxisTemperature;
             // 
             // PlotBoxTempHotbox
             // 
             this.PlotBoxTempHotbox.AutoSize = true;
             this.PlotBoxTempHotbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PlotBoxTempHotbox.Location = new System.Drawing.Point(600, 54);
+            this.PlotBoxTempHotbox.Location = new System.Drawing.Point(723, 54);
             this.PlotBoxTempHotbox.Name = "PlotBoxTempHotbox";
             this.PlotBoxTempHotbox.Size = new System.Drawing.Size(112, 20);
             this.PlotBoxTempHotbox.TabIndex = 13;
@@ -1205,7 +1256,7 @@
             // 
             this.PlotBoxTempCompressor.AutoSize = true;
             this.PlotBoxTempCompressor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PlotBoxTempCompressor.Location = new System.Drawing.Point(600, 24);
+            this.PlotBoxTempCompressor.Location = new System.Drawing.Point(723, 24);
             this.PlotBoxTempCompressor.Name = "PlotBoxTempCompressor";
             this.PlotBoxTempCompressor.Size = new System.Drawing.Size(143, 20);
             this.PlotBoxTempCompressor.TabIndex = 12;
@@ -1217,7 +1268,7 @@
             // 
             this.PlotBoxTempEvapOut.AutoSize = true;
             this.PlotBoxTempEvapOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PlotBoxTempEvapOut.Location = new System.Drawing.Point(465, 54);
+            this.PlotBoxTempEvapOut.Location = new System.Drawing.Point(588, 54);
             this.PlotBoxTempEvapOut.Name = "PlotBoxTempEvapOut";
             this.PlotBoxTempEvapOut.Size = new System.Drawing.Size(124, 20);
             this.PlotBoxTempEvapOut.TabIndex = 11;
@@ -1229,7 +1280,7 @@
             // 
             this.PlotBoxTempEvapIn.AutoSize = true;
             this.PlotBoxTempEvapIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PlotBoxTempEvapIn.Location = new System.Drawing.Point(465, 24);
+            this.PlotBoxTempEvapIn.Location = new System.Drawing.Point(588, 24);
             this.PlotBoxTempEvapIn.Name = "PlotBoxTempEvapIn";
             this.PlotBoxTempEvapIn.Size = new System.Drawing.Size(114, 20);
             this.PlotBoxTempEvapIn.TabIndex = 10;
@@ -1241,7 +1292,7 @@
             // 
             this.PlotBoxTempCondenserOut.AutoSize = true;
             this.PlotBoxTempCondenserOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PlotBoxTempCondenserOut.Location = new System.Drawing.Point(298, 54);
+            this.PlotBoxTempCondenserOut.Location = new System.Drawing.Point(421, 54);
             this.PlotBoxTempCondenserOut.Name = "PlotBoxTempCondenserOut";
             this.PlotBoxTempCondenserOut.Size = new System.Drawing.Size(158, 20);
             this.PlotBoxTempCondenserOut.TabIndex = 9;
@@ -1253,7 +1304,7 @@
             // 
             this.PlotBoxTempCondenserIn.AutoSize = true;
             this.PlotBoxTempCondenserIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PlotBoxTempCondenserIn.Location = new System.Drawing.Point(298, 24);
+            this.PlotBoxTempCondenserIn.Location = new System.Drawing.Point(421, 24);
             this.PlotBoxTempCondenserIn.Name = "PlotBoxTempCondenserIn";
             this.PlotBoxTempCondenserIn.Size = new System.Drawing.Size(148, 20);
             this.PlotBoxTempCondenserIn.TabIndex = 8;
@@ -1267,7 +1318,7 @@
             this.PlotBoxTempDischarge.Checked = true;
             this.PlotBoxTempDischarge.CheckState = System.Windows.Forms.CheckState.Checked;
             this.PlotBoxTempDischarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PlotBoxTempDischarge.Location = new System.Drawing.Point(159, 54);
+            this.PlotBoxTempDischarge.Location = new System.Drawing.Point(282, 54);
             this.PlotBoxTempDischarge.Name = "PlotBoxTempDischarge";
             this.PlotBoxTempDischarge.Size = new System.Drawing.Size(131, 20);
             this.PlotBoxTempDischarge.TabIndex = 7;
@@ -1281,7 +1332,7 @@
             this.PlotBoxTempSuction.Checked = true;
             this.PlotBoxTempSuction.CheckState = System.Windows.Forms.CheckState.Checked;
             this.PlotBoxTempSuction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PlotBoxTempSuction.Location = new System.Drawing.Point(159, 24);
+            this.PlotBoxTempSuction.Location = new System.Drawing.Point(282, 24);
             this.PlotBoxTempSuction.Name = "PlotBoxTempSuction";
             this.PlotBoxTempSuction.Size = new System.Drawing.Size(113, 20);
             this.PlotBoxTempSuction.TabIndex = 6;
@@ -1295,7 +1346,7 @@
             this.PlotBoxPressureDischarge.Checked = true;
             this.PlotBoxPressureDischarge.CheckState = System.Windows.Forms.CheckState.Checked;
             this.PlotBoxPressureDischarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PlotBoxPressureDischarge.Location = new System.Drawing.Point(8, 54);
+            this.PlotBoxPressureDischarge.Location = new System.Drawing.Point(131, 54);
             this.PlotBoxPressureDischarge.Name = "PlotBoxPressureDischarge";
             this.PlotBoxPressureDischarge.Size = new System.Drawing.Size(146, 20);
             this.PlotBoxPressureDischarge.TabIndex = 5;
@@ -1309,7 +1360,7 @@
             this.PlotBoxPressureSuction.Checked = true;
             this.PlotBoxPressureSuction.CheckState = System.Windows.Forms.CheckState.Checked;
             this.PlotBoxPressureSuction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PlotBoxPressureSuction.Location = new System.Drawing.Point(8, 24);
+            this.PlotBoxPressureSuction.Location = new System.Drawing.Point(131, 24);
             this.PlotBoxPressureSuction.Name = "PlotBoxPressureSuction";
             this.PlotBoxPressureSuction.Size = new System.Drawing.Size(128, 20);
             this.PlotBoxPressureSuction.TabIndex = 4;
@@ -1343,7 +1394,7 @@
             this.waveformGraph1.TabIndex = 0;
             this.waveformGraph1.UseColorGenerator = true;
             this.waveformGraph1.XAxes.AddRange(new NationalInstruments.UI.XAxis[] {
-            this.xAxis1});
+            this.TimeAxis});
             this.waveformGraph1.YAxes.AddRange(new NationalInstruments.UI.YAxis[] {
             this.AxisPressure,
             this.AxisTemperature});
@@ -1360,7 +1411,7 @@
             this.BoxSuction.Controls.Add(this.thermometerSuction);
             this.BoxSuction.Controls.Add(this.gaugeSuction);
             this.BoxSuction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BoxSuction.Location = new System.Drawing.Point(513, 25);
+            this.BoxSuction.Location = new System.Drawing.Point(9, 27);
             this.BoxSuction.Name = "BoxSuction";
             this.BoxSuction.Size = new System.Drawing.Size(480, 400);
             this.BoxSuction.TabIndex = 6;
@@ -1487,7 +1538,7 @@
             this.BoxCondenser.Controls.Add(this.thermometerCondOut);
             this.BoxCondenser.Controls.Add(this.thermometerCondIn);
             this.BoxCondenser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BoxCondenser.Location = new System.Drawing.Point(8, 432);
+            this.BoxCondenser.Location = new System.Drawing.Point(8, 430);
             this.BoxCondenser.Name = "BoxCondenser";
             this.BoxCondenser.Size = new System.Drawing.Size(293, 171);
             this.BoxCondenser.TabIndex = 7;
@@ -1562,7 +1613,7 @@
             this.BoxEvapurator.Controls.Add(this.label4);
             this.BoxEvapurator.Controls.Add(this.label3);
             this.BoxEvapurator.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BoxEvapurator.Location = new System.Drawing.Point(514, 428);
+            this.BoxEvapurator.Location = new System.Drawing.Point(513, 430);
             this.BoxEvapurator.Name = "BoxEvapurator";
             this.BoxEvapurator.Size = new System.Drawing.Size(286, 200);
             this.BoxEvapurator.TabIndex = 8;
@@ -2197,7 +2248,7 @@
             this.BoxHotbox.Controls.Add(this.ledHotbox);
             this.BoxHotbox.Controls.Add(this.thermometerHotbox);
             this.BoxHotbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BoxHotbox.Location = new System.Drawing.Point(805, 428);
+            this.BoxHotbox.Location = new System.Drawing.Point(804, 430);
             this.BoxHotbox.Name = "BoxHotbox";
             this.BoxHotbox.Size = new System.Drawing.Size(188, 200);
             this.BoxHotbox.TabIndex = 15;
@@ -2362,6 +2413,9 @@
             // 
             // BoxAC
             // 
+            this.BoxAC.Controls.Add(this.label43);
+            this.BoxAC.Controls.Add(this.label42);
+            this.BoxAC.Controls.Add(this.label41);
             this.BoxAC.Controls.Add(this.TBACHotboxTemp);
             this.BoxAC.Controls.Add(this.TBACDischargeTemp);
             this.BoxAC.Controls.Add(this.TBACSuctionTemp);
@@ -2384,9 +2438,39 @@
             this.BoxAC.Text = "AC Loop";
             this.BoxAC.Visible = false;
             // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label43.Location = new System.Drawing.Point(77, 417);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(66, 20);
+            this.label43.TabIndex = 15;
+            this.label43.Text = "Hotbox";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.White;
+            this.label42.Location = new System.Drawing.Point(390, 27);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(88, 20);
+            this.label42.TabIndex = 14;
+            this.label42.Text = "Inside car";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label41.Location = new System.Drawing.Point(480, 228);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(101, 20);
+            this.label41.TabIndex = 13;
+            this.label41.Text = "Outside car";
+            // 
             // TBACHotboxTemp
             // 
-            this.TBACHotboxTemp.Location = new System.Drawing.Point(71, 393);
+            this.TBACHotboxTemp.Location = new System.Drawing.Point(71, 440);
             this.TBACHotboxTemp.Name = "TBACHotboxTemp";
             this.TBACHotboxTemp.ReadOnly = true;
             this.TBACHotboxTemp.Size = new System.Drawing.Size(80, 26);
@@ -2440,7 +2524,7 @@
             // 
             // TBACAirOutTemp
             // 
-            this.TBACAirOutTemp.Location = new System.Drawing.Point(472, 24);
+            this.TBACAirOutTemp.Location = new System.Drawing.Point(489, 24);
             this.TBACAirOutTemp.Name = "TBACAirOutTemp";
             this.TBACAirOutTemp.ReadOnly = true;
             this.TBACAirOutTemp.Size = new System.Drawing.Size(80, 26);
@@ -2547,28 +2631,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1390, 768);
+            this.Controls.Add(this.BoxChart);
+            this.Controls.Add(this.BoxSuction);
             this.Controls.Add(this.BoxCondenser);
             this.Controls.Add(this.BoxInformation);
-            this.Controls.Add(this.BoxTerminal);
             this.Controls.Add(this.BoxHotbox);
             this.Controls.Add(this.BoxCompressor);
             this.Controls.Add(this.BoxEvapurator);
-            this.Controls.Add(this.BoxSuction);
             this.Controls.Add(this.BoxECV);
-            this.Controls.Add(this.BoxDischrge);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuMain);
-            this.Controls.Add(this.BoxAC);
-            this.Controls.Add(this.BoxChart);
             this.Controls.Add(this.BoxRPM);
             this.Controls.Add(this.BoxCoil);
+            this.Controls.Add(this.BoxTerminal);
+            this.Controls.Add(this.BoxDischrge);
+            this.Controls.Add(this.BoxAC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuMain;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1400, 800);
-            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1400, 800);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2591,6 +2674,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gaugeDischarge)).EndInit();
             this.BoxChart.ResumeLayout(false);
             this.BoxChart.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -2787,7 +2872,7 @@
         private System.Windows.Forms.GroupBox BoxChart;
         private NationalInstruments.UI.WindowsForms.WaveformGraph waveformGraph1;
         private NationalInstruments.UI.WaveformPlot WFPressureSuction;
-        private NationalInstruments.UI.XAxis xAxis1;
+        private NationalInstruments.UI.XAxis TimeAxis;
         private NationalInstruments.UI.YAxis AxisPressure;
         private System.Windows.Forms.ToolStripMenuItem defaultSettingsToolStripMenuItem;
         private System.Windows.Forms.TextBox textBoxReportInfo;
@@ -2856,8 +2941,8 @@
         private System.Windows.Forms.CheckBox PaxisBOX;
         private System.Windows.Forms.CheckBox TaxisBox;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TimeAxisMAX;
+        private System.Windows.Forms.TextBox TimeAxisMIN;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.CheckBox TimeAxisBOX;
@@ -2865,6 +2950,12 @@
         private System.Windows.Forms.TextBox Terminal;
         private System.Windows.Forms.Button TerminalClearBut;
         private System.Windows.Forms.CheckBox TerminalStopCheck;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label43;
     }
 }
 

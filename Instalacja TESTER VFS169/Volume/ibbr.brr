@@ -1,0 +1,115 @@
+National Instruments Installer Builder Build Configuration File.
+ToolVersion: 15.0.40.49154
+BuildStartedAt: 2016-01-20 10:44:51
+----------------------------------------------------------------------
+Installer Information >>>
+Type: Installer
+Version: 0.7.5
+InstallerId: {50B83236-70A3-4326-8711-56807279304F}
+----------------------------------------------------------------------
+Adding files >>>
+
+FileItem >>
+FileName: Database.mdf
+TargetPath: ProgramFilesFolder\TesterVFS169
+TargetPathType: RelativeToDirectoryTableKey
+TargetPathRoot: ProgramFilesFolder
+ComponentGuid: {6BCFEA57-A70F-48FE-BABA-777C3592BAB8}
+ComponentKey: DATABASE.MDF.2.5E1E92DE9E0547D9807820E79570EA50
+Checksum: N9szZXGfBlxCZnzxzA1qHQ==
+
+FileItem >>
+FileName: Database_log.ldf
+TargetPath: ProgramFilesFolder\TesterVFS169
+TargetPathType: RelativeToDirectoryTableKey
+TargetPathRoot: ProgramFilesFolder
+ComponentGuid: {3517F5FD-B74A-457E-B5A6-DC8A053AED30}
+ComponentKey: DATABASE_LOG.LDF.3.5E1E92DE9E0547D9807820E79570EA50
+Checksum: fC5nnil665Hpdr/4L+su2g==
+
+FileItem >>
+FileName: Tester_VFS169.exe
+TargetPath: ProgramFilesFolder\TesterVFS169
+TargetPathType: RelativeToDirectoryTableKey
+TargetPathRoot: ProgramFilesFolder
+ComponentGuid: {62C67334-F848-4907-8C33-EF32CD3FED52}
+ComponentKey: TESTER_VFS169.EXE.4.5E1E92DE9E0547D9807820E79570EA50
+Checksum: T34n2Ftkfm06WRIKhbrrMw==
+
+FileItem >>
+FileName: Tester_VFS169.exe.config
+TargetPath: ProgramFilesFolder\TesterVFS169
+TargetPathType: RelativeToDirectoryTableKey
+TargetPathRoot: ProgramFilesFolder
+ComponentGuid: {CD8942A2-5A48-4A31-887A-EC69D2D43DFA}
+ComponentKey: TESTER_VFS169.EXE.CONFIG.5.5E1E92DE9E0547D9807820E79570EA50
+Checksum: v/Z1WDoWtQpt3Kt3zia+GQ==
+
+FileItem >>
+FileName: Tester_VFS169.pdb
+TargetPath: ProgramFilesFolder\TesterVFS169
+TargetPathType: RelativeToDirectoryTableKey
+TargetPathRoot: ProgramFilesFolder
+ComponentGuid: {CE5F5620-57BE-4016-8DFC-75A59BF4718B}
+ComponentKey: TESTER_VFS169.PDB.6.5E1E92DE9E0547D9807820E79570EA50
+Checksum: gddwhxC9VqO4cugGxpBR2w==
+
+FileItem >>
+FileName: Tester_VFS169.vshost.exe
+TargetPath: ProgramFilesFolder\TesterVFS169
+TargetPathType: RelativeToDirectoryTableKey
+TargetPathRoot: ProgramFilesFolder
+ComponentGuid: {6AE01D15-C2A8-4125-BCC6-9E2414354A4A}
+ComponentKey: TESTER_VFS169.VSHOST.EXE.7.5E1E92DE9E0547D9807820E79570EA50
+Checksum: Ar5tM7HtvGHHmILT9Va9ig==
+
+FileItem >>
+FileName: Tester_VFS169.vshost.exe.config
+TargetPath: ProgramFilesFolder\TesterVFS169
+TargetPathType: RelativeToDirectoryTableKey
+TargetPathRoot: ProgramFilesFolder
+ComponentGuid: {E678F49D-0149-426C-89B5-A22796AA4BFA}
+ComponentKey: TESTER_VFS169.VSHOST.EXE.CONFIG.8.5E1E92DE9E0547D9807820E79570EA50
+Checksum: v/Z1WDoWtQpt3Kt3zia+GQ==
+
+FileItem >>
+FileName: Tester_VFS169.vshost.exe.manifest
+TargetPath: ProgramFilesFolder\TesterVFS169
+TargetPathType: RelativeToDirectoryTableKey
+TargetPathRoot: ProgramFilesFolder
+ComponentGuid: {7B6DE5E4-9E2D-4C19-A36F-06F77269B0FA}
+ComponentKey: TESTER_VFS169.VSHOST.EXE.MANIFEST.9.5E1E92DE9E0547D9807820E79570EA50
+Checksum: oZomWLppAwxqydEf19fjwQ==
+----------------------------------------------------------------------
+Adding products >>>
+
+NIInstaller >>
+Id: {8FB91FB8-153E-4C6B-B71B-3D217A75D5F1}
+Flavor: Runtime
+UpgradeCode: {B431CDA0-0424-4BF2-A16E-506267104E1B}
+Version: 15.0.49156
+
+NIInstaller >>
+Id: {41A4D3B1-B1A6-4445-A1D6-A09DC8799B11}
+Flavor: Full
+UpgradeCode: {63BB9FC4-E4C1-4A01-9735-1CE3D5EDCF40}
+Version: 15.0.49153
+
+NIInstaller >>
+Id: {98237E58-B99C-4B77-93E0-32A881B930F6}
+Flavor: DefaultFull
+UpgradeCode: {0E192465-CC28-4C84-BE81-710B71C595A3}
+Version: 15.0.151
+
+NIInstaller >>
+Id: {510323BA-77C2-4767-AE70-04932178D02B}
+Flavor: DefaultFull
+UpgradeCode: {67B28CDF-779F-4203-89FF-094FA1FDE46C}
+Version: 15.0.49152
+
+NIInstaller >>
+Id: {27067A8A-F87B-4CD9-A1B9-05D0D97ECD10}
+Flavor: _full_
+UpgradeCode: {69DA64F2-1630-4C0C-947D-6CF5590A63A4}
+Version: 5.1.4005
+Build completed at 2016-01-20 10:45:17
