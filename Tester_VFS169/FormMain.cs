@@ -219,13 +219,8 @@ namespace Tester_VFS169
         }
 
         /// <summary>
-        /// Metoda wpisywania wartosci do TEXT BOX
+        /// Metoda wpisywania wartosci do TERMINALA
         /// </summary>
-        /// <example>
-        /// SetTextBox(textBox1, zmienne[3].ToString());
-        /// textBox1 ===== nazwa kontrolki
-        /// zmienne[3].ToString() ===== wartosc przekazywana 
-        /// </example>
         /// <param name="tb"></param>
         /// <param name="value"></param>
         public void SetTextBoxLines(TextBox tbl, string value)
@@ -254,13 +249,13 @@ namespace Tester_VFS169
                     ///<remarks>
                     ///Rozbicie tekstu przychodzącegoz SerialPort na tablice zmiennych
                     ///</remarks>
-
-
                     ZmienneCOM = COM.ReadLine().Replace('.', ',').Split(';');          //19 wartosci
 
 
 
-
+                    ///<remarks>
+                    ///Wpisywanie zmiennych do Terminala
+                    ///</remarks>
                     if (tERMINALToolStripMenuItem.Checked == true && TerminalStop == false)
                     {
                     SetTextBoxLines(Terminal, ZmienneCOM[0] + " ; " + ZmienneCOM[1] + " ; " + ZmienneCOM[2] + " ; " + ZmienneCOM[3]
@@ -273,8 +268,10 @@ namespace Tester_VFS169
                     zmienne = Array.ConvertAll(ZmienneCOM, Double.Parse);
 
 
-
-                        WriteDataLog(PlikRaportu, DateTime.Now.ToShortDateString() + ";" + DateTime.Now.ToLongTimeString()
+                    ///<remarks>
+                    ///Zapisywanie zanych do pliku
+                    ///</remarks>
+                    WriteDataLog(PlikRaportu, DateTime.Now.ToShortDateString() + ";" + DateTime.Now.ToLongTimeString()
                             + ";" + String.Format("{0:D3}:{1:D2}:{2:d2}", s2, s1, t)
                             + ";" + zmienne[0].ToString() + ";" + zmienne[1].ToString() + ";" + zmienne[2].ToString()
                             + ";" + zmienne[3].ToString() + ";" + zmienne[5].ToString() + ";" + zmienne[4].ToString() + ";" + zmienne[6].ToString()
@@ -312,7 +309,10 @@ namespace Tester_VFS169
                     */
 
 
-                    //Plot generate
+
+                    ///<remarks>
+                    ///Wysyłanie danych do GRAPH CHART
+                    ///</remarks>
                     WFPressureSuction.PlotYAppend(zmienne[12]);
                     WFPressureDischarge.PlotYAppend(zmienne[13]);
 
@@ -326,6 +326,11 @@ namespace Tester_VFS169
                     WFTempSuction.PlotYAppend(zmienne[0]);
 
 
+
+                    ///<remarks>
+                    ///Obsługa kontrolek z podziałem na funkcje
+                    ///</remarks>
+                    ///
 
 
                     //Discharge
@@ -448,14 +453,22 @@ namespace Tester_VFS169
 
         }
 
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'databaseDataSet.ShotTestInfo' . Możesz go przenieść lub usunąć.
+            this.shotTestInfoTableAdapter.Fill(this.databaseDataSet.ShotTestInfo);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'databaseDataSet.TestDescriptionInput' . Możesz go przenieść lub usunąć.
             this.testDescriptionInputTableAdapter.Fill(this.databaseDataSet.TestDescriptionInput);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'databaseDataSet.TestDescriptionSetup' . Możesz go przenieść lub usunąć.
             this.testDescriptionSetupTableAdapter.Fill(this.databaseDataSet.TestDescriptionSetup);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'databaseDataSet.TestParameters' . Możesz go przenieść lub usunąć.
             this.testParametersTableAdapter.Fill(this.databaseDataSet.TestParameters);
+
+
+
 
 
 
@@ -470,6 +483,10 @@ namespace Tester_VFS169
 
 
         }
+
+
+
+
 
         /// <summary>
         /// Stoper działania testera
@@ -497,6 +514,8 @@ namespace Tester_VFS169
             //Wyswietlanie czasu działania testu
             labelStoper.Text = String.Format("{0:D3}:{1:D2}:{2:d2}", s2, s1, t);
         }
+
+
 
 
         /// <summary>
@@ -676,8 +695,8 @@ namespace Tester_VFS169
                 chartToolStripMenuItem.Checked = true;
             }
 
-            
-            
+
+
             WFPressureSuction.Visible = true;
             WFPressureDischarge.Visible = true;
             WFTempCompressor.Visible = false;
@@ -688,6 +707,8 @@ namespace Tester_VFS169
             WFTempEvapOut.Visible = false;
             WFTempHotbox.Visible = false;
             WFTempSuction.Visible = true;
+            PlotBoxTempSuction.Checked = true;
+            PlotBoxTempDischarge.Checked = true;
         }
 
         /// <summary>
@@ -827,7 +848,11 @@ namespace Tester_VFS169
 
 
 
-
+        /// <summary>
+        /// Szybkie za zamykanie połaczenia - TYLKO DEBUG
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             COM.Close();
@@ -868,20 +893,34 @@ namespace Tester_VFS169
             }
         }
 
-
+        /// <summary>
+        /// Otwieranie ustawienia formulaża z komentazem
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void commentsToTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormComments FC = new FormComments();
             FC.Show();
         }
 
+
+        /// <summary>
+        /// Otwieranie formulaża konczącergo test
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void finishTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormFinishTest FFinish = new FormFinishTest();
             FFinish.Show();
         }
 
-
+        /// <summary>
+        /// Ustawienie Folderu i pliku Settings
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backlogFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (saveFileSetting.ShowDialog() == DialogResult.OK)
@@ -906,7 +945,13 @@ namespace Tester_VFS169
                 openFileSetting.InitialDirectory = GlobalFolder;
             }
         }
+        
 
+        /// <summary>
+        /// Metoda zapisywania danych do pliku .txt
+        /// </summary>
+        /// <param name="logFileName"></param>
+        /// <param name="data"></param>
         public static void WriteDataLog(string logFileName, string data)
         {
             if (File.Exists(logFileName) & dzialanie == true)
@@ -922,6 +967,12 @@ namespace Tester_VFS169
             }
         }
 
+
+        /// <summary>
+        /// Ustawienie standardowych scieżek do raportu i testu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void defaultSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string TestSettingsDir = "c:/TESTER_VFS169/Settings/";
@@ -952,40 +1003,87 @@ namespace Tester_VFS169
             textBoxReportInfo.Text = RepR;
         }
 
+
+        /// <summary>
+        /// Kopiowanie do schowka scieżki do pliku SETTINGS
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButCopySettings_Click(object sender, EventArgs e)
         {
-
-            System.Windows.Forms.Clipboard.SetText(textBoxSettingsInfo.Text);
+            try
+            {
+                System.Diagnostics.Process.Start(@textBoxSettingsInfo.Text);
+                //System.Windows.Forms.Clipboard.SetText(textBoxSettingsInfo.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Lack of correct file", "Warning");
+            }
 
         }
 
+
+        /// <summary>
+        /// Kopiowanie do schowka scieżki do pliku TEST
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void butCopyReport_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Clipboard.SetText(textBoxReportInfo.Text);
+            try
+            {
+                System.Diagnostics.Process.Start(@textBoxReportInfo.Text);
+                //System.Windows.Forms.Clipboard.SetText(textBoxReportInfo.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Lack of correct file", "Warning");
+            }
+            
+
         }
 
+        /// <summary>
+        /// Otwieranie formy definicji nowego testu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void newTestDescriptionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormNTD FNTD = new FormNTD();
             FNTD.ShowDialog();
         }
 
+
+        /// <summary>
+        /// Wyswietlanie aktualnej daty i godziny w pasku dolnym
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timerZegar_Tick(object sender, EventArgs e)
         {
-            Zegar.Text = DateTime.Now.ToShortDateString() + "    " + DateTime.Now.ToLongTimeString();
+            StripStatusTime.Text = DateTime.Now.ToShortDateString() + "    " + DateTime.Now.ToLongTimeString();
         }
 
+        /// <summary>
+        /// Otwieranie formy Rozpoczecia nowego testu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void startNewTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormSNT FSNT = new FormSNT();
             FSNT.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
 
+        /// <summary>
+        /// Wyswietlanie wykresu oraz skali Pressure Suction
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (PlotBoxPressureSuction.Checked)
@@ -1009,7 +1107,11 @@ namespace Tester_VFS169
             }
         }
 
-
+        /// <summary>
+        /// Wyswietlanie wykresu oraz skali PressureDischatge
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlotPressureDischarge_CheckedChanged(object sender, EventArgs e)
         {
             if (PlotBoxPressureDischarge.Checked)
@@ -1033,6 +1135,11 @@ namespace Tester_VFS169
             }
         }
 
+        /// <summary>
+        /// Wyswietlanie wykresu oraz skali TempSuction
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlotBoxTempSuction_CheckedChanged(object sender, EventArgs e)
         {
             if (PlotBoxTempSuction.Checked)
@@ -1045,8 +1152,23 @@ namespace Tester_VFS169
                 WFTempSuction.Visible = false;
                 legendItem3.Visible = false;
             }
+
+            if (!PlotBoxTempCompressor.Checked & !PlotBoxTempCondenserIn.Checked & !PlotBoxTempCondenserOut.Checked & !PlotBoxTempDischarge.Checked & !PlotBoxTempEvapIn.Checked & !PlotBoxTempEvapOut.Checked & !PlotBoxTempHotbox.Checked & !PlotBoxTempSuction.Checked)
+            {
+                AxisTemperature.Visible = false;
+            }
+            else
+            {
+                AxisTemperature.Visible = true;
+            }
         }
 
+
+        /// <summary>
+        /// Wyswietlanie wykresu oraz skali TempDischarge
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlotBoxTempDischarge_CheckedChanged(object sender, EventArgs e)
         {
             if (PlotBoxTempDischarge.Checked)
@@ -1059,8 +1181,22 @@ namespace Tester_VFS169
                 WFTempDischarge.Visible = false;
                 legendItem4.Visible = false;
             }
+            if (!PlotBoxTempCompressor.Checked & !PlotBoxTempCondenserIn.Checked & !PlotBoxTempCondenserOut.Checked & !PlotBoxTempDischarge.Checked & !PlotBoxTempEvapIn.Checked & !PlotBoxTempEvapOut.Checked & !PlotBoxTempHotbox.Checked & !PlotBoxTempSuction.Checked)
+            {
+                AxisTemperature.Visible = false;
+            }
+            else
+            {
+                AxisTemperature.Visible = true;
+            }
         }
 
+
+        /// <summary>
+        /// Wyswietlanie wykresu oraz skali CONDENSERIn
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlotBoxTempCondenserIn_CheckedChanged(object sender, EventArgs e)
         {
             if (PlotBoxTempCondenserIn.Checked)
@@ -1073,8 +1209,21 @@ namespace Tester_VFS169
                 WFTempCondenserIn.Visible = false;
                 legendItem5.Visible = false;
             }
+            if (!PlotBoxTempCompressor.Checked & !PlotBoxTempCondenserIn.Checked & !PlotBoxTempCondenserOut.Checked & !PlotBoxTempDischarge.Checked & !PlotBoxTempEvapIn.Checked & !PlotBoxTempEvapOut.Checked & !PlotBoxTempHotbox.Checked & !PlotBoxTempSuction.Checked)
+            {
+                AxisTemperature.Visible = false;
+            }
+            else
+            {
+                AxisTemperature.Visible = true;
+            }
         }
 
+        /// <summary>
+        /// Wyswietlanie wykresu oraz skali CondenserOut
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlotBoxTempCondenserOut_CheckedChanged(object sender, EventArgs e)
         {
             if (PlotBoxTempCondenserOut.Checked)
@@ -1087,8 +1236,22 @@ namespace Tester_VFS169
                 WFTempCondenserOut.Visible = false;
                 legendItem6.Visible = false;
             }
+            if (!PlotBoxTempCompressor.Checked & !PlotBoxTempCondenserIn.Checked & !PlotBoxTempCondenserOut.Checked & !PlotBoxTempDischarge.Checked & !PlotBoxTempEvapIn.Checked & !PlotBoxTempEvapOut.Checked & !PlotBoxTempHotbox.Checked & !PlotBoxTempSuction.Checked)
+            {
+                AxisTemperature.Visible = false;
+            }
+            else
+            {
+                AxisTemperature.Visible = true;
+            }
         }
 
+
+        /// <summary>
+        /// Wyswietlanie wykresu oraz skali EVAPIN
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlotBoxTempEvapIn_CheckedChanged(object sender, EventArgs e)
         {
             if (PlotBoxTempEvapIn.Checked)
@@ -1101,8 +1264,21 @@ namespace Tester_VFS169
                 WFTempEvapIn.Visible = false;
                 legendItem7.Visible = false;
             }
+            if (!PlotBoxTempCompressor.Checked & !PlotBoxTempCondenserIn.Checked & !PlotBoxTempCondenserOut.Checked & !PlotBoxTempDischarge.Checked & !PlotBoxTempEvapIn.Checked & !PlotBoxTempEvapOut.Checked & !PlotBoxTempHotbox.Checked & !PlotBoxTempSuction.Checked)
+            {
+                AxisTemperature.Visible = false;
+            }
+            else
+            {
+                AxisTemperature.Visible = true;
+            }
         }
 
+        /// <summary>
+        /// Wyswietlanie wykresu oraz skali EVAPOUT
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlotBoxTempEvapOut_CheckedChanged(object sender, EventArgs e)
         {
             if (PlotBoxTempEvapOut.Checked)
@@ -1115,8 +1291,21 @@ namespace Tester_VFS169
                 WFTempEvapOut.Visible = false;
                 legendItem8.Visible = false;
             }
+            if (!PlotBoxTempCompressor.Checked & !PlotBoxTempCondenserIn.Checked & !PlotBoxTempCondenserOut.Checked & !PlotBoxTempDischarge.Checked & !PlotBoxTempEvapIn.Checked & !PlotBoxTempEvapOut.Checked & !PlotBoxTempHotbox.Checked & !PlotBoxTempSuction.Checked)
+            {
+                AxisTemperature.Visible = false;
+            }
+            else
+            {
+                AxisTemperature.Visible = true;
+            }
         }
 
+        /// <summary>
+        /// Wyswietlanie wykresu oraz skali COMPRESSOR
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlotBoxTempCompressor_CheckedChanged(object sender, EventArgs e)
         {
             if (PlotBoxTempCompressor.Checked)
@@ -1129,8 +1318,21 @@ namespace Tester_VFS169
                 WFTempCompressor.Visible = false;
                 legendItem9.Visible = false;
             }
+            if (!PlotBoxTempCompressor.Checked & !PlotBoxTempCondenserIn.Checked & !PlotBoxTempCondenserOut.Checked & !PlotBoxTempDischarge.Checked & !PlotBoxTempEvapIn.Checked & !PlotBoxTempEvapOut.Checked & !PlotBoxTempHotbox.Checked & !PlotBoxTempSuction.Checked)
+            {
+                AxisTemperature.Visible = false;
+            }
+            else
+            {
+                AxisTemperature.Visible = true;
+            }
         }
 
+        /// <summary>
+        /// Wyswietlanie wykresu oraz skali HOTBOX
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlotBoxTempHotbox_CheckedChanged(object sender, EventArgs e)
         {
             if (PlotBoxTempHotbox.Checked)
@@ -1143,8 +1345,23 @@ namespace Tester_VFS169
                 WFTempHotbox.Visible = false;
                 legendItem10.Visible = false;
             }
+            if (!PlotBoxTempCompressor.Checked & !PlotBoxTempCondenserIn.Checked & !PlotBoxTempCondenserOut.Checked & !PlotBoxTempDischarge.Checked & !PlotBoxTempEvapIn.Checked & !PlotBoxTempEvapOut.Checked & !PlotBoxTempHotbox.Checked & !PlotBoxTempSuction.Checked)
+            {
+                AxisTemperature.Visible = false;
+            }
+            else
+            {
+                AxisTemperature.Visible = true;
+            }
         }
 
+
+
+        /// <summary>
+        /// Zmiana stanu pomiedzy auto a Manual Value dla osi TEMPERATURE
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TaxisBox_CheckedChanged(object sender, EventArgs e)
         {
             if (TaxisBox.Checked)
@@ -1163,6 +1380,12 @@ namespace Tester_VFS169
             }
         }
 
+
+        /// <summary>
+        /// Zmiana stanu pomiedzy auto a Manual Value dla osi PRESSURE
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PaxisBOX_CheckedChanged_1(object sender, EventArgs e)
         {
             if (PaxisBOX.Checked)
@@ -1181,6 +1404,12 @@ namespace Tester_VFS169
             }
         }
 
+
+        /// <summary>
+        /// Wyswietlanie terminala
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tERMINALToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (tERMINALToolStripMenuItem.Checked == true)
@@ -1201,6 +1430,11 @@ namespace Tester_VFS169
             }
         }
 
+        /// <summary>
+        ///  Wstrzymanie sysyłanie danych do terminala
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TerminalStopCheck_CheckedChanged(object sender, EventArgs e)
         {
             if (TerminalStopCheck.Checked)
@@ -1223,15 +1457,19 @@ namespace Tester_VFS169
 
         }
 
+
+        /// <summary>
+        /// Zmiana stanu pomiedzy auto a Manual Value dla osi TIME
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TimeAxisBOX_CheckedChanged(object sender, EventArgs e)
         {
             if (TimeAxisBOX.Checked)
             {
                 TimeAxisMIN.ReadOnly = true;
                 TimeAxisMAX.ReadOnly = true;
-                AxisPressure.Mode = NationalInstruments.UI.AxisMode.StripChart;
-                NationalInstruments.UI.Range TAxis = new NationalInstruments.UI.Range(0,30);
-                TimeAxis.Range = TAxis;
+                TimeAxis.Mode = NationalInstruments.UI.AxisMode.StripChart;
             }
             else
             {
@@ -1242,7 +1480,13 @@ namespace Tester_VFS169
                 TimeAxis.Range = TAxis;
             }
         }
+        
 
+        /// <summary>
+        /// Ustawienie wartosci MIN i MAX dla skali Temperature
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TaxisMIN_TextChanged(object sender, EventArgs e)
         {
             try
@@ -1269,6 +1513,12 @@ namespace Tester_VFS169
             }
         }
 
+
+        /// <summary>
+        /// Ustawienie wartosci MIN i MAX dla skali Pressure
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PaxisMIN_TextChanged(object sender, EventArgs e)
         {
             try
@@ -1295,6 +1545,12 @@ namespace Tester_VFS169
             }
         }
 
+
+        /// <summary>
+        /// Ustawienie wartosci MIN i MAX dla skali TIME
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TimeAxisMIN_TextChanged(object sender, EventArgs e)
         {
             try
@@ -1320,6 +1576,66 @@ namespace Tester_VFS169
                 //MessageBox.Show("Wrong ValueType");
             }
         }
+
+
+        /// <summary>
+        /// Ustawienie automatycznego  Minimum w oknie czasu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void label36_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            TimeAxisMIN.Text = "0";
+        }
+
+
+        /// <summary>
+        /// Kopiowanie linku do pliku raportu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBoxReportInfo_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                System.Windows.Forms.Clipboard.SetText(textBoxReportInfo.Text);
+            }
+            catch
+            {
+
+            }
+        }
+
+        /// <summary>
+        /// Kopiowanie linku do pliku Settings
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBoxSettingsInfo_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                System.Windows.Forms.Clipboard.SetText(textBoxSettingsInfo.Text);
+            }
+            catch
+            {
+
+            }
+        }
+
+        /// <summary>
+        /// Przeładowanie data base dla DataSet 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.testDescriptionInputTableAdapter.Fill(this.databaseDataSet.TestDescriptionInput);
+            this.testDescriptionSetupTableAdapter.Fill(this.databaseDataSet.TestDescriptionSetup);
+            this.testParametersTableAdapter.Fill(this.databaseDataSet.TestParameters);
+        }
+
+
 
 
     }

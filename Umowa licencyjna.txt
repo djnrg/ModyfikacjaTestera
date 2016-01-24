@@ -1,0 +1,102 @@
+Ogólna Umowa Licencyjna na u¿ytkowanie programu komputerowego
+
+Niniejsza umowa okreœla postanowienia prawne zawarte pomiêdzy nabywc¹ licencji na u¿ytkowanie programu komputerowego zwanym dalej U¿ytkownikiem, a Tomaszem Pasierbskim zwan¹ dalej Producentem. Warunkiem udzielenia licencji jest zaakceptowanie postanowieñ tej umowy przez U¿ytkownika.
+
+
+1. Przedmiot licencji
+Przedmiotem niniejszej umowy jest udzielenie licencji na u¿ytkowanie kopii programu
+komputerowego okreœlonej w specyfikacji licencji lub osobnej umowie, poprzez nazwe, numer
+wersji oraz numer seryjny, zwanej dalej Programem, na warunkach okreœlonych w treœci
+umowy.
+2. Prawa autorskie
+Producent jest jedynym w³aœcicielem wszelkich praw autorskich oraz maj¹tkowych do
+Programu i dokumentacji. S¹ one chronione przez ustawê o prawie autorskim oraz umowy
+miêdzynarodowe.
+3. Ograniczenia licencji
+O ile osobna umowa nie stanowi inaczej Producent udziela U¿ytkownikowi licencji na
+u¿ytkowanie jednej kopii Programu na jednym komputerze a w przypadku wersji sieciowej na
+dowolnej iloœci komputerów w jednym punkcie. Bez zgody Producenta U¿ytkownik nie mo¿e
+sprzedawaæ, dzier¿awiæ, ani w jakikolwiek inny sposób przenosiæ praw wynikaj¹cych z licencji
+na osoby trzecie. U¿ytkownik nie ma prawa kopiowaæ oraz rozpowszechniaæ Programu i
+dokumentacji w jakiejkolwiek postaci, za wyj¹tkiem wykonania jednej kopii Programu do celów
+archiwalnych. U¿ytkownik nie ma prawa dekompilowaæ, analizowaæ oraz modyfikowaæ kodu
+Programu. Producent zastrzega sobie prawo do zastosowania œrodków technicznych
+(zabezpieczeñ) w celu zapewnienia realizacji powy¿szych ustaleñ. Producent zastrzega sobie
+wszelkie inne prawa nie wyra¿one bezpoœrednio w umowie.
+4. Ograniczona gwarancja
+Producent gwarantuje usuwanie b³êdów krytycznych w terminie 14 dni. Wersja wolna od b³êdu
+zostanie umieszczona na stronach internetowych Producenta. Producent udziela gwarancji na
+wady materia³owe noœnika programu oraz dokumentacji. Okres gwarancji wynosi 1 rok od daty
+zakupu Programu. Producent nie gwarantuje, ¿e program bêdzie ca³kowicie wolny od b³êdów
+oraz ¿e spe³ni oczekiwania u¿ytkownika. Gwarancja nie obejmuje problemów i wad wynik³ych z
+nieprawid³owego dzia³ania lub nieprawid³owego u¿ycia sprzêtu komputerowego oraz innych
+urz¹dzeñ i programów maj¹cych wp³yw na dzia³anie Programu. Gwarancja nie obejmuje
+problemów i wad wynik³ych ze zdarzeñ losowych lub nieprawid³owego u¿ytkowania Programu.
+Wszelka ewentualna odpowiedzialnoœæ Producenta zostaje ograniczona do kwoty zap³aconej za
+program. Strony wy³¹czaj¹ mo¿liwoœæ stosowania przepisów o rêkojmi.
+5. Specyfikacja udzielonej licencji
+Nazwa programu, numer licencji oraz klucz produktu znajduj¹ siê na etykiecie licencyjnej
+dostarczonej wraz z programem. Etykieta ta jest integraln¹ czêœci¹ umowy licencyjnej i nale¿y
+j¹ chroniæ przed zniszczeniem gdy¿ zawiera wa¿ne dane niezbêdne do wykonania autoryzacji
+oraz uruchomienia programu. W przypadku dostawy Programu tylko drog¹ elektroniczn¹ (ESD)
+niezbêdne dane identyfikuj¹ce zakupion¹ licencjê znajduj¹ siê na dokumencie potwierdzaj¹cym
+zakup np fakturze VAT. Program nale¿y autoryzowaæ na stronie internetowej producenta w
+ci¹gu 30 dni od daty zakupu. W odpowiedzi na adres e-mail podany na formularzu zostanie
+odes³any identyfikator autoryzacji wraz z instrukcj¹ wprowadzenia go do programu.
+Autoryzacja przypisuje na sta³e numer licencji produktu do numeru NIP firmy, która j¹
+wykonuje. Po wykonaniu autoryzacji zmiana numeru NIP ani zwrot programu nie jest mo¿liwy.
+6. Aktualizacja oprogramowania
+Licencja uprawnia u¿ytkownika do bezp³atnego pobierania z internetu nowych wersji programu
+(aktualizacji) tylko przez okres abonamentu wskazany na etykiecie licencyjnej lub faturze VAT.
+Jest on liczony od daty zakupu programu. Na serwerze znajduj¹ siê zawsze tylko najnowsze
+wersje programów, nie ma mo¿liwoœci pobierania aktualizacji archiwalnych. Pobrane w okresie
+przys³uguj¹cego abonamentu aktualizacje nale¿y zachowaæ tak aby ewnetualnie móc ich u¿yæ
+www.f ly sof t.pl/licencja.html
+www.f ly sof t.pl/licencja.html 2/2
+ponownie w przysz³oœci np po przeinstalowaniu sytemu operacyjnego. Po up³ywie czasu prawa
+do pobierania nowych wersji istnieje mo¿liwoœæ wykupienia aktualizacji wg cennika
+znajduj¹cego siê na stronie internetowej producenta. Wa¿noœæ samej licencji na u¿ywanie
+programu jest równie¿ okreœlona na etykiecie licencyjnej lub fakturze VAT, mo¿e byæ ona
+bezterminowa lub okreœlona czasowo.
+7. Pomoc techniczna
+Czas prawa dostêpu do bezp³atnej pomocy technicznej oraz kana³ dostêpu (e-mail, telefon) jest
+okreœlony na etykiecie licencyjnej lub fakturze VAT. Zakres pomocy dotyczy wsparcia w
+rozwi¹zywaniu problemów dotycz¹cych technicznego funkcjonowania zakupionego programu
+oraz porad merytorycznych w zakresie jego obs³ugi. Pomoc taka jest realizowana poprzez
+elektroniczny kana³ dostêpu (formularz pomocy technicznej dostêpny na stronie producenta). W
+przypadku posiadania aktywnej us³ugi TELEKONSULTANT ze wsparcia technicznego mo¿na
+korzystaæ równie¿ telefonicznie, dzwoni¹c na numery infolinii. Pomoc techniczna nie obejmuje
+zagadnieñ nie zwi¹zanych bezpoœrednio z obs³ug¹ zakupionego Programu takich jak
+konfiguracja systemu operacyjnego, instalacja sprzêtów, kopiowanie plików itp.
+8. Instalator programu
+Otrzymany przy zakupie licencji noœnik z instalatorem programu nale¿y zabezpieczyæ przed
+utrat¹ lub zniszczeniem w celu umo¿liwienia ponowej instalacji aplikacji w przysz³oœci.
+Instalatory dostarczone tylko drog¹ elektroniczn¹ (w formie linku do ich pobrania z internetu)
+maj¹ charakter jednorazowej dostawy instalatora (link taki jest zwykle aktywny przez 30 dni od
+dnia dostawy chyba, ¿e przy jego dostawie zaznaczono inny termin wa¿noœci). Instalator po
+pobraniu nale¿y zabezpieczyæ na w³aœnym noœniku CD, dysku komputera lub jakiejkolwiek
+innej pamiêci elektronicznej przeznaczonej do przechowywania danych. W przypadku zakupu
+licencji z abonamentem na pobieranie aktualizacji nowsze instalatory bêdzie nadal mo¿na
+pobieraæ z internetowej strony producenta programu z dzia³u aktualizacje przez czas trwania
+abonamentu. Ze wzglêdu na ci¹g³y rozwój programów a co za tym idzie generowanie nowych
+wersji instalacyjnych nie ma mo¿liwoœci ponownego udostêpnienia linku do pobrania instalatora,
+który zosta³ t¹ drog¹ ju¿ udostêpniony w przesz³oœci. Obowi¹zek starannego zabezpieczenia
+instalatora w celu umo¿liwienia ponownego jego u¿ycia spoczywa na U¿ytkowniku programu,
+któremu instalator zosta³ udostêpniony po zakupie licencji. Elektroniczna dostawa instalatora
+jest opcjonalna, wyboru czy program ma byæ dostarczony drog¹ tradycyjn¹ na p³ycie CD czy w
+tylko w formie linku do pobrania z internetu dokonuje U¿ytkownik w chwili zakupu licencji.
+Wybieraj¹c elektroniczn¹ formê dostawy U¿ytkownik deklaruje, ¿e ma zapewnione mo¿liwoœci
+techniczne aby skutecznie pobraæ udostêpniony t¹ drog¹ program. Jeœli z jakiegokolwiek
+powodu U¿ytkownik mimo wyboru drogi elektroniczniej nie bêdzie w stanie skutecznie pobraæ
+instalatora mo¿e w terminie 30 dni od daty zakupu licencji, po wczeœniejszym uzgodnieniu z
+Producentem dokonaæ dop³aty równicy w cenie oraz kosztów przesy³ki i zmieniæ tym samym
+formê dostawy na dostawê drog¹ tradycyj¹ na p³ycie CD. Po up³ywie 30 dni od daty zakupu
+licencji dop³ata do wersji dostarczanej na noœniku CD nie bêdzie mo¿liwa. Producent nie ma
+obowi¹zku przechowywania dla potrzeb U¿ytkownika instalatorów archiwalnych na w³asnym
+serwerze. W przypadku koniecznoœci odzyskania instalatora archiwalnego U¿ytkownik mo¿e
+zakupiæ w sklepie internetowym Producenta (www.SolidneProgramy.pl) us³ugê ponownego
+wygenerowania instalatora archiwalnego na warunkach okreœlonych w opisie tej us³ugi lub
+mo¿e uzyskaæ dostêp do instalatorów najnowszych dokonuj¹c zakupu odpowiedniego
+abonamentu aktualizacyjnego przeznaczonego dla danego typu licencji.
+INFOLINIA : tel. 014 / 698-20-02 kom. 608/ 92-10-60
+www.SolidneProgramy.pl

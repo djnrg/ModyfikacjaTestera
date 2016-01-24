@@ -91,11 +91,10 @@
             this.StripProgressCOM = new System.Windows.Forms.ToolStripProgressBar();
             this.StripStatusData = new System.Windows.Forms.ToolStripStatusLabel();
             this.StripStatusDane = new System.Windows.Forms.ToolStripStatusLabel();
+            this.StripStatusTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.COM = new System.IO.Ports.SerialPort(this.components);
             this.timerCOM = new System.Windows.Forms.Timer(this.components);
             this.timerStoper = new System.Windows.Forms.Timer(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Zegar = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.testDescriptionSetupBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -244,8 +243,6 @@
             this.label23 = new System.Windows.Forms.Label();
             this.buttonDisconnect = new System.Windows.Forms.Button();
             this.BoxInformation = new System.Windows.Forms.GroupBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.TestSelected = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.butCopyReport = new System.Windows.Forms.Button();
             this.ButCopySettings = new System.Windows.Forms.Button();
@@ -253,6 +250,8 @@
             this.label30 = new System.Windows.Forms.Label();
             this.textBoxSettingsInfo = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.TestSelected = new System.Windows.Forms.ComboBox();
             this.SaveFileReport = new System.Windows.Forms.SaveFileDialog();
             this.saveFileSetting = new System.Windows.Forms.SaveFileDialog();
             this.openFileSetting = new System.Windows.Forms.OpenFileDialog();
@@ -282,9 +281,18 @@
             this.testDescriptionInputTableAdapter = new Tester_VFS169.DatabaseDataSetTableAdapters.TestDescriptionInputTableAdapter();
             this.fKTestDescriptionInputTestDescriptionSetup1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.timerZegar = new System.Windows.Forms.Timer(this.components);
+            this.BoxInfo = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.shotTestInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label44 = new System.Windows.Forms.Label();
+            this.shotTestInfoTableAdapter = new Tester_VFS169.DatabaseDataSetTableAdapters.ShotTestInfoTableAdapter();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.generateREPORTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain.SuspendLayout();
             this.statusStrip.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.testDescriptionSetupBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledStoper)).BeginInit();
@@ -326,6 +334,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.testParametersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKTestDescriptionInputTestDescriptionSetup1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKTestDescriptionInputTestDescriptionSetup1BindingSource1)).BeginInit();
+            this.BoxInfo.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shotTestInfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuMain
@@ -458,7 +470,9 @@
             this.commentsToTestToolStripMenuItem,
             this.saveTestStatusToolStripMenuItem,
             this.toolStripSeparator4,
-            this.finishTestToolStripMenuItem});
+            this.finishTestToolStripMenuItem,
+            this.toolStripSeparator7,
+            this.generateREPORTToolStripMenuItem});
             this.testDescriptioToolStripMenuItem.Name = "testDescriptioToolStripMenuItem";
             this.testDescriptioToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
             this.testDescriptioToolStripMenuItem.Text = "Test description";
@@ -523,21 +537,21 @@
             // aCLoopToolStripMenuItem
             // 
             this.aCLoopToolStripMenuItem.Name = "aCLoopToolStripMenuItem";
-            this.aCLoopToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.aCLoopToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aCLoopToolStripMenuItem.Text = "A/C Loop";
             this.aCLoopToolStripMenuItem.Click += new System.EventHandler(this.aCLoopToolStripMenuItem_Click);
             // 
             // chartToolStripMenuItem
             // 
             this.chartToolStripMenuItem.Name = "chartToolStripMenuItem";
-            this.chartToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.chartToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.chartToolStripMenuItem.Text = "Graph";
             this.chartToolStripMenuItem.Click += new System.EventHandler(this.pressuresToolStripMenuItem_Click);
             // 
             // tERMINALToolStripMenuItem
             // 
             this.tERMINALToolStripMenuItem.Name = "tERMINALToolStripMenuItem";
-            this.tERMINALToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.tERMINALToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.tERMINALToolStripMenuItem.Text = "TERMINAL";
             this.tERMINALToolStripMenuItem.Click += new System.EventHandler(this.tERMINALToolStripMenuItem_Click);
             // 
@@ -585,7 +599,8 @@
             this.StripStatusCOM,
             this.StripProgressCOM,
             this.StripStatusData,
-            this.StripStatusDane});
+            this.StripStatusDane,
+            this.StripStatusTime});
             this.statusStrip.Location = new System.Drawing.Point(0, 746);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1390, 22);
@@ -616,6 +631,14 @@
             this.StripStatusDane.Size = new System.Drawing.Size(49, 17);
             this.StripStatusDane.Text = "Dane???";
             // 
+            // StripStatusTime
+            // 
+            this.StripStatusTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.StripStatusTime.Name = "StripStatusTime";
+            this.StripStatusTime.Size = new System.Drawing.Size(1188, 17);
+            this.StripStatusTime.Spring = true;
+            this.StripStatusTime.Text = "TIME";
+            // 
             // COM
             // 
             this.COM.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.COM_DataReceived);
@@ -630,53 +653,21 @@
             // 
             this.timerStoper.Tick += new System.EventHandler(this.timerStoper_Tick);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.groupBox1.Controls.Add(this.Zegar);
-            this.groupBox1.Controls.Add(this.label35);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label34);
-            this.groupBox1.Controls.Add(this.ledStoper);
-            this.groupBox1.Controls.Add(this.buttonReset);
-            this.groupBox1.Controls.Add(this.buttonStart);
-            this.groupBox1.Controls.Add(this.labelStoper);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox1.Location = new System.Drawing.Point(1015, 30);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 6, 6, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 167);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Test time";
-            // 
-            // Zegar
-            // 
-            this.Zegar.AutoSize = true;
-            this.Zegar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Zegar.Location = new System.Drawing.Point(81, 138);
-            this.Zegar.Name = "Zegar";
-            this.Zegar.Size = new System.Drawing.Size(51, 20);
-            this.Zegar.TabIndex = 7;
-            this.Zegar.Text = "TIME";
-            this.Zegar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(304, 104);
+            this.label35.Location = new System.Drawing.Point(326, 112);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(18, 20);
+            this.label35.Size = new System.Drawing.Size(14, 13);
             this.label35.TabIndex = 6;
             this.label35.Text = "h";
             // 
             // textBox1
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testDescriptionSetupBindingSource, "RequestedTime", true));
-            this.textBox1.Location = new System.Drawing.Point(166, 102);
+            this.textBox1.Location = new System.Drawing.Point(185, 108);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 26);
+            this.textBox1.Size = new System.Drawing.Size(135, 20);
             this.textBox1.TabIndex = 5;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -694,7 +685,7 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label34.Location = new System.Drawing.Point(16, 105);
+            this.label34.Location = new System.Drawing.Point(35, 108);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(146, 20);
             this.label34.TabIndex = 4;
@@ -702,14 +693,15 @@
             // 
             // ledStoper
             // 
-            this.ledStoper.Location = new System.Drawing.Point(291, 13);
+            this.ledStoper.Location = new System.Drawing.Point(277, 12);
             this.ledStoper.Name = "ledStoper";
             this.ledStoper.Size = new System.Drawing.Size(64, 64);
             this.ledStoper.TabIndex = 3;
             // 
             // buttonReset
             // 
-            this.buttonReset.Location = new System.Drawing.Point(147, 59);
+            this.buttonReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonReset.Location = new System.Drawing.Point(133, 58);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(100, 36);
             this.buttonReset.TabIndex = 2;
@@ -719,7 +711,8 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(38, 59);
+            this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonStart.Location = new System.Drawing.Point(24, 58);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(100, 36);
             this.buttonStart.TabIndex = 1;
@@ -733,7 +726,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelStoper.AutoSize = true;
             this.labelStoper.Font = new System.Drawing.Font("Arial", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelStoper.Location = new System.Drawing.Point(55, 21);
+            this.labelStoper.Location = new System.Drawing.Point(41, 20);
             this.labelStoper.Name = "labelStoper";
             this.labelStoper.Size = new System.Drawing.Size(174, 40);
             this.labelStoper.TabIndex = 0;
@@ -840,7 +833,7 @@
             // 
             this.gaugeDischarge.AutoDivisionSpacing = false;
             this.gaugeDischarge.DialColor = System.Drawing.SystemColors.ButtonFace;
-            this.gaugeDischarge.Location = new System.Drawing.Point(31, 21);
+            this.gaugeDischarge.Location = new System.Drawing.Point(30, 21);
             this.gaugeDischarge.MajorDivisions.LineWidth = 2F;
             this.gaugeDischarge.MajorDivisions.TickLength = 7F;
             this.gaugeDischarge.Name = "gaugeDischarge";
@@ -1015,6 +1008,7 @@
             this.label36.Size = new System.Drawing.Size(27, 13);
             this.label36.TabIndex = 1;
             this.label36.Text = "Min.";
+            this.label36.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.label36_MouseDoubleClick);
             // 
             // TimeAxisBOX
             // 
@@ -1124,13 +1118,17 @@
             // 
             // WFPressureSuction
             // 
-            this.WFPressureSuction.HistoryCapacity = 36000;
+            this.WFPressureSuction.HistoryCapacity = 64800;
+            this.WFPressureSuction.ToolTipsEnabled = true;
             this.WFPressureSuction.XAxis = this.TimeAxis;
             this.WFPressureSuction.YAxis = this.AxisPressure;
             // 
             // TimeAxis
             // 
             this.TimeAxis.Caption = "Time [sek]";
+            this.TimeAxis.EditRangeElapsedTimeFormat = "hh\\:mm\\:ss";
+            this.TimeAxis.MajorDivisions.GridColor = System.Drawing.Color.Maroon;
+            this.TimeAxis.MajorDivisions.GridVisible = true;
             this.TimeAxis.Mode = NationalInstruments.UI.AxisMode.StripChart;
             this.TimeAxis.Range = new NationalInstruments.UI.Range(0D, 600D);
             // 
@@ -1138,6 +1136,7 @@
             // 
             this.AxisPressure.Caption = "Pressure [BarG]";
             this.AxisPressure.CaptionPosition = NationalInstruments.UI.YAxisPosition.Right;
+            this.AxisPressure.MajorDivisions.GridVisible = true;
             this.AxisPressure.Position = NationalInstruments.UI.YAxisPosition.Right;
             // 
             // legendItem2
@@ -1147,6 +1146,7 @@
             // 
             // WFPressureDischarge
             // 
+            this.WFPressureDischarge.HistoryCapacity = 64800;
             this.WFPressureDischarge.XAxis = this.TimeAxis;
             this.WFPressureDischarge.YAxis = this.AxisPressure;
             // 
@@ -1157,6 +1157,7 @@
             // 
             // WFTempSuction
             // 
+            this.WFTempSuction.HistoryCapacity = 64800;
             this.WFTempSuction.XAxis = this.TimeAxis;
             this.WFTempSuction.YAxis = this.AxisTemperature;
             // 
@@ -1171,6 +1172,7 @@
             // 
             // WFTempDischarge
             // 
+            this.WFTempDischarge.HistoryCapacity = 64800;
             this.WFTempDischarge.XAxis = this.TimeAxis;
             this.WFTempDischarge.YAxis = this.AxisTemperature;
             // 
@@ -1182,6 +1184,7 @@
             // 
             // WFTempCondenserIn
             // 
+            this.WFTempCondenserIn.HistoryCapacity = 64800;
             this.WFTempCondenserIn.XAxis = this.TimeAxis;
             this.WFTempCondenserIn.YAxis = this.AxisTemperature;
             // 
@@ -1193,6 +1196,7 @@
             // 
             // WFTempCondenserOut
             // 
+            this.WFTempCondenserOut.HistoryCapacity = 64800;
             this.WFTempCondenserOut.XAxis = this.TimeAxis;
             this.WFTempCondenserOut.YAxis = this.AxisTemperature;
             // 
@@ -1204,6 +1208,7 @@
             // 
             // WFTempEvapIn
             // 
+            this.WFTempEvapIn.HistoryCapacity = 64800;
             this.WFTempEvapIn.XAxis = this.TimeAxis;
             this.WFTempEvapIn.YAxis = this.AxisTemperature;
             // 
@@ -1215,6 +1220,7 @@
             // 
             // WFTempEvapOut
             // 
+            this.WFTempEvapOut.HistoryCapacity = 64800;
             this.WFTempEvapOut.XAxis = this.TimeAxis;
             this.WFTempEvapOut.YAxis = this.AxisTemperature;
             // 
@@ -1226,6 +1232,7 @@
             // 
             // WFTempCompressor
             // 
+            this.WFTempCompressor.HistoryCapacity = 64800;
             this.WFTempCompressor.XAxis = this.TimeAxis;
             this.WFTempCompressor.YAxis = this.AxisTemperature;
             // 
@@ -1237,6 +1244,7 @@
             // 
             // WFTempHotbox
             // 
+            this.WFTempHotbox.HistoryCapacity = 64800;
             this.WFTempHotbox.XAxis = this.TimeAxis;
             this.WFTempHotbox.YAxis = this.AxisTemperature;
             // 
@@ -1377,7 +1385,7 @@
             | NationalInstruments.UI.GraphInteractionModes.DragCursor) 
             | NationalInstruments.UI.GraphInteractionModes.DragAnnotationCaption) 
             | NationalInstruments.UI.GraphInteractionModes.EditRange)));
-            this.waveformGraph1.Location = new System.Drawing.Point(6, 83);
+            this.waveformGraph1.Location = new System.Drawing.Point(6, 80);
             this.waveformGraph1.Name = "waveformGraph1";
             this.waveformGraph1.Plots.AddRange(new NationalInstruments.UI.WaveformPlot[] {
             this.WFPressureSuction,
@@ -1390,7 +1398,7 @@
             this.WFTempEvapOut,
             this.WFTempCompressor,
             this.WFTempHotbox});
-            this.waveformGraph1.Size = new System.Drawing.Size(975, 559);
+            this.waveformGraph1.Size = new System.Drawing.Size(975, 565);
             this.waveformGraph1.TabIndex = 0;
             this.waveformGraph1.UseColorGenerator = true;
             this.waveformGraph1.XAxes.AddRange(new NationalInstruments.UI.XAxis[] {
@@ -2286,8 +2294,6 @@
             // 
             // BoxInformation
             // 
-            this.BoxInformation.Controls.Add(this.label33);
-            this.BoxInformation.Controls.Add(this.TestSelected);
             this.BoxInformation.Controls.Add(this.buttonDisconnect);
             this.BoxInformation.Controls.Add(this.label31);
             this.BoxInformation.Controls.Add(this.butCopyReport);
@@ -2304,34 +2310,14 @@
             this.BoxInformation.TabStop = false;
             this.BoxInformation.Text = "Current information";
             // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(5, 90);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(72, 15);
-            this.label33.TabIndex = 19;
-            this.label33.Text = "Test spec.";
-            // 
-            // TestSelected
-            // 
-            this.TestSelected.DataSource = this.testDescriptionSetupBindingSource;
-            this.TestSelected.DisplayMember = "TestName";
-            this.TestSelected.FormattingEnabled = true;
-            this.TestSelected.Location = new System.Drawing.Point(83, 86);
-            this.TestSelected.Name = "TestSelected";
-            this.TestSelected.Size = new System.Drawing.Size(204, 23);
-            this.TestSelected.TabIndex = 18;
-            this.TestSelected.ValueMember = "ID_TestInput";
-            // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(195, 9);
+            this.label31.Location = new System.Drawing.Point(225, 9);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(93, 15);
+            this.label31.Size = new System.Drawing.Size(65, 15);
             this.label31.TabIndex = 6;
-            this.label31.Text = "Copy location";
+            this.label31.Text = "Open file";
             // 
             // butCopyReport
             // 
@@ -2360,6 +2346,7 @@
             this.textBoxReportInfo.Size = new System.Drawing.Size(191, 21);
             this.textBoxReportInfo.TabIndex = 3;
             this.textBoxReportInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxReportInfo.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.textBoxReportInfo_MouseDoubleClick);
             // 
             // label30
             // 
@@ -2377,6 +2364,7 @@
             this.textBoxSettingsInfo.Size = new System.Drawing.Size(191, 21);
             this.textBoxSettingsInfo.TabIndex = 1;
             this.textBoxSettingsInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxSettingsInfo.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.textBoxSettingsInfo_MouseDoubleClick);
             // 
             // label25
             // 
@@ -2386,6 +2374,26 @@
             this.label25.Size = new System.Drawing.Size(59, 15);
             this.label25.TabIndex = 0;
             this.label25.Text = "Settings";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(3, 63);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(67, 13);
+            this.label33.TabIndex = 19;
+            this.label33.Text = "Test spec.";
+            // 
+            // TestSelected
+            // 
+            this.TestSelected.DataSource = this.testDescriptionSetupBindingSource;
+            this.TestSelected.DisplayMember = "TestName";
+            this.TestSelected.FormattingEnabled = true;
+            this.TestSelected.Location = new System.Drawing.Point(84, 59);
+            this.TestSelected.Name = "TestSelected";
+            this.TestSelected.Size = new System.Drawing.Size(257, 21);
+            this.TestSelected.TabIndex = 18;
+            this.TestSelected.ValueMember = "ID_TestInput";
             // 
             // SaveFileReport
             // 
@@ -2625,13 +2633,108 @@
             this.timerZegar.Interval = 1000;
             this.timerZegar.Tick += new System.EventHandler(this.timerZegar_Tick);
             // 
+            // BoxInfo
+            // 
+            this.BoxInfo.Controls.Add(this.tabPage1);
+            this.BoxInfo.Controls.Add(this.tabPage2);
+            this.BoxInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.BoxInfo.Location = new System.Drawing.Point(1014, 34);
+            this.BoxInfo.Name = "BoxInfo";
+            this.BoxInfo.SelectedIndex = 0;
+            this.BoxInfo.Size = new System.Drawing.Size(359, 169);
+            this.BoxInfo.TabIndex = 21;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tabPage1.Controls.Add(this.label35);
+            this.tabPage1.Controls.Add(this.buttonStart);
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.labelStoper);
+            this.tabPage1.Controls.Add(this.label34);
+            this.tabPage1.Controls.Add(this.buttonReset);
+            this.tabPage1.Controls.Add(this.ledStoper);
+            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(351, 140);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Timer";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.label44);
+            this.tabPage2.Controls.Add(this.label33);
+            this.tabPage2.Controls.Add(this.TestSelected);
+            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(351, 140);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Selected test";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(84, 97);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Reload DataBase";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.shotTestInfoBindingSource;
+            this.comboBox1.DisplayMember = "TestNameInput";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(84, 23);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(257, 21);
+            this.comboBox1.TabIndex = 21;
+            this.comboBox1.ValueMember = "ID_TestInput";
+            // 
+            // shotTestInfoBindingSource
+            // 
+            this.shotTestInfoBindingSource.DataMember = "ShotTestInfo";
+            this.shotTestInfoBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(7, 27);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(71, 13);
+            this.label44.TabIndex = 20;
+            this.label44.Text = "Actuall test";
+            // 
+            // shotTestInfoTableAdapter
+            // 
+            this.shotTestInfoTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(166, 6);
+            // 
+            // generateREPORTToolStripMenuItem
+            // 
+            this.generateREPORTToolStripMenuItem.Name = "generateREPORTToolStripMenuItem";
+            this.generateREPORTToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.generateREPORTToolStripMenuItem.Text = "Generate REPORT";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1390, 768);
-            this.Controls.Add(this.BoxChart);
+            this.Controls.Add(this.BoxInfo);
             this.Controls.Add(this.BoxSuction);
             this.Controls.Add(this.BoxCondenser);
             this.Controls.Add(this.BoxInformation);
@@ -2639,7 +2742,6 @@
             this.Controls.Add(this.BoxCompressor);
             this.Controls.Add(this.BoxEvapurator);
             this.Controls.Add(this.BoxECV);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuMain);
             this.Controls.Add(this.BoxRPM);
@@ -2647,6 +2749,7 @@
             this.Controls.Add(this.BoxTerminal);
             this.Controls.Add(this.BoxDischrge);
             this.Controls.Add(this.BoxAC);
+            this.Controls.Add(this.BoxChart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuMain;
@@ -2663,8 +2766,6 @@
             this.menuMain.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.testDescriptionSetupBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledStoper)).EndInit();
@@ -2721,6 +2822,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.testParametersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKTestDescriptionInputTestDescriptionSetup1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKTestDescriptionInputTestDescriptionSetup1BindingSource1)).EndInit();
+            this.BoxInfo.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shotTestInfoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2754,7 +2861,6 @@
         private System.Windows.Forms.ToolStripMenuItem StripConnect;
         private System.Windows.Forms.ToolStripStatusLabel StripStatusCOM;
         private System.Windows.Forms.ToolStripProgressBar StripProgressCOM;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labelStoper;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Button buttonStart;
@@ -2897,7 +3003,6 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label Zegar;
         private System.Windows.Forms.Timer timerZegar;
         private NationalInstruments.UI.WaveformPlot WFPressureDischarge;
         private System.Windows.Forms.CheckBox PlotBoxPressureSuction;
@@ -2956,6 +3061,17 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.ToolStripStatusLabel StripStatusTime;
+        private System.Windows.Forms.TabControl BoxInfo;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.BindingSource shotTestInfoBindingSource;
+        private DatabaseDataSetTableAdapters.ShotTestInfoTableAdapter shotTestInfoTableAdapter;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripMenuItem generateREPORTToolStripMenuItem;
     }
 }
 
