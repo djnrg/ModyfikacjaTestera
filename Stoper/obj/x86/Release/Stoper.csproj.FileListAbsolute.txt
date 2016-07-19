@@ -1,7 +1,0 @@
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Stoper\bin\Release\Stoper.exe
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Stoper\bin\Release\Stoper.pdb
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Stoper\obj\x86\Release\Stoper.Form1.resources
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Stoper\obj\x86\Release\Stoper.Properties.Resources.resources
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Stoper\obj\x86\Release\Stoper.csproj.GenerateResource.Cache
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Stoper\obj\x86\Release\Stoper.exe
-D:\PROJECTY PROGRAMOW\VISUAL STUDIO\ModyfikacjaTestera\Stoper\obj\x86\Release\Stoper.pdb

@@ -77,6 +77,8 @@
             this.saveTestStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.finishTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.generateREPORTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graphsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aCLoopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -289,8 +291,6 @@
             this.shotTestInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label44 = new System.Windows.Forms.Label();
             this.shotTestInfoTableAdapter = new Tester_VFS169.DatabaseDataSetTableAdapters.ShotTestInfoTableAdapter();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.generateREPORTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain.SuspendLayout();
             this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.testDescriptionSetupBindingSource)).BeginInit();
@@ -474,7 +474,7 @@
             this.toolStripSeparator7,
             this.generateREPORTToolStripMenuItem});
             this.testDescriptioToolStripMenuItem.Name = "testDescriptioToolStripMenuItem";
-            this.testDescriptioToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.testDescriptioToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.testDescriptioToolStripMenuItem.Text = "Test description";
             // 
             // startNewTestToolStripMenuItem
@@ -522,6 +522,17 @@
             this.finishTestToolStripMenuItem.Text = "Finish test";
             this.finishTestToolStripMenuItem.Click += new System.EventHandler(this.finishTestToolStripMenuItem_Click);
             // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(166, 6);
+            // 
+            // generateREPORTToolStripMenuItem
+            // 
+            this.generateREPORTToolStripMenuItem.Name = "generateREPORTToolStripMenuItem";
+            this.generateREPORTToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.generateREPORTToolStripMenuItem.Text = "Generate REPORT";
+            // 
             // graphsToolStripMenuItem
             // 
             this.graphsToolStripMenuItem.Checked = true;
@@ -537,21 +548,21 @@
             // aCLoopToolStripMenuItem
             // 
             this.aCLoopToolStripMenuItem.Name = "aCLoopToolStripMenuItem";
-            this.aCLoopToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aCLoopToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.aCLoopToolStripMenuItem.Text = "A/C Loop";
             this.aCLoopToolStripMenuItem.Click += new System.EventHandler(this.aCLoopToolStripMenuItem_Click);
             // 
             // chartToolStripMenuItem
             // 
             this.chartToolStripMenuItem.Name = "chartToolStripMenuItem";
-            this.chartToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.chartToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.chartToolStripMenuItem.Text = "Graph";
             this.chartToolStripMenuItem.Click += new System.EventHandler(this.pressuresToolStripMenuItem_Click);
             // 
             // tERMINALToolStripMenuItem
             // 
             this.tERMINALToolStripMenuItem.Name = "tERMINALToolStripMenuItem";
-            this.tERMINALToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tERMINALToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.tERMINALToolStripMenuItem.Text = "TERMINAL";
             this.tERMINALToolStripMenuItem.Click += new System.EventHandler(this.tERMINALToolStripMenuItem_Click);
             // 
@@ -568,10 +579,10 @@
             // 
             // helpToolStripMenuItem1
             // 
-            this.helpToolStripMenuItem1.Enabled = false;
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
             this.helpToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.helpToolStripMenuItem1.Text = "Help";
+            this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
             // 
             // toolStripSeparator5
             // 
@@ -601,7 +612,7 @@
             this.StripStatusData,
             this.StripStatusDane,
             this.StripStatusTime});
-            this.statusStrip.Location = new System.Drawing.Point(0, 746);
+            this.statusStrip.Location = new System.Drawing.Point(0, 745);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1390, 22);
             this.statusStrip.TabIndex = 1;
@@ -837,17 +848,17 @@
             this.gaugeDischarge.MajorDivisions.LineWidth = 2F;
             this.gaugeDischarge.MajorDivisions.TickLength = 7F;
             this.gaugeDischarge.Name = "gaugeDischarge";
-            this.gaugeDischarge.Range = new NationalInstruments.UI.Range(0D, 30D);
-            scaleRangeFill3.Range = new NationalInstruments.UI.Range(0D, 8D);
+            this.gaugeDischarge.Range = new NationalInstruments.UI.Range(-1D, 39D);
+            scaleRangeFill3.Range = new NationalInstruments.UI.Range(-1D, 8D);
             scaleRangeFill3.Style = NationalInstruments.UI.ScaleRangeFillStyle.CreateGradientStyle(System.Drawing.Color.Blue, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(64))))), 0.5D);
             scaleRangeFill3.Width = 10F;
-            scaleRangeFill4.Range = new NationalInstruments.UI.Range(8D, 16D);
+            scaleRangeFill4.Range = new NationalInstruments.UI.Range(8D, 20D);
             scaleRangeFill4.Style = NationalInstruments.UI.ScaleRangeFillStyle.CreateGradientStyle(System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(64))))), System.Drawing.Color.Lime, 0.5D);
             scaleRangeFill4.Width = 10F;
-            scaleRangeFill5.Range = new NationalInstruments.UI.Range(16D, 25D);
+            scaleRangeFill5.Range = new NationalInstruments.UI.Range(20D, 30D);
             scaleRangeFill5.Style = NationalInstruments.UI.ScaleRangeFillStyle.CreateGradientStyle(System.Drawing.Color.Lime, System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0))))), 0.5D);
             scaleRangeFill5.Width = 10F;
-            scaleRangeFill6.Range = new NationalInstruments.UI.Range(25D, 30D);
+            scaleRangeFill6.Range = new NationalInstruments.UI.Range(30D, 39D);
             scaleRangeFill6.Style = NationalInstruments.UI.ScaleRangeFillStyle.CreateGradientStyle(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0))))), System.Drawing.Color.Red, 0.5D);
             scaleRangeFill6.Width = 10F;
             this.gaugeDischarge.RangeFills.AddRange(new NationalInstruments.UI.ScaleRangeFill[] {
@@ -1016,11 +1027,11 @@
             this.TimeAxisBOX.Checked = true;
             this.TimeAxisBOX.CheckState = System.Windows.Forms.CheckState.Checked;
             this.TimeAxisBOX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.TimeAxisBOX.Location = new System.Drawing.Point(12, 4);
+            this.TimeAxisBOX.Location = new System.Drawing.Point(4, 4);
             this.TimeAxisBOX.Name = "TimeAxisBOX";
-            this.TimeAxisBOX.Size = new System.Drawing.Size(114, 17);
+            this.TimeAxisBOX.Size = new System.Drawing.Size(128, 17);
             this.TimeAxisBOX.TabIndex = 0;
-            this.TimeAxisBOX.Text = "Auto Time Axis ";
+            this.TimeAxisBOX.Text = "Auto Time Axis [s]";
             this.TimeAxisBOX.UseVisualStyleBackColor = true;
             this.TimeAxisBOX.CheckedChanged += new System.EventHandler(this.TimeAxisBOX_CheckedChanged);
             // 
@@ -1125,18 +1136,15 @@
             // 
             // TimeAxis
             // 
-            this.TimeAxis.Caption = "Time [sek]";
+            this.TimeAxis.Caption = "Time";
             this.TimeAxis.EditRangeElapsedTimeFormat = "hh\\:mm\\:ss";
-            this.TimeAxis.MajorDivisions.GridColor = System.Drawing.Color.Maroon;
-            this.TimeAxis.MajorDivisions.GridVisible = true;
-            this.TimeAxis.Mode = NationalInstruments.UI.AxisMode.StripChart;
+            this.TimeAxis.MajorDivisions.LabelFormat = new NationalInstruments.UI.FormatString(NationalInstruments.UI.FormatStringMode.ElapsedTime, "E:d\\.hh\\:mm\\:ss");
             this.TimeAxis.Range = new NationalInstruments.UI.Range(0D, 600D);
             // 
             // AxisPressure
             // 
             this.AxisPressure.Caption = "Pressure [BarG]";
             this.AxisPressure.CaptionPosition = NationalInstruments.UI.YAxisPosition.Right;
-            this.AxisPressure.MajorDivisions.GridVisible = true;
             this.AxisPressure.Position = NationalInstruments.UI.YAxisPosition.Right;
             // 
             // legendItem2
@@ -1514,8 +1522,8 @@
             this.gaugeSuction.MajorDivisions.TickLength = 7F;
             this.gaugeSuction.MinorDivisions.Interval = 0.2D;
             this.gaugeSuction.Name = "gaugeSuction";
-            this.gaugeSuction.Range = new NationalInstruments.UI.Range(0D, 12D);
-            scaleRangeFill9.Range = new NationalInstruments.UI.Range(0D, 3D);
+            this.gaugeSuction.Range = new NationalInstruments.UI.Range(-1D, 11D);
+            scaleRangeFill9.Range = new NationalInstruments.UI.Range(-1D, 3D);
             scaleRangeFill9.Style = NationalInstruments.UI.ScaleRangeFillStyle.CreateGradientStyle(System.Drawing.Color.Blue, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(64))))), 0.5D);
             scaleRangeFill9.Width = 10F;
             scaleRangeFill10.Range = new NationalInstruments.UI.Range(3D, 6D);
@@ -1800,13 +1808,13 @@
             this.meterCoilVoltage.Name = "meterCoilVoltage";
             this.meterCoilVoltage.Range = new NationalInstruments.UI.Range(0D, 25D);
             scaleRangeFill14.Distance = -20F;
-            scaleRangeFill14.Range = new NationalInstruments.UI.Range(11D, 14D);
+            scaleRangeFill14.Range = new NationalInstruments.UI.Range(8D, 14D);
             scaleRangeFill14.Width = 20F;
             scaleRangeFill15.Distance = -20F;
             scaleRangeFill15.Range = new NationalInstruments.UI.Range(23D, 25D);
             scaleRangeFill15.Width = 20F;
             scaleRangeFill16.Distance = -20F;
-            scaleRangeFill16.Range = new NationalInstruments.UI.Range(0D, 8D);
+            scaleRangeFill16.Range = new NationalInstruments.UI.Range(0D, 7D);
             scaleRangeFill16.Style = NationalInstruments.UI.ScaleRangeFillStyle.CreateSolidStyle(System.Drawing.Color.Red);
             scaleRangeFill16.Width = 20F;
             this.meterCoilVoltage.RangeFills.AddRange(new NationalInstruments.UI.ScaleRangeFill[] {
@@ -2717,23 +2725,12 @@
             // 
             this.shotTestInfoTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(166, 6);
-            // 
-            // generateREPORTToolStripMenuItem
-            // 
-            this.generateREPORTToolStripMenuItem.Name = "generateREPORTToolStripMenuItem";
-            this.generateREPORTToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.generateREPORTToolStripMenuItem.Text = "Generate REPORT";
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1390, 768);
+            this.ClientSize = new System.Drawing.Size(1390, 767);
             this.Controls.Add(this.BoxInfo);
             this.Controls.Add(this.BoxSuction);
             this.Controls.Add(this.BoxCondenser);

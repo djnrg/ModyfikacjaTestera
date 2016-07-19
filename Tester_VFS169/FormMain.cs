@@ -269,7 +269,7 @@ namespace Tester_VFS169
 
 
                     ///<remarks>
-                    ///Zapisywanie zanych do pliku
+                    ///Zapisywanie danych do pliku
                     ///</remarks>
                     WriteDataLog(PlikRaportu, DateTime.Now.ToShortDateString() + ";" + DateTime.Now.ToLongTimeString()
                             + ";" + String.Format("{0:D3}:{1:D2}:{2:d2}", s2, s1, t)
@@ -466,10 +466,6 @@ namespace Tester_VFS169
             this.testDescriptionSetupTableAdapter.Fill(this.databaseDataSet.TestDescriptionSetup);
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'databaseDataSet.TestParameters' . Możesz go przenieść lub usunąć.
             this.testParametersTableAdapter.Fill(this.databaseDataSet.TestParameters);
-
-
-
-
 
 
 #if DEBUG
@@ -885,7 +881,7 @@ namespace Tester_VFS169
                         {
                             streamWriter.WriteLine("DURABILITY TESTER VFS169");
                             streamWriter.WriteLine("Rozpoczęcie Testu: " + DateTime.Now.ToLongDateString() + " " + DateTime.Now.ToLongTimeString());
-                            streamWriter.WriteLine("DataNow;TomeNow;TimeOfTest;Tsuc;TdisTcondenserIn;TcondenserOut;TevapuratorIn;TevapuratorOut;Thotbox;Tcompressor;TairIn;HairIn;TairOut;HairOut;Psuc;Pdis;COILvoltage;COILcurrent;ECVvoltage;ECVcurrent;Cewka;rpm");
+                            streamWriter.WriteLine("DataNow;TomeNow;TimeOfTest;Tsuc;Tdis;TcondenserIn;TcondenserOut;TevapuratorIn;TevapuratorOut;Thotbox;Tcompressor;TairIn;HairIn;TairOut;HairOut;Psuc;Pdis;COILvoltage;COILcurrent;ECVvoltage;ECVcurrent;Cewka;rpm");
                             streamWriter.Close();
                         }
                     }
@@ -1633,6 +1629,24 @@ namespace Tester_VFS169
             this.testDescriptionInputTableAdapter.Fill(this.databaseDataSet.TestDescriptionInput);
             this.testDescriptionSetupTableAdapter.Fill(this.databaseDataSet.TestDescriptionSetup);
             this.testParametersTableAdapter.Fill(this.databaseDataSet.TestParameters);
+        }
+
+
+        /// <summary>
+        /// Wyswietlanie pliku HELP
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("Tester VFS169.chm");
+            }
+            catch
+            {
+                MessageBox.Show("Lack of correct file", "Warning");
+            }
         }
 
 
